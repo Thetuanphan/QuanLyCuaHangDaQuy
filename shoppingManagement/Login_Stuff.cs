@@ -11,9 +11,9 @@ using Oracle.ManagedDataAccess.Client;
 
 namespace shoppingManagement
 {
-    public partial class Form3 : Form
+    public partial class Login_Stuff : Form
     {
-        public Form3()
+        public Login_Stuff()
         {
             InitializeComponent();
         }
@@ -23,37 +23,38 @@ namespace shoppingManagement
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void quayve_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form1 f1 = new Form1();
+            Login f1 = new Login();
             f1.ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void dangnhap_Click(object sender, EventArgs e)
         {
             string connstr = "Data Source=(DESCRIPTION=" +
-"(ADDRESS = (PROTOCOL = TCP)(HOST = DESKTOP-2V34OVD)(PORT = 1521))" +
-"(CONNECT_DATA =" +
- "(SERVER = DEDICATED)" +
- "(SERVICE_NAME = XE)" +
-")" +
-"); User Id=HR; Password=hr";
+            "(ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))" +
+            "(CONNECT_DATA =" +
+            "(SERVER = DEDICATED)" +
+            "(SERVICE_NAME = orcl)" + ")" +
+            "); User Id=ttp; Password=123456Az";
+
             try
             {
                 OracleConnection con = new OracleConnection(connstr);
-                OracleDataAdapter adapter = new OracleDataAdapter("Select count(*) from stuffinfo where username='" + txtUsername.Text + "' and password='" + txtPassword.Text + "' ", connstr);
+                OracleDataAdapter adapter = new OracleDataAdapter("Select count(*) from TAIKHOAN where TENTK='" + txtUsername.TextName + "' and MATKHAU='" + txtPassword.TextName + "' ", connstr);
                 DataTable data = new DataTable();
                 adapter.Fill(data);
+
                 if (data.Rows[0][0].ToString() == "1")
                 {
                     this.Hide();
-                    Form6 f6 = new Form6(txtUsername.Text,txtPassword.Text);
-                    f6.ShowDialog();
+                    Admin_Menu f4 = new Admin_Menu();
+                    f4.ShowDialog();
                 }
                 else
                 {
-                    MessageBox.Show("please check your username & password");
+                    MessageBox.Show("Xin hãy kiểm tra lại tên đăng nhập và mật khẩu!");
 
                 }
 
@@ -61,11 +62,16 @@ namespace shoppingManagement
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Đã có vấn đề về kết nối: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void Form3_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
         {
 
         }

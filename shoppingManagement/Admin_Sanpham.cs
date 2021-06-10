@@ -13,10 +13,10 @@ using System.IO;
 
 namespace shoppingManagement
 {
-    public partial class Form5 : Form
+    public partial class Admin_Sanpham : Form
     {
        
-        public Form5()
+        public Admin_Sanpham()
         {
             InitializeComponent();
             
@@ -249,14 +249,14 @@ namespace shoppingManagement
         private void button6_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form1 f1 = new Form1();
+            Login f1 = new Login();
             f1.ShowDialog();
         }
 
         private void txtBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form4 f4 = new Form4();
+            Admin_Menu f4 = new Admin_Menu();
             f4.ShowDialog();
         }
     }

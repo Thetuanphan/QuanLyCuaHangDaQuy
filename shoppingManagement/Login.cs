@@ -10,18 +10,25 @@ using System.Windows.Forms;
 
 namespace shoppingManagement
 {
-    public partial class Form11 : Form
+    public partial class Login : Form
     {
-        public Form11()
+        public Login()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void quanly_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login_Admin f2 = new Login_Admin();
+            f2.ShowDialog();
+        }
+
+        private void nhanvien_Click(object sender, EventArgs e)
         {
             this.Hide();
             Login_Stuff f3 = new Login_Stuff();
-            f3.ShowDialog(); 
+            f3.ShowDialog();
         }
     }
 }

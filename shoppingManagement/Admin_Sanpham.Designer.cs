@@ -1,6 +1,6 @@
 ﻿namespace shoppingManagement
 {
-    partial class Form5
+    partial class Admin_Sanpham
     {
         /// <summary>
         /// Required designer variable.

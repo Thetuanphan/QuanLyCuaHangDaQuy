@@ -11,10 +11,10 @@ using Oracle.ManagedDataAccess.Client;
 
 namespace shoppingManagement
 {
-    public partial class Form6 : Form
+    public partial class NV_Sellmenu : Form
     {
         private double grandTotal=0;
-        public Form6(string user,string pass ) 
+        public NV_Sellmenu(string user,string pass ) 
         {
             InitializeComponent();
             lblUser.Text = user;
@@ -186,7 +186,7 @@ namespace shoppingManagement
         private void button5_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form3 f3 = new Form3();
+            Login_Stuff f3 = new Login_Stuff();
             f3.ShowDialog();
         }
 

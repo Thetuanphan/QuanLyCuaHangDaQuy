@@ -36,7 +36,7 @@ namespace shoppingManagement
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form2 f2 = new Form2();
+            Login_Admin f2 = new Login_Admin();
             f2.ShowDialog();
         }
 
@@ -102,7 +102,7 @@ namespace shoppingManagement
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form4 f4 = new Form4();
+            Admin_Menu f4 = new Admin_Menu();
             f4.ShowDialog();
         }
 

@@ -1,6 +1,6 @@
 ﻿namespace shoppingManagement
 {
-    partial class Form6
+    partial class NV_Sellmenu
     {
         /// <summary>
         /// Required designer variable.

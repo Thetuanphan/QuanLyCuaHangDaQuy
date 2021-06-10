@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace shoppingManagement
 {
-    public partial class Form4 : Form
+    public partial class Admin_Menu : Form
     {
-        public Form4()
+        public Admin_Menu()
         {
             InitializeComponent();
         }
@@ -20,7 +20,7 @@ namespace shoppingManagement
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form5 f5 = new Form5();
+            Admin_Sanpham f5 = new Admin_Sanpham();
             f5.ShowDialog();
         }
 
@@ -34,8 +34,13 @@ namespace shoppingManagement
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form1 f1 = new Form1();
+            Login f1 = new Login();
             f1.ShowDialog();
+        }
+
+        private void Admin_Menu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
