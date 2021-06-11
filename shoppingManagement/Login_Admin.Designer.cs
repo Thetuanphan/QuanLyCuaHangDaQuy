@@ -178,7 +178,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Login_Admin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Admin Login";
+            this.Text = "Quản Lý Đăng Nhập";
             this.Load += new System.EventHandler(this.Login_Admin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -10,18 +10,16 @@ using System.Windows.Forms;
 
 namespace shoppingManagement
 {
-    public partial class Form11 : Form
+    public partial class Admin_Khachhang : Form
     {
-        public Form11()
+        public Admin_Khachhang()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Admin_Khachhang_Load(object sender, EventArgs e)
         {
-            this.Hide();
-            Login_Stuff f3 = new Login_Stuff();
-            f3.ShowDialog(); 
+
         }
     }
 }

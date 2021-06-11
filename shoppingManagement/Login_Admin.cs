@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Oracle.ManagedDataAccess.Client;
 
+
 namespace shoppingManagement
 {
     public partial class Login_Admin : Form
@@ -33,12 +34,11 @@ namespace shoppingManagement
         private void dangnhap_Click(object sender, EventArgs e)
         {
             string connstr = "Data Source=(DESCRIPTION=" +
-            "(ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))" +
-            "(CONNECT_DATA =" +
-            "(SERVER = DEDICATED)" +
-            "(SERVICE_NAME = orcl)" + ")" +
-            "); User Id=ttp; Password=123456Az";
-
+                        "(ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))" +
+                        "(CONNECT_DATA =" +
+                        "(SERVER = DEDICATED)" +
+                        "(SERVICE_NAME = orcl)" + ")" +
+                        "); User Id=ttp; Password=123456Az";
             try
             {
                 OracleConnection con = new OracleConnection(connstr);

@@ -108,9 +108,7 @@ namespace shoppingManagement
 
         private void button4_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form13 f13 = new Form13();
-            f13.ShowDialog();
+            
         }
     }
 }

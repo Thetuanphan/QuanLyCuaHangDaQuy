@@ -13,14 +13,11 @@ using System.IO;
 
 namespace shoppingManagement
 {
-    public partial class Admin_Sanpham : Form
+    public partial class Admin_Khuyenmai : Form
     {
-       
-        public Admin_Sanpham()
+        public Admin_Khuyenmai()
         {
             InitializeComponent();
-            
-           
         }
 
         public void connection()
@@ -36,26 +33,13 @@ namespace shoppingManagement
             try
             {
 
-                string sql = "Select * from SANPHAM  order by MaSP";
-                string sql1 = "Select * from NGUYENVATLIEU  order by MaVL";
-                string sql2 = "Select * from DOITAC  order by MaDT";
+                string sql = "Select * from KHUYENMAI  order by MaKM";
 
                 OracleDataAdapter adapter = new OracleDataAdapter(sql, con);
-                OracleDataAdapter adapter1 = new OracleDataAdapter(sql1, con);
-                OracleDataAdapter adapter2 = new OracleDataAdapter(sql2, con);
-
 
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
                 dataGridView1.DataSource = dt;
-
-                DataTable dt1 = new DataTable();
-                adapter1.Fill(dt1);
-                dataGridView2.DataSource = dt1;
-
-                DataTable dt2 = new DataTable();
-                adapter2.Fill(dt2);
-                dataGridView3.DataSource = dt2;
 
             }
             catch (Exception ex)
@@ -64,12 +48,10 @@ namespace shoppingManagement
             }
         }
 
-        private void Form5_Load(object sender, EventArgs e)
+        private void Admin_Khuyenmai_Load(object sender, EventArgs e)
         {
             connection();
         }
-
-        
 
         private void quayve_Click(object sender, EventArgs e)
         {
@@ -78,18 +60,7 @@ namespace shoppingManagement
             f4.ShowDialog();
         }
 
-        private void dataGridView1_MouseClick(object sender, MouseEventArgs e)
-        {
-            MaSP.TextName = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
-            MaVL.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
-            MaDT.TextName = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
-            TenSP.TextName = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
-            SLTon.TextName = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
-            DonGia.TextName = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
-            DonGia.TextName = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
-        }
-
-        private void themsanpham_Click(object sender, EventArgs e)
+        private void them_Click(object sender, EventArgs e)
         {
             string connstr = "Data Source=(DESCRIPTION=" +
             "(ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))" +
@@ -105,16 +76,16 @@ namespace shoppingManagement
             try
             {
 
-                string sql = "INSERT INTO SANPHAM (MaSP, MaVL, MaDT, TenSP, DonGia, SLTon) values " +
-                    "(" + "'" + MaSP.TextName + "','" + MaVL.Text + "','" + MaDT.TextName + "','" + TenSP.TextName + "'," + Int32.Parse(DonGia.TextName) + "," + Int32.Parse(SLTon.TextName) + ")";
+                string sql = "INSERT INTO KHUYENMAI (MaKM, TenKM) values " +
+                    "('" + MaKM.TextName + "','" + TenKM.TextName + "')";
                 OracleCommand cmd = new OracleCommand(sql, con);
 
                 con.Open();
 
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Đã thêm sản phẩm thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Đã thêm khuyến mãi thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                OracleDataAdapter adapter = new OracleDataAdapter("select * from SANPHAM order by MaSP", con);
+                OracleDataAdapter adapter = new OracleDataAdapter("select * from KHUYENMAI order by MaKM", con);
                 DataTable dt = new DataTable();
 
                 adapter.Fill(dt);
@@ -134,7 +105,7 @@ namespace shoppingManagement
             }
         }
 
-        private void xoasanpham_Click(object sender, EventArgs e)
+        private void xoa_Click(object sender, EventArgs e)
         {
             string connstr = "Data Source=(DESCRIPTION=" +
             "(ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))" +
@@ -146,15 +117,15 @@ namespace shoppingManagement
 
             try
             {
-                string sql = "DELETE FROM SANPHAM Where MaSP=" + "'" + MaSP.TextName + "'";
+                string sql = "DELETE FROM KHUYENMAI Where MaKM=" + "'" + MaKM.TextName + "'";
                 OracleCommand cmd = new OracleCommand(sql, con);
 
                 con.Open();
 
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Xóa sản phẩm thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Xóa khuyến mãi thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                OracleDataAdapter adapter = new OracleDataAdapter("select * from SANPHAM order by MaSP", con);
+                OracleDataAdapter adapter = new OracleDataAdapter("select * from KHUYENMAI order by MaKM", con);
                 DataTable dt = new DataTable();
 
                 adapter.Fill(dt);
@@ -174,7 +145,7 @@ namespace shoppingManagement
             }
         }
 
-        private void capnhatsanpham_Click(object sender, EventArgs e)
+        private void capnhat_Click(object sender, EventArgs e)
         {
             string connstr = "Data Source=(DESCRIPTION=" +
             "(ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))" +
@@ -186,17 +157,17 @@ namespace shoppingManagement
 
             try
             {
-                string sql = "update SANPHAM" +
-                     " SET " + "MaVL= '" + MaVL.Text + "', TenSP='" + TenSP.TextName + "', SLTon=" + SLTon.TextName + ", DonGia=" + DonGia.TextName + ", MaDT=" + MaDT.TextName +
-                    " where MaSP ='" + MaSP.TextName + "'";
+                string sql = "update KHUYENMAI" +
+                     " SET " + "TenVL= '" + TenKM.TextName +
+                    " where MaVL ='" + MaKM.TextName + "'";
                 OracleCommand cmd = new OracleCommand(sql, con);
 
                 con.Open();
 
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Cập nhật sản phẩm thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Cập nhật khuyến mãi thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                OracleDataAdapter adapter = new OracleDataAdapter("select * from SANPHAM order by MaSP", con);
+                OracleDataAdapter adapter = new OracleDataAdapter("select * from KHUYENMAI order by MaKM", con);
                 DataTable dt = new DataTable();
 
                 adapter.Fill(dt);
@@ -219,8 +190,8 @@ namespace shoppingManagement
         private void lammoi_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Admin_Sanpham f2 = new Admin_Sanpham();
-            f2.ShowDialog();
+            Admin_Khuyenmai f8 = new Admin_Khuyenmai();
+            f8.ShowDialog();
         }
 
         private void timkiem_Click(object sender, EventArgs e)
@@ -236,34 +207,25 @@ namespace shoppingManagement
             try
             {
 
-                string sql = "Select * from SANPHAM where MaSP='" + TraCuu.TextName + "' order by MaSP";
-                string sql1 = "Select * from NGUYENVATLIEU where MaVL='" + TraCuu.TextName + "' order by MaVL";
-                string sql2 = "Select * from DOITAC where MaDT='" + TraCuu.TextName + "' order by MaDT";
+                string sql = "Select * from KHUYENMAI where MaKM='" + TraCuu.TextName + "' order by MaKM";
+                string sql1 = "Select * from KHUYENMAI where TenKM='" + TraCuu.TextName + "' order by MaKM";
 
                 OracleDataAdapter adapter = new OracleDataAdapter(sql, con);
                 OracleDataAdapter adapter1 = new OracleDataAdapter(sql1, con);
-                OracleDataAdapter adapter2 = new OracleDataAdapter(sql2, con);
 
-                if (LoaiTimKiem.Text == "MaSP")
+                if (LoaiTimKiem.Text == "MaKM")
                 {
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);
                     dataGridView1.DataSource = dt;
                 }
-                else {
-                    if (LoaiTimKiem.Text == "MaVL")
+                else
+                {
+                    if (LoaiTimKiem.Text == "TenKM")
                     {
                         DataTable dt1 = new DataTable();
                         adapter1.Fill(dt1);
-                        dataGridView2.DataSource = dt1;
-                    }
-                    else {
-                        if (LoaiTimKiem.Text == "MaSP")
-                        {
-                            DataTable dt2 = new DataTable();
-                            adapter2.Fill(dt2);
-                            dataGridView3.DataSource = dt2;
-                        }
+                        dataGridView1.DataSource = dt1;
                     }
                 }
             }
@@ -272,11 +234,5 @@ namespace shoppingManagement
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void LoaiTimKiem_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
-    
 }

@@ -45,6 +45,9 @@
     <Reference Include="JMaterialTextbox">
       <HintPath>D:\Downloads\JControls\JMaterialTextbox.dll</HintPath>
     </Reference>
+    <Reference Include="JMetroTextBox">
+      <HintPath>D:\Downloads\JControls\JMetroTextBox.dll</HintPath>
+    </Reference>
     <Reference Include="JTextBox">
       <HintPath>D:\Downloads\JControls\JTextBox.dll</HintPath>
     </Reference>
@@ -61,6 +64,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
@@ -75,6 +79,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin_Dichvu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Dichvu.Designer.cs">
+      <DependentUpon>Admin_Dichvu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Doitac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Doitac.Designer.cs">
+      <DependentUpon>Admin_Doitac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Khachhang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Khachhang.Designer.cs">
+      <DependentUpon>Admin_Khachhang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Khuyenmai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Khuyenmai.Designer.cs">
+      <DependentUpon>Admin_Khuyenmai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Nhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Nhanvien.Designer.cs">
+      <DependentUpon>Admin_Nhanvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Vatlieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Vatlieu.Designer.cs">
+      <DependentUpon>Admin_Vatlieu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Button_WOC.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -89,18 +129,6 @@
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form11.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form11.Designer.cs">
-      <DependentUpon>Form11.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form13.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form13.Designer.cs">
-      <DependentUpon>Form13.cs</DependentUpon>
     </Compile>
     <Compile Include="Login_Admin.cs">
       <SubType>Form</SubType>
@@ -158,17 +186,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Admin_Dichvu.resx">
+      <DependentUpon>Admin_Dichvu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Doitac.resx">
+      <DependentUpon>Admin_Doitac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Khachhang.resx">
+      <DependentUpon>Admin_Khachhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Khuyenmai.resx">
+      <DependentUpon>Admin_Khuyenmai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Nhanvien.resx">
+      <DependentUpon>Admin_Nhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Vatlieu.resx">
+      <DependentUpon>Admin_Vatlieu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form11.resx">
-      <DependentUpon>Form11.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form13.resx">
-      <DependentUpon>Form13.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login_Admin.resx">
       <DependentUpon>Login_Admin.cs</DependentUpon>
