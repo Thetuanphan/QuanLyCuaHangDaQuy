@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.qltaikhoan = new ePOSOne.btnProduct.Button_WOC();
             this.tkdoanhthu = new ePOSOne.btnProduct.Button_WOC();
             this.quayve = new ePOSOne.btnProduct.Button_WOC();
             this.qlkhachhang = new ePOSOne.btnProduct.Button_WOC();
@@ -41,7 +42,6 @@
             this.qldoitac = new ePOSOne.btnProduct.Button_WOC();
             this.qlnhanvien = new ePOSOne.btnProduct.Button_WOC();
             this.qlsanpham = new ePOSOne.btnProduct.Button_WOC();
-            this.qltaikhoan = new ePOSOne.btnProduct.Button_WOC();
             this.SuspendLayout();
             // 
             // label1
@@ -64,6 +64,25 @@
             this.label4.TabIndex = 29;
             this.label4.Text = "Chọn Chức Năng Quản Lý";
             // 
+            // qltaikhoan
+            // 
+            this.qltaikhoan.BorderColor = System.Drawing.Color.Black;
+            this.qltaikhoan.ButtonColor = System.Drawing.Color.White;
+            this.qltaikhoan.FlatAppearance.BorderSize = 0;
+            this.qltaikhoan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.qltaikhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.qltaikhoan.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qltaikhoan.Location = new System.Drawing.Point(37, 363);
+            this.qltaikhoan.Name = "qltaikhoan";
+            this.qltaikhoan.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.qltaikhoan.OnHoverButtonColor = System.Drawing.Color.Black;
+            this.qltaikhoan.OnHoverTextColor = System.Drawing.Color.White;
+            this.qltaikhoan.Size = new System.Drawing.Size(229, 38);
+            this.qltaikhoan.TabIndex = 32;
+            this.qltaikhoan.Text = "Quản Lý Tài Khoản";
+            this.qltaikhoan.TextColor = System.Drawing.Color.Black;
+            this.qltaikhoan.UseVisualStyleBackColor = true;
+            // 
             // tkdoanhthu
             // 
             this.tkdoanhthu.BorderColor = System.Drawing.Color.Black;
@@ -82,6 +101,7 @@
             this.tkdoanhthu.Text = "Thống Kê Doanh Thu";
             this.tkdoanhthu.TextColor = System.Drawing.Color.Black;
             this.tkdoanhthu.UseVisualStyleBackColor = true;
+            this.tkdoanhthu.Click += new System.EventHandler(this.tkdoanhthu_Click);
             // 
             // quayve
             // 
@@ -121,6 +141,7 @@
             this.qlkhachhang.Text = "Quản Lý Khách Hàng";
             this.qlkhachhang.TextColor = System.Drawing.Color.Black;
             this.qlkhachhang.UseVisualStyleBackColor = true;
+            this.qlkhachhang.Click += new System.EventHandler(this.qlkhachhang_Click);
             // 
             // qlnhaphang
             // 
@@ -140,6 +161,7 @@
             this.qlnhaphang.Text = "Quản Lý Nhập Hàng";
             this.qlnhaphang.TextColor = System.Drawing.Color.Black;
             this.qlnhaphang.UseVisualStyleBackColor = true;
+            this.qlnhaphang.Click += new System.EventHandler(this.qlnhaphang_Click);
             // 
             // qldichvu
             // 
@@ -279,25 +301,6 @@
             this.qlsanpham.TextColor = System.Drawing.Color.Black;
             this.qlsanpham.UseVisualStyleBackColor = true;
             this.qlsanpham.Click += new System.EventHandler(this.qlsanpham_Click);
-            // 
-            // qltaikhoan
-            // 
-            this.qltaikhoan.BorderColor = System.Drawing.Color.Black;
-            this.qltaikhoan.ButtonColor = System.Drawing.Color.White;
-            this.qltaikhoan.FlatAppearance.BorderSize = 0;
-            this.qltaikhoan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.qltaikhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.qltaikhoan.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qltaikhoan.Location = new System.Drawing.Point(37, 363);
-            this.qltaikhoan.Name = "qltaikhoan";
-            this.qltaikhoan.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.qltaikhoan.OnHoverButtonColor = System.Drawing.Color.Black;
-            this.qltaikhoan.OnHoverTextColor = System.Drawing.Color.White;
-            this.qltaikhoan.Size = new System.Drawing.Size(229, 38);
-            this.qltaikhoan.TabIndex = 32;
-            this.qltaikhoan.Text = "Quản Lý Tài Khoản";
-            this.qltaikhoan.TextColor = System.Drawing.Color.Black;
-            this.qltaikhoan.UseVisualStyleBackColor = true;
             // 
             // Admin_Menu
             // 

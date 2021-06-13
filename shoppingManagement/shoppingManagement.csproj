@@ -91,6 +91,12 @@
     <Compile Include="Admin_Doitac.Designer.cs">
       <DependentUpon>Admin_Doitac.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin_Hoadon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Hoadon.Designer.cs">
+      <DependentUpon>Admin_Hoadon.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin_Khachhang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,12 @@
     <Compile Include="Admin_Nhanvien.Designer.cs">
       <DependentUpon>Admin_Nhanvien.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin_Nhaphang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Nhaphang.Designer.cs">
+      <DependentUpon>Admin_Nhaphang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin_Vatlieu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,11 +130,17 @@
     <Compile Include="Button_WOC.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="baocaothang.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>baocaothang.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Admin_Thongkedoanhthu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Admin_Thongkedoanhthu.Designer.cs">
+      <DependentUpon>Admin_Thongkedoanhthu.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -153,12 +171,6 @@
     </Compile>
     <Compile Include="Admin_Sanpham.Designer.cs">
       <DependentUpon>Admin_Sanpham.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Monthly_Report.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Monthly_Report.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="NV_Sellmenu.cs">
       <SubType>Form</SubType>
@@ -192,6 +204,9 @@
     <EmbeddedResource Include="Admin_Doitac.resx">
       <DependentUpon>Admin_Doitac.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Hoadon.resx">
+      <DependentUpon>Admin_Hoadon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin_Khachhang.resx">
       <DependentUpon>Admin_Khachhang.cs</DependentUpon>
     </EmbeddedResource>
@@ -201,11 +216,18 @@
     <EmbeddedResource Include="Admin_Nhanvien.resx">
       <DependentUpon>Admin_Nhanvien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Nhaphang.resx">
+      <DependentUpon>Admin_Nhaphang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin_Vatlieu.resx">
       <DependentUpon>Admin_Vatlieu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="baocaothang.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>baocaothang.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Thongkedoanhthu.resx">
+      <DependentUpon>Admin_Thongkedoanhthu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -221,10 +243,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_Sanpham.resx">
       <DependentUpon>Admin_Sanpham.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Monthly_Report.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Monthly_Report.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="NV_Sellmenu.resx">
       <DependentUpon>NV_Sellmenu.cs</DependentUpon>

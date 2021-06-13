@@ -16,14 +16,14 @@ namespace shoppingManagement {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class Monthly_Report : ReportClass {
+    public class baocaothang : ReportClass {
         
-        public Monthly_Report() {
+        public baocaothang() {
         }
         
         public override string ResourceName {
             get {
-                return "Monthly_Report.rpt";
+                return "baocaothang.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace shoppingManagement {
         
         public override string FullResourceName {
             get {
-                return "shoppingManagement.Monthly_Report.rpt";
+                return "shoppingManagement.baocaothang.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace shoppingManagement {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedMonthly_Report : Component, ICachedReport {
+    public class Cachedbaocaothang : Component, ICachedReport {
         
-        public CachedMonthly_Report() {
+        public Cachedbaocaothang() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace shoppingManagement {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            Monthly_Report rpt = new Monthly_Report();
+            baocaothang rpt = new baocaothang();
             rpt.Site = this.Site;
             return rpt;
         }

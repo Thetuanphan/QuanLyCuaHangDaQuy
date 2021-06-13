@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace shoppingManagement
 {
-    public partial class Form1 : Form
+    public partial class Admin_Hoadon : Form
     {
-        public Form1()
+        public Admin_Hoadon()
         {
             InitializeComponent();
         }
 
-        private void button_WOC1_Click(object sender, EventArgs e)
+        private void quayve_Click(object sender, EventArgs e)
         {
 
         }

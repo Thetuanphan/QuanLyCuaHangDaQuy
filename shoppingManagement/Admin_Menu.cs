@@ -70,5 +70,24 @@ namespace shoppingManagement
             Admin_Doitac f4 = new Admin_Doitac();
             f4.ShowDialog();
         }
+
+        private void qlkhachhang_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Admin_Khachhang f4 = new Admin_Khachhang();
+            f4.ShowDialog();
+        }
+
+        private void tkdoanhthu_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Admin_Thongkedoanhthu f4 = new Admin_Thongkedoanhthu();
+            f4.ShowDialog();
+        }
+
+        private void qlnhaphang_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
