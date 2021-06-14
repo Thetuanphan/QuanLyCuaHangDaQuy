@@ -13,13 +13,12 @@ using System.IO;
 
 namespace shoppingManagement
 {
-    public partial class Admin_Thongkedoanhthu : Form
+    public partial class Hoa_Don : Form
     {
-        public Admin_Thongkedoanhthu()
+        public Hoa_Don()
         {
             InitializeComponent();
         }
-
 
         private void lapbc_Click(object sender, EventArgs e)
         {
@@ -33,22 +32,24 @@ namespace shoppingManagement
             OracleConnection con = new OracleConnection(connstr);
             try
             {
-                string m = cthang.Text;
+                string m = choadon.Text;
 
-                string sql = "Select * from HOADON where to_char(thoigianlap, 'mm') = " + Int32.Parse(m);
+                string sql = "Select * from HOADON join CTHD using (MaHD) join SANPHAM using (MaSP) " +
+                    "join NGUYENVATLIEU using (MaVL) where MaHD = 'HD10'";
 
-                OracleDataAdapter adapter1 = new OracleDataAdapter(sql, con);
+                OracleDataAdapter adapter = new OracleDataAdapter(sql, con);
 
+                DataSet s1 = new DataSet();
+                adapter.Fill(s1);
 
-                DataSet s = new DataSet();
-                adapter1.Fill(s);
-
-                baocaothang sr = new baocaothang();
-                sr.SetDataSource(s.Tables["table"]);
+                CrystalReport1 sr = new CrystalReport1();
+                sr.SetDataSource(s1.Tables["table1"]);
                 MessageBox.Show(sr.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
 
                 crystalReportViewer2.ReportSource = sr;
             }
+
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

@@ -16,7 +16,7 @@ namespace shoppingManagement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Admin_Thongkedoanhthu());
+            Application.Run(new Hoa_Don());
         }
     }
 }

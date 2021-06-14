@@ -51,7 +51,7 @@ namespace shoppingManagement
             this.lapbc.OnHoverTextColor = System.Drawing.Color.White;
             this.lapbc.Size = new System.Drawing.Size(166, 39);
             this.lapbc.TabIndex = 84;
-            this.lapbc.Text = "Làm mới";
+            this.lapbc.Text = "Lập báo cáo";
             this.lapbc.TextColor = System.Drawing.Color.Black;
             this.lapbc.UseVisualStyleBackColor = true;
             this.lapbc.Click += new System.EventHandler(this.lapbc_Click);
