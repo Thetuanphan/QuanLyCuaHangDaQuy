@@ -56,6 +56,8 @@
             this.xoasanpham = new ePOSOne.btnProduct.Button_WOC();
             this.themsanpham = new ePOSOne.btnProduct.Button_WOC();
             this.quayve = new ePOSOne.btnProduct.Button_WOC();
+            this.label12 = new System.Windows.Forms.Label();
+            this.DVT = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -104,7 +106,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(25, 170);
+            this.label7.Location = new System.Drawing.Point(25, 141);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(127, 19);
             this.label7.TabIndex = 43;
@@ -114,7 +116,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(25, 102);
+            this.label3.Location = new System.Drawing.Point(25, 73);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(116, 19);
             this.label3.TabIndex = 41;
@@ -136,38 +138,17 @@
             this.MaVL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MaVL.FormattingEnabled = true;
             this.MaVL.Items.AddRange(new object[] {
-            "Vàng 999",
-            "Vàng 24K",
-            "Vàng trắng 10K",
-            "Vàng trắng 14K",
-            "Vàng trắng 18K",
-            "Vàng 9K",
-            "Vàng 10K",
-            "Vàng 14K",
-            "Vàng 18K",
-            "Vàng hồng 10K",
-            "Vàng hồng 14K",
-            "Vàng hồng 18K",
-            "Vàng Y 750",
-            "Vàng Y 925",
-            "Vàng Non",
-            "Bạc ta",
-            "Bạc 925",
-            "Bạc Thái",
-            "Bạc Y",
-            "Kim cương",
-            "Ruby",
-            "Sapphire",
-            "Emerald",
-            "Spinel",
-            "Thạch anh",
-            "Garnet",
-            "Topaz",
-            "Hematite",
-            "Bạch kim",
-            "Titanium",
-            "VL1"});
-            this.MaVL.Location = new System.Drawing.Point(164, 171);
+            "VL01",
+            "VL02",
+            "VL03",
+            "VL04",
+            "VL05",
+            "VL06",
+            "VL07",
+            "VL08",
+            "VL09",
+            "VL10"});
+            this.MaVL.Location = new System.Drawing.Point(164, 142);
             this.MaVL.Name = "MaVL";
             this.MaVL.Size = new System.Drawing.Size(171, 21);
             this.MaVL.TabIndex = 39;
@@ -192,7 +173,8 @@
             this.MaSP.IsPassword = false;
             this.MaSP.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.MaSP.LineThickness = 2;
-            this.MaSP.Location = new System.Drawing.Point(164, 99);
+            this.MaSP.Location = new System.Drawing.Point(164, 70);
+            this.MaSP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaSP.MaxLength = 32767;
             this.MaSP.Name = "MaSP";
             this.MaSP.OnFocusedColor = System.Drawing.Color.Black;
@@ -346,9 +328,6 @@
             this.LoaiTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LoaiTimKiem.FormattingEnabled = true;
             this.LoaiTimKiem.Items.AddRange(new object[] {
-            "TenSP",
-            "TenVL",
-            "TenDT",
             "MaSP",
             "MaVL",
             "MaDT"});
@@ -379,6 +358,7 @@
             this.TraCuu.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.TraCuu.LineThickness = 2;
             this.TraCuu.Location = new System.Drawing.Point(516, 25);
+            this.TraCuu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TraCuu.MaxLength = 32767;
             this.TraCuu.Name = "TraCuu";
             this.TraCuu.OnFocusedColor = System.Drawing.Color.Black;
@@ -516,12 +496,37 @@
             this.quayve.UseVisualStyleBackColor = true;
             this.quayve.Click += new System.EventHandler(this.quayve_Click);
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(25, 184);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(92, 19);
+            this.label12.TabIndex = 71;
+            this.label12.Text = "Đơn vị tính";
+            // 
+            // DVT
+            // 
+            this.DVT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DVT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DVT.FormattingEnabled = true;
+            this.DVT.Items.AddRange(new object[] {
+            "Cai",
+            "Vien"});
+            this.DVT.Location = new System.Drawing.Point(164, 182);
+            this.DVT.Name = "DVT";
+            this.DVT.Size = new System.Drawing.Size(171, 21);
+            this.DVT.TabIndex = 72;
+            // 
             // Admin_Sanpham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1017, 632);
+            this.Controls.Add(this.DVT);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.timkiem);
             this.Controls.Add(this.TraCuu);
             this.Controls.Add(this.label11);
@@ -592,5 +597,7 @@
         private System.Windows.Forms.Label label11;
         private JMaterialTextbox.JMaterialTextbox TraCuu;
         private ePOSOne.btnProduct.Button_WOC timkiem;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox DVT;
     }
 }

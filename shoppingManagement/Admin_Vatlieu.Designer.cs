@@ -81,6 +81,7 @@ namespace shoppingManagement
             this.TraCuu.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.TraCuu.LineThickness = 2;
             this.TraCuu.Location = new System.Drawing.Point(515, 38);
+            this.TraCuu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TraCuu.MaxLength = 32767;
             this.TraCuu.Name = "TraCuu";
             this.TraCuu.OnFocusedColor = System.Drawing.Color.Black;
@@ -167,6 +168,7 @@ namespace shoppingManagement
             this.MaVL.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.MaVL.LineThickness = 2;
             this.MaVL.Location = new System.Drawing.Point(163, 147);
+            this.MaVL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaVL.MaxLength = 32767;
             this.MaVL.Name = "MaVL";
             this.MaVL.OnFocusedColor = System.Drawing.Color.Black;
@@ -310,6 +312,7 @@ namespace shoppingManagement
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(562, 503);
             this.dataGridView1.TabIndex = 71;
+            this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
             // 
             // Admin_Vatlieu
             // 

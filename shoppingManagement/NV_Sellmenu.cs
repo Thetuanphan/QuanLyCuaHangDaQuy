@@ -14,7 +14,7 @@ namespace shoppingManagement
     public partial class NV_Sellmenu : Form
     {
         private double grandTotal=0;
-        public NV_Sellmenu(string user,string pass ) 
+        public NV_Sellmenu(string user, string pass, string makh) 
         {
             InitializeComponent();
             lblUser.Text = user;
@@ -40,32 +40,34 @@ namespace shoppingManagement
 
         private void Form6_Load(object sender, EventArgs e)
         {
-           /* string connstr = "Data Source=(DESCRIPTION=" +
-         "(ADDRESS = (PROTOCOL = TCP)(HOST = DESKTOP-2V34OVD)(PORT = 1521))" +
-          "(CONNECT_DATA =" +
-             "(SERVER = DEDICATED)" +
-             "(SERVICE_NAME = XE)" +
-     ")" +
-     "); User Id=HR; Password=hr";
-            OracleConnection con = new OracleConnection(connstr);
-            try
-            {
+            // TODO: This line of code loads data into the 'dataSet1.SANPHAM' table. You can move, or remove it, as needed.
+            this.sANPHAMTableAdapter.Fill(this.dataSet1.SANPHAM);
+            /* string connstr = "Data Source=(DESCRIPTION=" +
+          "(ADDRESS = (PROTOCOL = TCP)(HOST = DESKTOP-2V34OVD)(PORT = 1521))" +
+           "(CONNECT_DATA =" +
+              "(SERVER = DEDICATED)" +
+              "(SERVICE_NAME = XE)" +
+      ")" +
+      "); User Id=HR; Password=hr";
+             OracleConnection con = new OracleConnection(connstr);
+             try
+             {
 
 
-                string sql = "Select * from product";
+                 string sql = "Select * from product";
 
-                OracleDataAdapter adapter = new OracleDataAdapter(sql, con);
+                 OracleDataAdapter adapter = new OracleDataAdapter(sql, con);
 
 
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
-                dataGridView1.DataSource = dt;
+                 DataTable dt = new DataTable();
+                 adapter.Fill(dt);
+                 dataGridView1.DataSource = dt;
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }*/
+             }
+             catch (Exception ex)
+             {
+                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+             }*/
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -186,7 +188,7 @@ namespace shoppingManagement
         private void button5_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Login_Stuff f3 = new Login_Stuff();
+            Login_NV f3 = new Login_NV();
             f3.ShowDialog();
         }
 

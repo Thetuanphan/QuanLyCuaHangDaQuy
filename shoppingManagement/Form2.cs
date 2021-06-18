@@ -7,20 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 using Oracle.ManagedDataAccess.Client;
 using System.IO;
 
 namespace shoppingManagement
 {
-    public partial class Hoa_Don : Form
+    public partial class Form2 : Form
     {
-        public Hoa_Don()
+        public Form2()
         {
             InitializeComponent();
         }
 
-        private void lapbc_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             string connstr = "Data Source=(DESCRIPTION=" +
             "(ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))" +
@@ -32,27 +31,38 @@ namespace shoppingManagement
             OracleConnection con = new OracleConnection(connstr);
             try
             {
-                string m = choadon.Text;
+                // string m = cthang.Text;
 
-                string sql = "Select * from HOADON join CTHD using (MaHD) join SANPHAM using (MaSP) " +
-                    "join NGUYENVATLIEU using (MaVL) where MaHD = 'HD10'";
+                hoadon sr = new hoadon();
 
-                OracleDataAdapter adapter = new OracleDataAdapter(sql, con);
+                string sql = "Select * from HOADON where MaHD = 'HD10'";
 
                 DataSet s1 = new DataSet();
-                adapter.Fill(s1);
 
-                CrystalReport1 sr = new CrystalReport1();
-                sr.SetDataSource(s1.Tables["table1"]);
-                MessageBox.Show(sr.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                OracleDataAdapter adapter1 = new OracleDataAdapter(sql, con);
 
 
-                crystalReportViewer2.ReportSource = sr;
+                adapter1.Fill(s1, "HOADON");
+                DataTable dt = s1.Tables["HOADON"];
+                sr.SetDataSource(s1.Tables["HOADON"]);
+                crystalReportViewer1.ReportSource = sr;
+                crystalReportViewer1.Refresh();
+
+
+                /*
+                dichvu sr1 = new dichvu();
+                //sr1.SetDataSource(s1.Tables["table1"]);
+                sr1.SetDataSource(s1.DataSet);
+                crystalReportViewer2.ReportSource = sr1;
+                crystalReportViewer2.Refresh(); */
             }
-
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                con.Close();
             }
         }
     }

@@ -120,7 +120,7 @@ namespace shoppingManagement
             {
 
                 string sql = "INSERT INTO NHANVIEN (MaNV, MaQL, TenNV, ChucVu, NgaySinh, GioiTinh, DiaChi, SDT, NgayVaoLam) values " +
-                    "(" + "'" + MaNV.TextName + "','" + MaQL.TextName + "','" + TenNV.TextName + "','" + ChucVu.TextName + "', TO_DATE('" + dSinh.TextName + "','dd/mm/yyyy'),'" + GioiTinh.Text + "','" + DiaChi.TextName + "'," + Int32.Parse(sdt.TextName) + "," + " TO_DATE('" + dVaoLam.TextName + "','dd/mm/yyyy')" +  ")";
+                    "(" + "'" + MaNV.TextName + "','" + MaQL.TextName + "','" + TenNV.TextName + "','" + ChucVu.TextName + "', TO_DATE('" + dSinh.TextName + "','dd/mm/yyyy hh:mi:ss AM'),'" + GioiTinh.Text + "','" + DiaChi.TextName + "'," + Int32.Parse(sdt.TextName) + "," + " TO_DATE('" + dVaoLam.TextName + "','dd/mm/yyyy hh:mi:ss AM')" +  ")";
                 OracleCommand cmd = new OracleCommand(sql, con);
 
                 con.Open();
@@ -150,86 +150,103 @@ namespace shoppingManagement
 
         private void xoa_Click(object sender, EventArgs e)
         {
-            string connstr = "Data Source=(DESCRIPTION=" +
+            if (MessageBox.Show("Bạn có chắc chắn xóa?", "Xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                string connstr = "Data Source=(DESCRIPTION=" +
             "(ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))" +
             "(CONNECT_DATA =" +
             "(SERVER = DEDICATED)" +
             "(SERVICE_NAME = orcl)" + ")" +
             "); User Id=ttp; Password=123456Az";
-            OracleConnection con = new OracleConnection(connstr);
+                OracleConnection con = new OracleConnection(connstr);
 
-            try
-            {
-                string sql = "DELETE FROM NHANVIEN Where MaNV=" + "'" + MaNV.TextName + "'";
-                OracleCommand cmd = new OracleCommand(sql, con);
+                try
+                {
+                    string sql = "DELETE FROM NHANVIEN Where MaNV=" + "'" + MaNV.TextName + "'";
+                    OracleCommand cmd = new OracleCommand(sql, con);
 
-                con.Open();
+                    con.Open();
 
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Xóa nhân viên thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Xóa nhân viên thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                OracleDataAdapter adapter = new OracleDataAdapter("select * from NHANVIEN order by MaNV", con);
-                DataTable dt = new DataTable();
+                    OracleDataAdapter adapter = new OracleDataAdapter("select * from NHANVIEN order by MaNV", con);
+                    DataTable dt = new DataTable();
 
-                adapter.Fill(dt);
+                    adapter.Fill(dt);
 
 
-                dataGridView1.DataSource = dt;
+                    dataGridView1.DataSource = dt;
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                finally
+                {
+                    con.Close();
+                }
             }
 
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            finally
-            {
-                con.Close();
+                MessageBox.Show("Dữ liệu chưa được xóa", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
         private void capnhat_Click(object sender, EventArgs e)
         {
-            string connstr = "Data Source=(DESCRIPTION=" +
+            if (MessageBox.Show("Bạn có chắc chắn cập nhật?", "Cập nhật", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                string connstr = "Data Source=(DESCRIPTION=" +
             "(ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))" +
             "(CONNECT_DATA =" +
             "(SERVER = DEDICATED)" +
             "(SERVICE_NAME = orcl)" + ")" +
             "); User Id=ttp; Password=123456Az";
-            OracleConnection con = new OracleConnection(connstr);
+                OracleConnection con = new OracleConnection(connstr);
 
-            try
-            {
-                string sql = "update NHANVIEN" +
-                     " SET " + "MaQL= '" + MaQL.Text + "', TenNV='" + TenNV.TextName + "', ChucVu='" + ChucVu.TextName + "', NgaySinh=" + "TO_DATE('" + dSinh.TextName + "', 'dd/mm/yyyy')" + ", GioiTinh='" + GioiTinh.Text + "', DiaChi='" + DiaChi.TextName + "', SDT=" + sdt.TextName + ", NgayVaoLam= " + "TO_DATE('" + dVaoLam.TextName + "', 'dd/mm/yyyy')" +
-                    " where MaNV ='" + MaNV.TextName + "'";
+                try
+                {
+                    string sql = "update NHANVIEN" +
+                         " SET " + "MaQL= '" + MaQL.Text + "', TenNV='" + TenNV.TextName + "', ChucVu='" + ChucVu.TextName + "', NgaySinh=" + "TO_DATE('" + dSinh.TextName + "', 'dd/mm/yyyy hh:mi:ss AM')" + ", GioiTinh='" + GioiTinh.Text + "', DiaChi='" + DiaChi.TextName + "', SDT=" + sdt.TextName + ", NgayVaoLam= " + "TO_DATE('" + dVaoLam.TextName + "', 'dd/mm/yyyy hh:mi:ss AM')" +
+                        " where MaNV ='" + MaNV.TextName + "'";
 
-                /* string sql = "update NHANVIEN SET NgaySinh=" + "TO_DATE('" + dSinh.TextName + "','dd-mm-yyy')" + "where MaNV='" + MaNV.TextName + "'"; */
-                OracleCommand cmd = new OracleCommand(sql, con);
+                    /* string sql = "update NHANVIEN SET NgaySinh=" + "TO_DATE('" + dSinh.TextName + "','dd-mm-yyy')" + "where MaNV='" + MaNV.TextName + "'"; */
+                    OracleCommand cmd = new OracleCommand(sql, con);
 
-                con.Open();
+                    con.Open();
 
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Cập nhật nhân viên thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Cập nhật nhân viên thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                OracleDataAdapter adapter = new OracleDataAdapter("select * from NHANVIEN order by MaNV", con);
-                DataTable dt = new DataTable();
+                    OracleDataAdapter adapter = new OracleDataAdapter("select * from NHANVIEN order by MaNV", con);
+                    DataTable dt = new DataTable();
 
-                adapter.Fill(dt);
+                    adapter.Fill(dt);
 
 
-                dataGridView1.DataSource = dt;
+                    dataGridView1.DataSource = dt;
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                finally
+                {
+                    con.Close();
+                }
             }
 
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Dữ liệu chưa được cập nhật", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
-            finally
-            {
-                con.Close();
-            }
+            
         }
 
         private void lammoi_Click(object sender, EventArgs e)

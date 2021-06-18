@@ -158,7 +158,7 @@ namespace shoppingManagement
             try
             {
                 string sql = "update NGUYENVATLIEU" +
-                     " SET " + "TenVL= '" + TenVL.TextName +
+                     " SET " + "TenVL= '" + TenVL.TextName + "'" +
                     " where MaVL ='" + MaVL.TextName + "'";
                 OracleCommand cmd = new OracleCommand(sql, con);
 
@@ -233,6 +233,12 @@ namespace shoppingManagement
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void dataGridView1_MouseClick(object sender, MouseEventArgs e)
+        {
+            MaVL.TextName = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            TenVL.TextName = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
         }
     }
 }

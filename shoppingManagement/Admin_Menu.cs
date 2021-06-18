@@ -89,5 +89,26 @@ namespace shoppingManagement
         {
 
         }
+
+        private void button_WOC1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Re_hoadon f4 = new Re_hoadon();
+            f4.ShowDialog();
+        }
+
+        private void button_WOC2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Re_Nhaphang f4 = new Re_Nhaphang();
+            f4.ShowDialog();
+        }
+
+        private void qlhoadon_Click(object sender, EventArgs e)
+        {
+            //this.Hide();
+            //Admin_Hoadon f4 = new Admin_Hoadon();
+            //f4.ShowDialog();
+        }
     }
 }

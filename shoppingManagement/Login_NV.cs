@@ -11,9 +11,9 @@ using Oracle.ManagedDataAccess.Client;
 
 namespace shoppingManagement
 {
-    public partial class Login_Stuff : Form
+    public partial class Login_NV : Form
     {
-        public Login_Stuff()
+        public Login_NV()
         {
             InitializeComponent();
         }
@@ -49,7 +49,7 @@ namespace shoppingManagement
                 if (data.Rows[0][0].ToString() == "1")
                 {
                     this.Hide();
-                    Admin_Menu f4 = new Admin_Menu();
+                    NV_Menu f4 = new NV_Menu(txtUsername.TextName, txtPassword.TextName);
                     f4.ShowDialog();
                 }
                 else

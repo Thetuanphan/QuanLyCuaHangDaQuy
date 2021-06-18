@@ -1,7 +1,7 @@
 ﻿
 namespace shoppingManagement
 {
-    partial class Hoa_Don
+    partial class Re_hoadon
     {
         /// <summary>
         /// Required designer variable.
@@ -30,9 +30,10 @@ namespace shoppingManagement
         private void InitializeComponent()
         {
             this.label3 = new System.Windows.Forms.Label();
-            this.choadon = new System.Windows.Forms.ComboBox();
             this.crystalReportViewer2 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.lapbc = new ePOSOne.btnProduct.Button_WOC();
+            this.MaHD = new JMaterialTextbox.JMaterialTextbox();
+            this.quayve = new ePOSOne.btnProduct.Button_WOC();
             this.SuspendLayout();
             // 
             // label3
@@ -41,30 +42,9 @@ namespace shoppingManagement
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(23, 97);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 19);
+            this.label3.Size = new System.Drawing.Size(151, 19);
             this.label3.TabIndex = 91;
-            this.label3.Text = "Chọn mã HD:";
-            // 
-            // choadon
-            // 
-            this.choadon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.choadon.FormattingEnabled = true;
-            this.choadon.Items.AddRange(new object[] {
-            "HD1",
-            "HD2",
-            "HD3",
-            "HD4",
-            "HD5",
-            "HD6",
-            "HD7",
-            "HD8",
-            "HD9",
-            "HD10",
-            "HD11"});
-            this.choadon.Location = new System.Drawing.Point(27, 136);
-            this.choadon.Name = "choadon";
-            this.choadon.Size = new System.Drawing.Size(166, 21);
-            this.choadon.TabIndex = 90;
+            this.label3.Text = "Nhập mã hóa đơn:";
             // 
             // crystalReportViewer2
             // 
@@ -91,26 +71,70 @@ namespace shoppingManagement
             this.lapbc.OnHoverBorderColor = System.Drawing.Color.Black;
             this.lapbc.OnHoverButtonColor = System.Drawing.Color.Black;
             this.lapbc.OnHoverTextColor = System.Drawing.Color.White;
-            this.lapbc.Size = new System.Drawing.Size(166, 39);
+            this.lapbc.Size = new System.Drawing.Size(98, 39);
             this.lapbc.TabIndex = 88;
-            this.lapbc.Text = "Xem hóa đơn";
+            this.lapbc.Text = "Xem";
             this.lapbc.TextColor = System.Drawing.Color.Black;
             this.lapbc.UseVisualStyleBackColor = true;
             this.lapbc.Click += new System.EventHandler(this.lapbc_Click);
             // 
-            // Hoa_Don
+            // MaHD
+            // 
+            this.MaHD.BackColor = System.Drawing.Color.Transparent;
+            this.MaHD.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.MaHD.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.MaHD.ForeColors = System.Drawing.Color.Black;
+            this.MaHD.HintText = null;
+            this.MaHD.IsPassword = false;
+            this.MaHD.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.MaHD.LineThickness = 2;
+            this.MaHD.Location = new System.Drawing.Point(27, 138);
+            this.MaHD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaHD.MaxLength = 32767;
+            this.MaHD.Name = "MaHD";
+            this.MaHD.OnFocusedColor = System.Drawing.Color.Black;
+            this.MaHD.OnFocusedTextColor = System.Drawing.Color.Black;
+            this.MaHD.ReadOnly = false;
+            this.MaHD.Size = new System.Drawing.Size(98, 23);
+            this.MaHD.TabIndex = 92;
+            this.MaHD.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.MaHD.TextName = "";
+            // 
+            // quayve
+            // 
+            this.quayve.BorderColor = System.Drawing.Color.Black;
+            this.quayve.ButtonColor = System.Drawing.Color.White;
+            this.quayve.FlatAppearance.BorderSize = 0;
+            this.quayve.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.quayve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.quayve.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quayve.Location = new System.Drawing.Point(27, 12);
+            this.quayve.Name = "quayve";
+            this.quayve.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.quayve.OnHoverButtonColor = System.Drawing.Color.Black;
+            this.quayve.OnHoverTextColor = System.Drawing.Color.White;
+            this.quayve.Size = new System.Drawing.Size(80, 35);
+            this.quayve.TabIndex = 93;
+            this.quayve.Text = "<<";
+            this.quayve.TextColor = System.Drawing.Color.Black;
+            this.quayve.UseVisualStyleBackColor = true;
+            this.quayve.Click += new System.EventHandler(this.quayve_Click);
+            // 
+            // Re_hoadon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1017, 632);
+            this.Controls.Add(this.quayve);
+            this.Controls.Add(this.MaHD);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.choadon);
             this.Controls.Add(this.crystalReportViewer2);
             this.Controls.Add(this.lapbc);
-            this.Name = "Hoa_Don";
+            this.Name = "Re_hoadon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Hoa_Don";
+            this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,8 +143,9 @@ namespace shoppingManagement
         #endregion
 
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox choadon;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer2;
         private ePOSOne.btnProduct.Button_WOC lapbc;
+        private JMaterialTextbox.JMaterialTextbox MaHD;
+        private ePOSOne.btnProduct.Button_WOC quayve;
     }
 }

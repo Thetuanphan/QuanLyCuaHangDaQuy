@@ -1,7 +1,7 @@
 ﻿
 namespace shoppingManagement
 {
-    partial class Admin_Khachhang
+    partial class NV_Khachhang
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@ namespace shoppingManagement
         /// </summary>
         private void InitializeComponent()
         {
+            this.Loai = new System.Windows.Forms.ComboBox();
             this.dSinh = new JMaterialTextbox.JMaterialTextbox();
             this.sdt = new JMaterialTextbox.JMaterialTextbox();
             this.label16 = new System.Windows.Forms.Label();
@@ -37,7 +38,6 @@ namespace shoppingManagement
             this.GioiTinh = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.timkiem = new ePOSOne.btnProduct.Button_WOC();
             this.TraCuu = new JMaterialTextbox.JMaterialTextbox();
             this.label11 = new System.Windows.Forms.Label();
             this.LoaiTimKiem = new System.Windows.Forms.ComboBox();
@@ -46,20 +46,35 @@ namespace shoppingManagement
             this.Email = new JMaterialTextbox.JMaterialTextbox();
             this.TenKH = new JMaterialTextbox.JMaterialTextbox();
             this.MaKH = new JMaterialTextbox.JMaterialTextbox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.passtxt = new JMaterialTextbox.JMaterialTextbox();
+            this.usertxt = new JMaterialTextbox.JMaterialTextbox();
+            this.tieptuc = new ePOSOne.btnProduct.Button_WOC();
+            this.timkiem = new ePOSOne.btnProduct.Button_WOC();
             this.lammoi = new ePOSOne.btnProduct.Button_WOC();
             this.capnhat = new ePOSOne.btnProduct.Button_WOC();
             this.xoa = new ePOSOne.btnProduct.Button_WOC();
             this.them = new ePOSOne.btnProduct.Button_WOC();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.quayve = new ePOSOne.btnProduct.Button_WOC();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Loai = new System.Windows.Forms.ComboBox();
-            this.jMaterialTextbox1 = new JMaterialTextbox.JMaterialTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // Loai
+            // 
+            this.Loai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Loai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Loai.FormattingEnabled = true;
+            this.Loai.Items.AddRange(new object[] {
+            "VIP",
+            "Thuong"});
+            this.Loai.Location = new System.Drawing.Point(504, 272);
+            this.Loai.Name = "Loai";
+            this.Loai.Size = new System.Drawing.Size(92, 21);
+            this.Loai.TabIndex = 176;
             // 
             // dSinh
             // 
@@ -78,8 +93,8 @@ namespace shoppingManagement
             this.dSinh.OnFocusedColor = System.Drawing.Color.Black;
             this.dSinh.OnFocusedTextColor = System.Drawing.Color.Black;
             this.dSinh.ReadOnly = false;
-            this.dSinh.Size = new System.Drawing.Size(160, 23);
-            this.dSinh.TabIndex = 146;
+            this.dSinh.Size = new System.Drawing.Size(82, 23);
+            this.dSinh.TabIndex = 175;
             this.dSinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.dSinh.TextName = "";
             // 
@@ -101,7 +116,7 @@ namespace shoppingManagement
             this.sdt.OnFocusedTextColor = System.Drawing.Color.Black;
             this.sdt.ReadOnly = false;
             this.sdt.Size = new System.Drawing.Size(158, 18);
-            this.sdt.TabIndex = 145;
+            this.sdt.TabIndex = 174;
             this.sdt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.sdt.TextName = "";
             // 
@@ -112,7 +127,7 @@ namespace shoppingManagement
             this.label16.Location = new System.Drawing.Point(20, 275);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(46, 19);
-            this.label16.TabIndex = 144;
+            this.label16.TabIndex = 173;
             this.label16.Text = "SĐT:";
             // 
             // Diem
@@ -133,7 +148,7 @@ namespace shoppingManagement
             this.Diem.OnFocusedTextColor = System.Drawing.Color.Black;
             this.Diem.ReadOnly = false;
             this.Diem.Size = new System.Drawing.Size(61, 18);
-            this.Diem.TabIndex = 143;
+            this.Diem.TabIndex = 172;
             this.Diem.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Diem.TextName = "";
             // 
@@ -144,7 +159,7 @@ namespace shoppingManagement
             this.label15.Location = new System.Drawing.Point(278, 275);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(54, 19);
-            this.label15.TabIndex = 142;
+            this.label15.TabIndex = 171;
             this.label15.Text = "Điểm:";
             // 
             // GioiTinh
@@ -159,7 +174,7 @@ namespace shoppingManagement
             this.GioiTinh.Location = new System.Drawing.Point(392, 218);
             this.GioiTinh.Name = "GioiTinh";
             this.GioiTinh.Size = new System.Drawing.Size(92, 21);
-            this.GioiTinh.TabIndex = 141;
+            this.GioiTinh.TabIndex = 170;
             // 
             // label14
             // 
@@ -168,7 +183,7 @@ namespace shoppingManagement
             this.label14.Location = new System.Drawing.Point(20, 220);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(92, 19);
-            this.label14.TabIndex = 140;
+            this.label14.TabIndex = 169;
             this.label14.Text = "Ngày sinh:";
             // 
             // label2
@@ -178,30 +193,8 @@ namespace shoppingManagement
             this.label2.Location = new System.Drawing.Point(445, 274);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 19);
-            this.label2.TabIndex = 138;
+            this.label2.TabIndex = 168;
             this.label2.Text = "Loại: ";
-            // 
-            // timkiem
-            // 
-            this.timkiem.BackColor = System.Drawing.Color.White;
-            this.timkiem.BorderColor = System.Drawing.Color.Black;
-            this.timkiem.ButtonColor = System.Drawing.Color.Black;
-            this.timkiem.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.timkiem.FlatAppearance.BorderSize = 0;
-            this.timkiem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.timkiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.timkiem.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timkiem.Location = new System.Drawing.Point(790, 29);
-            this.timkiem.Name = "timkiem";
-            this.timkiem.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.timkiem.OnHoverButtonColor = System.Drawing.Color.White;
-            this.timkiem.OnHoverTextColor = System.Drawing.Color.Black;
-            this.timkiem.Size = new System.Drawing.Size(117, 36);
-            this.timkiem.TabIndex = 137;
-            this.timkiem.Text = "Tìm kiếm";
-            this.timkiem.TextColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.timkiem.UseVisualStyleBackColor = false;
-            this.timkiem.Click += new System.EventHandler(this.timkiem_Click);
             // 
             // TraCuu
             // 
@@ -221,7 +214,7 @@ namespace shoppingManagement
             this.TraCuu.OnFocusedTextColor = System.Drawing.Color.Black;
             this.TraCuu.ReadOnly = false;
             this.TraCuu.Size = new System.Drawing.Size(255, 23);
-            this.TraCuu.TabIndex = 136;
+            this.TraCuu.TabIndex = 166;
             this.TraCuu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.TraCuu.TextName = "";
             // 
@@ -232,7 +225,7 @@ namespace shoppingManagement
             this.label11.Location = new System.Drawing.Point(384, 32);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(119, 19);
-            this.label11.TabIndex = 135;
+            this.label11.TabIndex = 165;
             this.label11.Text = "Nhập từ khóa:";
             // 
             // LoaiTimKiem
@@ -247,7 +240,7 @@ namespace shoppingManagement
             this.LoaiTimKiem.Location = new System.Drawing.Point(282, 31);
             this.LoaiTimKiem.Name = "LoaiTimKiem";
             this.LoaiTimKiem.Size = new System.Drawing.Size(92, 21);
-            this.LoaiTimKiem.TabIndex = 134;
+            this.LoaiTimKiem.TabIndex = 164;
             // 
             // label6
             // 
@@ -256,7 +249,7 @@ namespace shoppingManagement
             this.label6.Location = new System.Drawing.Point(155, 30);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(121, 19);
-            this.label6.TabIndex = 133;
+            this.label6.TabIndex = 163;
             this.label6.Text = "Tìm kiếm theo:";
             // 
             // label5
@@ -266,7 +259,7 @@ namespace shoppingManagement
             this.label5.Location = new System.Drawing.Point(20, 374);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(150, 19);
-            this.label5.TabIndex = 132;
+            this.label5.TabIndex = 162;
             this.label5.Text = "Bảng khách hàng:";
             // 
             // Email
@@ -287,7 +280,7 @@ namespace shoppingManagement
             this.Email.OnFocusedTextColor = System.Drawing.Color.Black;
             this.Email.ReadOnly = false;
             this.Email.Size = new System.Drawing.Size(194, 18);
-            this.Email.TabIndex = 131;
+            this.Email.TabIndex = 161;
             this.Email.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Email.TextName = "";
             // 
@@ -309,7 +302,7 @@ namespace shoppingManagement
             this.TenKH.OnFocusedTextColor = System.Drawing.Color.Black;
             this.TenKH.ReadOnly = false;
             this.TenKH.Size = new System.Drawing.Size(190, 18);
-            this.TenKH.TabIndex = 130;
+            this.TenKH.TabIndex = 160;
             this.TenKH.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.TenKH.TextName = "";
             // 
@@ -331,9 +324,146 @@ namespace shoppingManagement
             this.MaKH.OnFocusedTextColor = System.Drawing.Color.Black;
             this.MaKH.ReadOnly = false;
             this.MaKH.Size = new System.Drawing.Size(82, 23);
-            this.MaKH.TabIndex = 128;
+            this.MaKH.TabIndex = 159;
             this.MaKH.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.MaKH.TextName = "";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(296, 220);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(79, 19);
+            this.label10.TabIndex = 154;
+            this.label10.Text = "Giới tính:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(390, 165);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(57, 19);
+            this.label9.TabIndex = 153;
+            this.label9.Text = "Email:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(20, 165);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(138, 19);
+            this.label8.TabIndex = 152;
+            this.label8.Text = "Tên khách hàng:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(20, 108);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(131, 19);
+            this.label3.TabIndex = 150;
+            this.label3.Text = "Mã khách hàng:";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(17, 396);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(983, 217);
+            this.dataGridView1.TabIndex = 149;
+            this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
+            // 
+            // passtxt
+            // 
+            this.passtxt.BackColor = System.Drawing.Color.Transparent;
+            this.passtxt.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.passtxt.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.passtxt.ForeColors = System.Drawing.Color.Transparent;
+            this.passtxt.HintText = null;
+            this.passtxt.IsPassword = false;
+            this.passtxt.LineBackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.passtxt.LineThickness = 2;
+            this.passtxt.Location = new System.Drawing.Point(994, 150);
+            this.passtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.passtxt.MaxLength = 32767;
+            this.passtxt.Name = "passtxt";
+            this.passtxt.OnFocusedColor = System.Drawing.Color.Black;
+            this.passtxt.OnFocusedTextColor = System.Drawing.Color.Black;
+            this.passtxt.ReadOnly = false;
+            this.passtxt.Size = new System.Drawing.Size(10, 10);
+            this.passtxt.TabIndex = 179;
+            this.passtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.passtxt.TextName = "";
+            // 
+            // usertxt
+            // 
+            this.usertxt.BackColor = System.Drawing.Color.Transparent;
+            this.usertxt.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.usertxt.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.usertxt.ForeColors = System.Drawing.Color.Transparent;
+            this.usertxt.HintText = null;
+            this.usertxt.IsPassword = false;
+            this.usertxt.LineBackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.usertxt.LineThickness = 2;
+            this.usertxt.Location = new System.Drawing.Point(994, 132);
+            this.usertxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.usertxt.MaxLength = 32767;
+            this.usertxt.Name = "usertxt";
+            this.usertxt.OnFocusedColor = System.Drawing.Color.Black;
+            this.usertxt.OnFocusedTextColor = System.Drawing.Color.Black;
+            this.usertxt.ReadOnly = false;
+            this.usertxt.Size = new System.Drawing.Size(10, 10);
+            this.usertxt.TabIndex = 178;
+            this.usertxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.usertxt.TextName = "";
+            // 
+            // tieptuc
+            // 
+            this.tieptuc.BorderColor = System.Drawing.Color.Black;
+            this.tieptuc.ButtonColor = System.Drawing.Color.White;
+            this.tieptuc.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.tieptuc.FlatAppearance.BorderSize = 0;
+            this.tieptuc.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.tieptuc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tieptuc.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tieptuc.Location = new System.Drawing.Point(897, 326);
+            this.tieptuc.Name = "tieptuc";
+            this.tieptuc.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.tieptuc.OnHoverButtonColor = System.Drawing.Color.Black;
+            this.tieptuc.OnHoverTextColor = System.Drawing.Color.White;
+            this.tieptuc.Size = new System.Drawing.Size(103, 39);
+            this.tieptuc.TabIndex = 180;
+            this.tieptuc.Text = "Tiếp Tục";
+            this.tieptuc.TextColor = System.Drawing.Color.Black;
+            this.tieptuc.UseVisualStyleBackColor = true;
+            this.tieptuc.Click += new System.EventHandler(this.tieptuc_Click);
+            // 
+            // timkiem
+            // 
+            this.timkiem.BackColor = System.Drawing.Color.White;
+            this.timkiem.BorderColor = System.Drawing.Color.Black;
+            this.timkiem.ButtonColor = System.Drawing.Color.Black;
+            this.timkiem.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.timkiem.FlatAppearance.BorderSize = 0;
+            this.timkiem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.timkiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.timkiem.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timkiem.Location = new System.Drawing.Point(790, 29);
+            this.timkiem.Name = "timkiem";
+            this.timkiem.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.timkiem.OnHoverButtonColor = System.Drawing.Color.White;
+            this.timkiem.OnHoverTextColor = System.Drawing.Color.Black;
+            this.timkiem.Size = new System.Drawing.Size(117, 36);
+            this.timkiem.TabIndex = 167;
+            this.timkiem.Text = "Tìm kiếm";
+            this.timkiem.TextColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.timkiem.UseVisualStyleBackColor = false;
+            this.timkiem.Click += new System.EventHandler(this.timkiem_Click);
             // 
             // lammoi
             // 
@@ -350,7 +480,7 @@ namespace shoppingManagement
             this.lammoi.OnHoverButtonColor = System.Drawing.Color.Black;
             this.lammoi.OnHoverTextColor = System.Drawing.Color.White;
             this.lammoi.Size = new System.Drawing.Size(79, 39);
-            this.lammoi.TabIndex = 126;
+            this.lammoi.TabIndex = 158;
             this.lammoi.Text = "Làm mới";
             this.lammoi.TextColor = System.Drawing.Color.Black;
             this.lammoi.UseVisualStyleBackColor = true;
@@ -365,13 +495,13 @@ namespace shoppingManagement
             this.capnhat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.capnhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.capnhat.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.capnhat.Location = new System.Drawing.Point(691, 326);
+            this.capnhat.Location = new System.Drawing.Point(397, 326);
             this.capnhat.Name = "capnhat";
             this.capnhat.OnHoverBorderColor = System.Drawing.Color.Black;
             this.capnhat.OnHoverButtonColor = System.Drawing.Color.White;
             this.capnhat.OnHoverTextColor = System.Drawing.Color.Black;
             this.capnhat.Size = new System.Drawing.Size(145, 38);
-            this.capnhat.TabIndex = 125;
+            this.capnhat.TabIndex = 157;
             this.capnhat.Text = "Cập nhật khách hàng";
             this.capnhat.TextColor = System.Drawing.Color.White;
             this.capnhat.UseVisualStyleBackColor = true;
@@ -386,13 +516,13 @@ namespace shoppingManagement
             this.xoa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.xoa.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xoa.Location = new System.Drawing.Point(862, 326);
+            this.xoa.Location = new System.Drawing.Point(568, 326);
             this.xoa.Name = "xoa";
             this.xoa.OnHoverBorderColor = System.Drawing.Color.Black;
             this.xoa.OnHoverButtonColor = System.Drawing.Color.White;
             this.xoa.OnHoverTextColor = System.Drawing.Color.Black;
             this.xoa.Size = new System.Drawing.Size(138, 38);
-            this.xoa.TabIndex = 124;
+            this.xoa.TabIndex = 156;
             this.xoa.Text = "Xóa khách hàng";
             this.xoa.TextColor = System.Drawing.Color.White;
             this.xoa.UseVisualStyleBackColor = true;
@@ -407,47 +537,17 @@ namespace shoppingManagement
             this.them.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.them.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.them.Location = new System.Drawing.Point(529, 326);
+            this.them.Location = new System.Drawing.Point(235, 326);
             this.them.Name = "them";
             this.them.OnHoverBorderColor = System.Drawing.Color.Black;
             this.them.OnHoverButtonColor = System.Drawing.Color.White;
             this.them.OnHoverTextColor = System.Drawing.Color.Black;
             this.them.Size = new System.Drawing.Size(138, 38);
-            this.them.TabIndex = 123;
+            this.them.TabIndex = 155;
             this.them.Text = "Thêm khách hàng";
             this.them.TextColor = System.Drawing.Color.White;
             this.them.UseVisualStyleBackColor = true;
             this.them.Click += new System.EventHandler(this.them_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(296, 220);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(79, 19);
-            this.label10.TabIndex = 122;
-            this.label10.Text = "Giới tính:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(390, 165);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(57, 19);
-            this.label9.TabIndex = 121;
-            this.label9.Text = "Email:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(20, 165);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(138, 19);
-            this.label8.TabIndex = 120;
-            this.label8.Text = "Tên khách hàng:";
             // 
             // quayve
             // 
@@ -464,74 +564,21 @@ namespace shoppingManagement
             this.quayve.OnHoverButtonColor = System.Drawing.Color.Black;
             this.quayve.OnHoverTextColor = System.Drawing.Color.White;
             this.quayve.Size = new System.Drawing.Size(76, 36);
-            this.quayve.TabIndex = 119;
+            this.quayve.TabIndex = 151;
             this.quayve.Text = "<<";
             this.quayve.TextColor = System.Drawing.Color.Black;
             this.quayve.UseVisualStyleBackColor = true;
             this.quayve.Click += new System.EventHandler(this.quayve_Click);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(20, 108);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 19);
-            this.label3.TabIndex = 118;
-            this.label3.Text = "Mã khách hàng:";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 396);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(983, 217);
-            this.dataGridView1.TabIndex = 117;
-            this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
-            // 
-            // Loai
-            // 
-            this.Loai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Loai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Loai.FormattingEnabled = true;
-            this.Loai.Items.AddRange(new object[] {
-            "VIP",
-            "Thuong"});
-            this.Loai.Location = new System.Drawing.Point(504, 272);
-            this.Loai.Name = "Loai";
-            this.Loai.Size = new System.Drawing.Size(92, 21);
-            this.Loai.TabIndex = 147;
-            // 
-            // jMaterialTextbox1
-            // 
-            this.jMaterialTextbox1.BackColor = System.Drawing.Color.Transparent;
-            this.jMaterialTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.jMaterialTextbox1.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.jMaterialTextbox1.ForeColors = System.Drawing.Color.Black;
-            this.jMaterialTextbox1.HintText = null;
-            this.jMaterialTextbox1.IsPassword = false;
-            this.jMaterialTextbox1.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.jMaterialTextbox1.LineThickness = 2;
-            this.jMaterialTextbox1.Location = new System.Drawing.Point(811, 201);
-            this.jMaterialTextbox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.jMaterialTextbox1.MaxLength = 32767;
-            this.jMaterialTextbox1.Name = "jMaterialTextbox1";
-            this.jMaterialTextbox1.OnFocusedColor = System.Drawing.Color.Black;
-            this.jMaterialTextbox1.OnFocusedTextColor = System.Drawing.Color.Black;
-            this.jMaterialTextbox1.ReadOnly = false;
-            this.jMaterialTextbox1.Size = new System.Drawing.Size(82, 23);
-            this.jMaterialTextbox1.TabIndex = 148;
-            this.jMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.jMaterialTextbox1.TextName = "";
-            // 
-            // Admin_Khachhang
+            // NV_Khachhang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1017, 632);
-            this.Controls.Add(this.jMaterialTextbox1);
+            this.Controls.Add(this.tieptuc);
+            this.Controls.Add(this.passtxt);
+            this.Controls.Add(this.usertxt);
             this.Controls.Add(this.Loai);
             this.Controls.Add(this.dSinh);
             this.Controls.Add(this.sdt);
@@ -560,10 +607,10 @@ namespace shoppingManagement
             this.Controls.Add(this.quayve);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Admin_Khachhang";
+            this.Name = "NV_Khachhang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Quản Lý Khách Hàng";
-            this.Load += new System.EventHandler(this.Admin_Khachhang_Load);
+            this.Text = "NV_Khachhang";
+            this.Load += new System.EventHandler(this.NV_Khachhang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -571,7 +618,7 @@ namespace shoppingManagement
         }
 
         #endregion
-
+        private System.Windows.Forms.ComboBox Loai;
         private JMaterialTextbox.JMaterialTextbox dSinh;
         private JMaterialTextbox.JMaterialTextbox sdt;
         private System.Windows.Forms.Label label16;
@@ -599,7 +646,8 @@ namespace shoppingManagement
         private ePOSOne.btnProduct.Button_WOC quayve;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox Loai;
-        private JMaterialTextbox.JMaterialTextbox jMaterialTextbox1;
+        private JMaterialTextbox.JMaterialTextbox passtxt;
+        private JMaterialTextbox.JMaterialTextbox usertxt;
+        private ePOSOne.btnProduct.Button_WOC tieptuc;
     }
 }

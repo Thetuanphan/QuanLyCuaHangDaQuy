@@ -79,7 +79,7 @@ namespace shoppingManagement
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Login_Stuff f3 = new Login_Stuff();
+            Login_NV f3 = new Login_NV();
             f3.ShowDialog();
         }
     }

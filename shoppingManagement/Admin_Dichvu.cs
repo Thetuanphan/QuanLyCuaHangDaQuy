@@ -114,84 +114,103 @@ namespace shoppingManagement
 
         private void xoa_Click(object sender, EventArgs e)
         {
-            string connstr = "Data Source=(DESCRIPTION=" +
+            if (MessageBox.Show("Bạn có chắc chắn xóa?", "Xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                string connstr = "Data Source=(DESCRIPTION=" +
             "(ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))" +
             "(CONNECT_DATA =" +
             "(SERVER = DEDICATED)" +
             "(SERVICE_NAME = orcl)" + ")" +
             "); User Id=ttp; Password=123456Az";
-            OracleConnection con = new OracleConnection(connstr);
+                OracleConnection con = new OracleConnection(connstr);
 
-            try
-            {
-                string sql = "DELETE FROM DICHVU Where Madv=" + "'" + MaDV.TextName + "'";
-                OracleCommand cmd = new OracleCommand(sql, con);
+                try
+                {
+                    string sql = "DELETE FROM DICHVU Where Madv=" + "'" + MaDV.TextName + "'";
+                    OracleCommand cmd = new OracleCommand(sql, con);
 
-                con.Open();
+                    con.Open();
 
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Xóa dịch vụ thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Xóa dịch vụ thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                OracleDataAdapter adapter = new OracleDataAdapter("select * from DICHVU order by MaDV", con);
-                DataTable dt = new DataTable();
+                    OracleDataAdapter adapter = new OracleDataAdapter("select * from DICHVU order by MaDV", con);
+                    DataTable dt = new DataTable();
 
-                adapter.Fill(dt);
+                    adapter.Fill(dt);
 
 
-                dataGridView1.DataSource = dt;
+                    dataGridView1.DataSource = dt;
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                finally
+                {
+                    con.Close();
+                }
             }
 
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Dữ liệu chưa được xóa", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
-            finally
-            {
-                con.Close();
-            }
+            
         }
 
         private void capnhat_Click(object sender, EventArgs e)
         {
-            string connstr = "Data Source=(DESCRIPTION=" +
+            if (MessageBox.Show("Bạn có chắc chắn cập nhật?", "Cập nhật", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                string connstr = "Data Source=(DESCRIPTION=" +
             "(ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))" +
             "(CONNECT_DATA =" +
             "(SERVER = DEDICATED)" +
             "(SERVICE_NAME = orcl)" + ")" +
             "); User Id=ttp; Password=123456Az";
-            OracleConnection con = new OracleConnection(connstr);
+                OracleConnection con = new OracleConnection(connstr);
 
-            try
-            {
-                string sql = "update DICHVU" +
-                     " SET " + "TenDV= '" + TenDV.TextName + "', DonGia=" + Int32.Parse(DonGia.TextName) +
-                    " where MaDV ='" + MaDV.TextName + "'";
-                OracleCommand cmd = new OracleCommand(sql, con);
+                try
+                {
+                    string sql = "update DICHVU" +
+                         " SET " + "TenDV= '" + TenDV.TextName + "', TienDV=" + Int32.Parse(DonGia.TextName) +
+                        " where MaDV ='" + MaDV.TextName + "'";
+                    OracleCommand cmd = new OracleCommand(sql, con);
 
-                con.Open();
+                    con.Open();
 
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Cập nhật dịch vụ thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Cập nhật dịch vụ thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                OracleDataAdapter adapter = new OracleDataAdapter("select * from DICHVU order by MaDV", con);
-                DataTable dt = new DataTable();
+                    OracleDataAdapter adapter = new OracleDataAdapter("select * from DICHVU order by MaDV", con);
+                    DataTable dt = new DataTable();
 
-                adapter.Fill(dt);
+                    adapter.Fill(dt);
 
 
-                dataGridView1.DataSource = dt;
+                    dataGridView1.DataSource = dt;
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                finally
+                {
+                    con.Close();
+                }
             }
 
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Dữ liệu chưa được cập nhật", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
-            finally
-            {
-                con.Close();
-            }
+            
+            
         }
 
         private void lammoi_Click(object sender, EventArgs e)
@@ -214,8 +233,8 @@ namespace shoppingManagement
             try
             {
 
-                string sql = "Select * from DICHVU where MaDV='" + TraCuu.TextName + "' order by MaDV";
-                string sql1 = "Select * from DICHVU where TenDV='" + TraCuu.TextName + "' order by MaDV";
+                string sql = "Select * from DICHVU where MaDV=UPPER('" + TraCuu.TextName + "') order by MaDV";
+                string sql1 = "Select * from DICHVU where TenDV=UPPER('" + TraCuu.TextName + "') order by MaDV";
 
                 OracleDataAdapter adapter = new OracleDataAdapter(sql, con);
                 OracleDataAdapter adapter1 = new OracleDataAdapter(sql1, con);

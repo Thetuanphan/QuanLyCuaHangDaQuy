@@ -84,9 +84,9 @@ namespace shoppingManagement
             MaVL.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
             MaDT.TextName = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
             TenSP.TextName = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
-            SLTon.TextName = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
-            DonGia.TextName = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
-            DonGia.TextName = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
+            DVT.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+            SLTon.TextName = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
+            DonGia.TextName = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
         }
 
         private void themsanpham_Click(object sender, EventArgs e)
@@ -105,8 +105,8 @@ namespace shoppingManagement
             try
             {
 
-                string sql = "INSERT INTO SANPHAM (MaSP, MaVL, MaDT, TenSP, DonGia, SLTon) values " +
-                    "(" + "'" + MaSP.TextName + "','" + MaVL.Text + "','" + MaDT.TextName + "','" + TenSP.TextName + "'," + Int32.Parse(DonGia.TextName) + "," + Int32.Parse(SLTon.TextName) + ")";
+                string sql = "INSERT INTO SANPHAM (MaSP, MaVL, MaDT, TenSP, DonGia, SLTon, DVT) values " +
+                    "(" + "'" + MaSP.TextName + "','" + MaVL.Text + "','" + MaDT.TextName + "','" + TenSP.TextName + "'," + Int32.Parse(DonGia.TextName) + "," + Int32.Parse(SLTon.TextName) + ",'" + DVT.Text + "')";
                 OracleCommand cmd = new OracleCommand(sql, con);
 
                 con.Open();
@@ -186,44 +186,67 @@ namespace shoppingManagement
 
         private void capnhatsanpham_Click(object sender, EventArgs e)
         {
-            string connstr = "Data Source=(DESCRIPTION=" +
+            if (MessageBox.Show("Bạn có chắc chắn cập nhật?", "Cập nhật", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                string connstr = "Data Source=(DESCRIPTION=" +
             "(ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))" +
             "(CONNECT_DATA =" +
             "(SERVER = DEDICATED)" +
             "(SERVICE_NAME = orcl)" + ")" +
             "); User Id=ttp; Password=123456Az";
-            OracleConnection con = new OracleConnection(connstr);
+                OracleConnection con = new OracleConnection(connstr);
 
-            try
-            {
-                string sql = "update SANPHAM" +
-                     " SET " + "MaVL= '" + MaVL.Text + "', TenSP='" + TenSP.TextName + "', SLTon=" + SLTon.TextName + ", DonGia=" + DonGia.TextName + ", MaDT=" + MaDT.TextName +
-                    " where MaSP ='" + MaSP.TextName + "'";
-                OracleCommand cmd = new OracleCommand(sql, con);
+                try
+                {
 
-                con.Open();
+                    try
+                    {
+                        string sql = "update SANPHAM" +
+                             " SET " + "MaVL= '" + MaVL.Text + "', TenSP='" + TenSP.TextName + "', SLTon=" + SLTon.TextName + ", DonGia=" + DonGia.TextName + ", MaDT='" + MaDT.TextName + "', DVT='" + DVT.Text + "'" +
+                            " where MaSP ='" + MaSP.TextName + "'";
+                        OracleCommand cmd = new OracleCommand(sql, con);
 
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Cập nhật sản phẩm thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        con.Open();
 
-                OracleDataAdapter adapter = new OracleDataAdapter("select * from SANPHAM order by MaSP", con);
-                DataTable dt = new DataTable();
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Cập nhật sản phẩm thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                adapter.Fill(dt);
+                        OracleDataAdapter adapter = new OracleDataAdapter("select * from SANPHAM order by MaSP", con);
+                        DataTable dt = new DataTable();
+
+                        adapter.Fill(dt);
 
 
-                dataGridView1.DataSource = dt;
+                        dataGridView1.DataSource = dt;
+                    }
+
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                    finally
+                    {
+                        con.Close();
+                    }
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                finally
+                {
+                    con.Close();
+                }
             }
 
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Dữ liệu chưa được cập nhật", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
-            finally
-            {
-                con.Close();
-            }
+            
         }
 
         private void lammoi_Click(object sender, EventArgs e)
@@ -246,9 +269,9 @@ namespace shoppingManagement
             try
             {
 
-                string sql = "Select * from SANPHAM where MaSP='" + TraCuu.TextName + "' order by MaSP";
-                string sql1 = "Select * from NGUYENVATLIEU where MaVL='" + TraCuu.TextName + "' order by MaVL";
-                string sql2 = "Select * from DOITAC where MaDT='" + TraCuu.TextName + "' order by MaDT";
+                string sql = "Select * from SANPHAM where MaSP=UPPER('" + TraCuu.TextName + "') order by MaSP";
+                string sql1 = "Select * from NGUYENVATLIEU where MaVL=UPPER('" + TraCuu.TextName + "') order by MaVL";
+                string sql2 = "Select * from DOITAC where MaDT=UPPER('" + TraCuu.TextName + "') order by MaDT";
 
                 OracleDataAdapter adapter = new OracleDataAdapter(sql, con);
                 OracleDataAdapter adapter1 = new OracleDataAdapter(sql1, con);
@@ -268,7 +291,7 @@ namespace shoppingManagement
                         dataGridView2.DataSource = dt1;
                     }
                     else {
-                        if (LoaiTimKiem.Text == "MaSP")
+                        if (LoaiTimKiem.Text == "MaDT")
                         {
                             DataTable dt2 = new DataTable();
                             adapter2.Fill(dt2);

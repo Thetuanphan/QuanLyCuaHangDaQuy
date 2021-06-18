@@ -430,7 +430,7 @@ namespace shoppingManagement
             this.dVaoLam.OnFocusedColor = System.Drawing.Color.Black;
             this.dVaoLam.OnFocusedTextColor = System.Drawing.Color.Black;
             this.dVaoLam.ReadOnly = false;
-            this.dVaoLam.Size = new System.Drawing.Size(123, 23);
+            this.dVaoLam.Size = new System.Drawing.Size(82, 23);
             this.dVaoLam.TabIndex = 103;
             this.dVaoLam.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.dVaoLam.TextName = "";
@@ -534,14 +534,14 @@ namespace shoppingManagement
             this.dSinh.IsPassword = false;
             this.dSinh.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dSinh.LineThickness = 2;
-            this.dSinh.Location = new System.Drawing.Point(133, 223);
+            this.dSinh.Location = new System.Drawing.Point(123, 224);
             this.dSinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dSinh.MaxLength = 32767;
             this.dSinh.Name = "dSinh";
             this.dSinh.OnFocusedColor = System.Drawing.Color.Black;
             this.dSinh.OnFocusedTextColor = System.Drawing.Color.Black;
             this.dSinh.ReadOnly = false;
-            this.dSinh.Size = new System.Drawing.Size(123, 23);
+            this.dSinh.Size = new System.Drawing.Size(82, 23);
             this.dSinh.TabIndex = 116;
             this.dSinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.dSinh.TextName = "";

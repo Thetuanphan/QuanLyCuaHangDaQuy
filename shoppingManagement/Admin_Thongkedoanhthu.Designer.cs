@@ -30,9 +30,10 @@ namespace shoppingManagement
         private void InitializeComponent()
         {
             this.lapbc = new ePOSOne.btnProduct.Button_WOC();
-            this.crystalReportViewer2 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.cthang = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.quayve = new ePOSOne.btnProduct.Button_WOC();
+            this.crystalReportViewer2 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.SuspendLayout();
             // 
             // lapbc
@@ -55,17 +56,6 @@ namespace shoppingManagement
             this.lapbc.TextColor = System.Drawing.Color.Black;
             this.lapbc.UseVisualStyleBackColor = true;
             this.lapbc.Click += new System.EventHandler(this.lapbc_Click);
-            // 
-            // crystalReportViewer2
-            // 
-            this.crystalReportViewer2.ActiveViewIndex = -1;
-            this.crystalReportViewer2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crystalReportViewer2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer2.Location = new System.Drawing.Point(225, 12);
-            this.crystalReportViewer2.Name = "crystalReportViewer2";
-            this.crystalReportViewer2.Size = new System.Drawing.Size(780, 608);
-            this.crystalReportViewer2.TabIndex = 85;
-            this.crystalReportViewer2.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
             // cthang
             // 
@@ -99,15 +89,49 @@ namespace shoppingManagement
             this.label3.TabIndex = 87;
             this.label3.Text = "Chọn tháng báo cáo:";
             // 
+            // quayve
+            // 
+            this.quayve.BorderColor = System.Drawing.Color.Black;
+            this.quayve.ButtonColor = System.Drawing.Color.White;
+            this.quayve.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.quayve.FlatAppearance.BorderSize = 0;
+            this.quayve.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.quayve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.quayve.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quayve.Location = new System.Drawing.Point(12, 12);
+            this.quayve.Name = "quayve";
+            this.quayve.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.quayve.OnHoverButtonColor = System.Drawing.Color.Black;
+            this.quayve.OnHoverTextColor = System.Drawing.Color.White;
+            this.quayve.Size = new System.Drawing.Size(76, 36);
+            this.quayve.TabIndex = 88;
+            this.quayve.Text = "<<";
+            this.quayve.TextColor = System.Drawing.Color.Black;
+            this.quayve.UseVisualStyleBackColor = true;
+            this.quayve.Click += new System.EventHandler(this.quayve_Click);
+            // 
+            // crystalReportViewer2
+            // 
+            this.crystalReportViewer2.ActiveViewIndex = -1;
+            this.crystalReportViewer2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer2.Location = new System.Drawing.Point(225, 12);
+            this.crystalReportViewer2.Name = "crystalReportViewer2";
+            this.crystalReportViewer2.Size = new System.Drawing.Size(780, 608);
+            this.crystalReportViewer2.TabIndex = 85;
+            this.crystalReportViewer2.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
+            // 
             // Admin_Thongkedoanhthu
             // 
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1017, 632);
+            this.Controls.Add(this.quayve);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cthang);
             this.Controls.Add(this.crystalReportViewer2);
             this.Controls.Add(this.lapbc);
             this.Name = "Admin_Thongkedoanhthu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,12 +140,13 @@ namespace shoppingManagement
         #endregion
         private ePOSOne.btnProduct.Button_WOC lapbaocao;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
-        private baocaothang crystalReport11;
+        //private baocaothang crystalReport11;
         private System.Windows.Forms.ComboBox thang;
         private System.Windows.Forms.Label label4;
         private ePOSOne.btnProduct.Button_WOC lapbc;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer2;
         private System.Windows.Forms.ComboBox cthang;
         private System.Windows.Forms.Label label3;
+        private ePOSOne.btnProduct.Button_WOC quayve;
     }
 }

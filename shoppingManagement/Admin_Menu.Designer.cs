@@ -42,6 +42,9 @@
             this.qldoitac = new ePOSOne.btnProduct.Button_WOC();
             this.qlnhanvien = new ePOSOne.btnProduct.Button_WOC();
             this.qlsanpham = new ePOSOne.btnProduct.Button_WOC();
+            this.button_WOC1 = new ePOSOne.btnProduct.Button_WOC();
+            this.button_WOC2 = new ePOSOne.btnProduct.Button_WOC();
+            this.qlphieudv = new ePOSOne.btnProduct.Button_WOC();
             this.SuspendLayout();
             // 
             // label1
@@ -91,7 +94,7 @@
             this.tkdoanhthu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.tkdoanhthu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tkdoanhthu.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tkdoanhthu.Location = new System.Drawing.Point(593, 363);
+            this.tkdoanhthu.Location = new System.Drawing.Point(317, 363);
             this.tkdoanhthu.Name = "tkdoanhthu";
             this.tkdoanhthu.OnHoverBorderColor = System.Drawing.Color.Black;
             this.tkdoanhthu.OnHoverButtonColor = System.Drawing.Color.Black;
@@ -201,6 +204,7 @@
             this.qlhoadon.Text = "Quản Lý Hóa Đơn";
             this.qlhoadon.TextColor = System.Drawing.Color.Black;
             this.qlhoadon.UseVisualStyleBackColor = true;
+            this.qlhoadon.Click += new System.EventHandler(this.qlhoadon_Click);
             // 
             // qlvatlieu
             // 
@@ -302,12 +306,74 @@
             this.qlsanpham.UseVisualStyleBackColor = true;
             this.qlsanpham.Click += new System.EventHandler(this.qlsanpham_Click);
             // 
+            // button_WOC1
+            // 
+            this.button_WOC1.BorderColor = System.Drawing.Color.Black;
+            this.button_WOC1.ButtonColor = System.Drawing.Color.White;
+            this.button_WOC1.FlatAppearance.BorderSize = 0;
+            this.button_WOC1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button_WOC1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_WOC1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_WOC1.Location = new System.Drawing.Point(764, 29);
+            this.button_WOC1.Name = "button_WOC1";
+            this.button_WOC1.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.button_WOC1.OnHoverButtonColor = System.Drawing.Color.Black;
+            this.button_WOC1.OnHoverTextColor = System.Drawing.Color.White;
+            this.button_WOC1.Size = new System.Drawing.Size(89, 38);
+            this.button_WOC1.TabIndex = 33;
+            this.button_WOC1.Text = "Xem HD";
+            this.button_WOC1.TextColor = System.Drawing.Color.Black;
+            this.button_WOC1.UseVisualStyleBackColor = true;
+            this.button_WOC1.Click += new System.EventHandler(this.button_WOC1_Click);
+            // 
+            // button_WOC2
+            // 
+            this.button_WOC2.BorderColor = System.Drawing.Color.Black;
+            this.button_WOC2.ButtonColor = System.Drawing.Color.White;
+            this.button_WOC2.FlatAppearance.BorderSize = 0;
+            this.button_WOC2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button_WOC2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_WOC2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_WOC2.Location = new System.Drawing.Point(764, 86);
+            this.button_WOC2.Name = "button_WOC2";
+            this.button_WOC2.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.button_WOC2.OnHoverButtonColor = System.Drawing.Color.Black;
+            this.button_WOC2.OnHoverTextColor = System.Drawing.Color.White;
+            this.button_WOC2.Size = new System.Drawing.Size(89, 38);
+            this.button_WOC2.TabIndex = 34;
+            this.button_WOC2.Text = "Xem NSP";
+            this.button_WOC2.TextColor = System.Drawing.Color.Black;
+            this.button_WOC2.UseVisualStyleBackColor = true;
+            this.button_WOC2.Click += new System.EventHandler(this.button_WOC2_Click);
+            // 
+            // qlphieudv
+            // 
+            this.qlphieudv.BorderColor = System.Drawing.Color.Black;
+            this.qlphieudv.ButtonColor = System.Drawing.Color.White;
+            this.qlphieudv.FlatAppearance.BorderSize = 0;
+            this.qlphieudv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.qlphieudv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.qlphieudv.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qlphieudv.Location = new System.Drawing.Point(593, 363);
+            this.qlphieudv.Name = "qlphieudv";
+            this.qlphieudv.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.qlphieudv.OnHoverButtonColor = System.Drawing.Color.Black;
+            this.qlphieudv.OnHoverTextColor = System.Drawing.Color.White;
+            this.qlphieudv.Size = new System.Drawing.Size(229, 38);
+            this.qlphieudv.TabIndex = 35;
+            this.qlphieudv.Text = "Quản Lý Phiếu Dịch Vụ";
+            this.qlphieudv.TextColor = System.Drawing.Color.Black;
+            this.qlphieudv.UseVisualStyleBackColor = true;
+            // 
             // Admin_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(880, 457);
+            this.Controls.Add(this.qlphieudv);
+            this.Controls.Add(this.button_WOC2);
+            this.Controls.Add(this.button_WOC1);
             this.Controls.Add(this.qltaikhoan);
             this.Controls.Add(this.tkdoanhthu);
             this.Controls.Add(this.quayve);
@@ -348,5 +414,8 @@
         private ePOSOne.btnProduct.Button_WOC quayve;
         private ePOSOne.btnProduct.Button_WOC tkdoanhthu;
         private ePOSOne.btnProduct.Button_WOC qltaikhoan;
+        private ePOSOne.btnProduct.Button_WOC button_WOC1;
+        private ePOSOne.btnProduct.Button_WOC button_WOC2;
+        private ePOSOne.btnProduct.Button_WOC qlphieudv;
     }
 }

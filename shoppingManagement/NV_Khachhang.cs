@@ -7,29 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 using Oracle.ManagedDataAccess.Client;
 using System.IO;
 
 namespace shoppingManagement
 {
-    public partial class Admin_Doitac : Form
+    public partial class NV_Khachhang : Form
     {
-        public Admin_Doitac()
+        public NV_Khachhang(string user, string pass)
         {
             InitializeComponent();
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void quayve_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Admin_Menu f4 = new Admin_Menu();
-            f4.ShowDialog();
+            usertxt.TextName = user;
+            passtxt.TextName = pass;
         }
 
         public void connection()
@@ -45,7 +34,7 @@ namespace shoppingManagement
             try
             {
 
-                string sql = "Select * from DOITAC  order by MaDT";
+                string sql = "Select * from KHACHHANG  order by MaKH";
 
                 OracleDataAdapter adapter = new OracleDataAdapter(sql, con);
 
@@ -60,18 +49,21 @@ namespace shoppingManagement
             }
         }
 
-        private void Admin_Doitac_Load(object sender, EventArgs e)
+        private void NV_Khachhang_Load(object sender, EventArgs e)
         {
             connection();
         }
 
         private void dataGridView1_MouseClick(object sender, MouseEventArgs e)
         {
-            MaDT.TextName = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
-            TenDT.TextName = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
-            DiaChi.TextName = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
-            sdt.TextName = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
-            GhiChu.TextName = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+            MaKH.TextName = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            TenKH.TextName = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            GioiTinh.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+            Email.TextName = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+            sdt.TextName = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+            Diem.TextName = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
+            Loai.Text = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
+            dSinh.TextName = dataGridView1.SelectedRows[0].Cells[7].Value.ToString();
         }
 
         private void them_Click(object sender, EventArgs e)
@@ -90,16 +82,16 @@ namespace shoppingManagement
             try
             {
 
-                string sql = "INSERT INTO DOITAC (MaDT, TenCTY, DiaChi, GhiChu, SDT) values " +
-                    "(" + "'" + MaDT.TextName + "','" + TenDT.TextName + "','" + DiaChi.TextName + "','" + GhiChu.TextName + "'," + Int32.Parse(sdt.TextName) + ")";
+                string sql = "INSERT INTO KHACHHANG (MaKH, TenKH, GioiTinh, Email, SDT, Diem, Loai, NgSinh) values " +
+                    "(" + "'" + MaKH.TextName + "','" + TenKH.TextName + "','" + GioiTinh.Text + "','" + Email.TextName + "'," + sdt.TextName + ",'" + Diem.TextName + "','" + Loai.Text + "'," + " TO_DATE('" + dSinh.TextName + "','dd/mm/yyyy hh:mi:ss AM')" + ")";
                 OracleCommand cmd = new OracleCommand(sql, con);
 
                 con.Open();
 
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Đã thêm đối tác thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Đã thêm khách hàng thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                OracleDataAdapter adapter = new OracleDataAdapter("select * from DOITAC order by MaDT", con);
+                OracleDataAdapter adapter = new OracleDataAdapter("select * from KHACHHANG order by MaKH", con);
                 DataTable dt = new DataTable();
 
                 adapter.Fill(dt);
@@ -119,6 +111,58 @@ namespace shoppingManagement
             }
         }
 
+        private void capnhat_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chắc chắn cập nhật?", "Cập nhật", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                string connstr = "Data Source=(DESCRIPTION=" +
+            "(ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))" +
+            "(CONNECT_DATA =" +
+            "(SERVER = DEDICATED)" +
+            "(SERVICE_NAME = orcl)" + ")" +
+            "); User Id=ttp; Password=123456Az";
+                OracleConnection con = new OracleConnection(connstr);
+
+                try
+                {
+                    string sql = "update KHACHHANG" +
+                         " SET " + "TenKH= '" + TenKH.TextName + "', GioiTinh='" + GioiTinh.Text + "', Email='" + Email.TextName + "', NgSinh=" + "TO_DATE('" + dSinh.TextName + "', 'dd/mm/yyyy hh:mi:ss AM')" + ", SDT=" + sdt.TextName + ", Diem=" + Diem.TextName + ", Loai='" + sdt.TextName + "'" +
+                        " where MaKH ='" + MaKH.TextName + "'";
+
+                    /* string sql = "update NHANVIEN SET NgaySinh=" + "TO_DATE('" + dSinh.TextName + "','dd-mm-yyy')" + "where MaNV='" + MaNV.TextName + "'"; */
+                    OracleCommand cmd = new OracleCommand(sql, con);
+
+                    con.Open();
+
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Cập nhật khách hàng thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    OracleDataAdapter adapter = new OracleDataAdapter("select * from KHACHHANG order by MaKH", con);
+                    DataTable dt = new DataTable();
+
+                    adapter.Fill(dt);
+
+
+                    dataGridView1.DataSource = dt;
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                finally
+                {
+                    con.Close();
+                }
+            }
+
+            else
+            {
+                MessageBox.Show("Dữ liệu chưa được cập nhật", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
         private void xoa_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có chắc chắn xóa?", "Xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -133,15 +177,15 @@ namespace shoppingManagement
 
                 try
                 {
-                    string sql = "DELETE FROM DOITAC Where MaDT=" + "'" + MaDT.TextName + "'";
+                    string sql = "DELETE FROM KHACHHANG Where MaKH=" + "'" + MaKH.TextName + "'";
                     OracleCommand cmd = new OracleCommand(sql, con);
 
                     con.Open();
 
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Xóa đối tác thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Xóa khách hàng thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    OracleDataAdapter adapter = new OracleDataAdapter("select * from DOITAC order by MaDT", con);
+                    OracleDataAdapter adapter = new OracleDataAdapter("select * from KHACHHANG order by MaKH", con);
                     DataTable dt = new DataTable();
 
                     adapter.Fill(dt);
@@ -165,63 +209,12 @@ namespace shoppingManagement
             {
                 MessageBox.Show("Dữ liệu chưa được xóa", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            
-        }
-
-        private void capnhat_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Bạn có chắc chắn cập nhật?", "Cập nhật", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                string connstr = "Data Source=(DESCRIPTION=" +
-            "(ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))" +
-            "(CONNECT_DATA =" +
-            "(SERVER = DEDICATED)" +
-            "(SERVICE_NAME = orcl)" + ")" +
-            "); User Id=ttp; Password=123456Az";
-                OracleConnection con = new OracleConnection(connstr);
-
-                try
-                {
-                    string sql = "update DOITAC" +
-                         " SET " + "TenCTY= '" + TenDT.TextName + "', DiaChi='" + DiaChi.TextName + "', GhiChu='" + GhiChu.TextName + "', SDT=" + sdt.TextName +
-                        " where MaDT ='" + MaDT.TextName + "'";
-                    OracleCommand cmd = new OracleCommand(sql, con);
-
-                    con.Open();
-
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Cập nhật đối tác thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    OracleDataAdapter adapter = new OracleDataAdapter("select * from DOITAC order by MaDT", con);
-                    DataTable dt = new DataTable();
-
-                    adapter.Fill(dt);
-
-                    dataGridView1.DataSource = dt;
-                }
-
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-                finally
-                {
-                    con.Close();
-                }
-            }
-
-            else
-            {
-                MessageBox.Show("Dữ liệu chưa được cập nhật", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            
         }
 
         private void lammoi_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Admin_Doitac f2 = new Admin_Doitac();
+            NV_Khachhang f2 = new NV_Khachhang(usertxt.TextName, passtxt.TextName);
             f2.ShowDialog();
         }
 
@@ -238,15 +231,15 @@ namespace shoppingManagement
             try
             {
 
-                string sql = "Select * from DOITAC where MaDT=UPPER('" + TraCuu.TextName + "') order by MaDT";
-                string sql1 = "Select * from DOITAC where TenCTY=UPPER('" + TraCuu.TextName + "') order by MaDT";
-                string sql2 = "Select * from DOITAC where SDT=UPPER('" + TraCuu.TextName + "') order by MaDT";
+                string sql = "Select * from KHACHHANG where TenKH='" + TraCuu.TextName + "' order by MaKH";
+                string sql1 = "Select * from KHACHHANG where MaKH='" + TraCuu.TextName + "' order by MaKH";
+                string sql2 = "Select * from KHACHHANG where SDT='" + TraCuu.TextName + "' order by MaKH";
 
                 OracleDataAdapter adapter = new OracleDataAdapter(sql, con);
                 OracleDataAdapter adapter1 = new OracleDataAdapter(sql1, con);
                 OracleDataAdapter adapter2 = new OracleDataAdapter(sql2, con);
 
-                if (LoaiTimKiem.Text == "MaDT")
+                if (LoaiTimKiem.Text == "TenKH")
                 {
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);
@@ -254,7 +247,7 @@ namespace shoppingManagement
                 }
                 else
                 {
-                    if (LoaiTimKiem.Text == "TenCTY")
+                    if (LoaiTimKiem.Text == "MaKH")
                     {
                         DataTable dt1 = new DataTable();
                         adapter1.Fill(dt1);
@@ -275,6 +268,28 @@ namespace shoppingManagement
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void tieptuc_Click(object sender, EventArgs e)
+        {
+            if (MaKH.TextName == null)
+            {
+                MessageBox.Show("Bạn chưa chọn khách hàng", "Chưa chọn khách hàng", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            }
+
+            else
+            {
+                this.Hide();
+                NV_Mahoadon f3 = new NV_Mahoadon(usertxt.TextName, passtxt.TextName, MaKH.TextName);
+                f3.ShowDialog();
+            }
+        }
+
+        private void quayve_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            NV_Menu f3 = new NV_Menu(usertxt.TextName, passtxt.TextName);
+            f3.ShowDialog();
         }
     }
 }

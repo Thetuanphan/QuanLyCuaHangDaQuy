@@ -1,6 +1,6 @@
 ﻿namespace shoppingManagement
 {
-    partial class Login_Stuff
+    partial class Login_NV
     {
         /// <summary>
         /// Required designer variable.

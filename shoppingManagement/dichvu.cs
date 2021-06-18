@@ -16,14 +16,14 @@ namespace shoppingManagement {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class CrystalReport1 : ReportClass {
+    public class dichvu : ReportClass {
         
-        public CrystalReport1() {
+        public dichvu() {
         }
         
         public override string ResourceName {
             get {
-                return "CrystalReport1.rpt";
+                return "dichvu.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace shoppingManagement {
         
         public override string FullResourceName {
             get {
-                return "shoppingManagement.CrystalReport1.rpt";
+                return "shoppingManagement.dichvu.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace shoppingManagement {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedCrystalReport1 : Component, ICachedReport {
+    public class Cacheddichvu : Component, ICachedReport {
         
-        public CachedCrystalReport1() {
+        public Cacheddichvu() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace shoppingManagement {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            CrystalReport1 rpt = new CrystalReport1();
+            dichvu rpt = new dichvu();
             rpt.Site = this.Site;
             return rpt;
         }

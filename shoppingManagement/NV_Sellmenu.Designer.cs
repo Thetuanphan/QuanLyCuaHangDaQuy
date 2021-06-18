@@ -28,14 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -60,22 +54,37 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.dataSet1 = new shoppingManagement.DataSet1();
+            this.sANPHAMBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sANPHAMTableAdapter = new shoppingManagement.DataSet1TableAdapters.SANPHAMTableAdapter();
+            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.mASPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mAVLDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mADTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tENSPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dVTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sLTONDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dONGIADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sANPHAMBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7});
+            this.mASPDataGridViewTextBoxColumn,
+            this.mAVLDataGridViewTextBoxColumn,
+            this.mADTDataGridViewTextBoxColumn,
+            this.tENSPDataGridViewTextBoxColumn,
+            this.dVTDataGridViewTextBoxColumn,
+            this.sLTONDataGridViewTextBoxColumn,
+            this.dONGIADataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.sANPHAMBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(83, 43);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -83,42 +92,6 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "select";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Id";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.HeaderText = "Type";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Model";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Memory";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Price";
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Quantity";
-            this.Column7.Name = "Column7";
             // 
             // label1
             // 
@@ -332,7 +305,68 @@
             this.label5.Text = "TOTAL PRICE:";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // Form6
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sANPHAMBindingSource
+            // 
+            this.sANPHAMBindingSource.DataMember = "SANPHAM";
+            this.sANPHAMBindingSource.DataSource = this.dataSet1;
+            // 
+            // sANPHAMTableAdapter
+            // 
+            this.sANPHAMTableAdapter.ClearBeforeFill = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "select";
+            this.Column1.Name = "Column1";
+            // 
+            // mASPDataGridViewTextBoxColumn
+            // 
+            this.mASPDataGridViewTextBoxColumn.DataPropertyName = "MASP";
+            this.mASPDataGridViewTextBoxColumn.HeaderText = "MASP";
+            this.mASPDataGridViewTextBoxColumn.Name = "mASPDataGridViewTextBoxColumn";
+            // 
+            // mAVLDataGridViewTextBoxColumn
+            // 
+            this.mAVLDataGridViewTextBoxColumn.DataPropertyName = "MAVL";
+            this.mAVLDataGridViewTextBoxColumn.HeaderText = "MAVL";
+            this.mAVLDataGridViewTextBoxColumn.Name = "mAVLDataGridViewTextBoxColumn";
+            // 
+            // mADTDataGridViewTextBoxColumn
+            // 
+            this.mADTDataGridViewTextBoxColumn.DataPropertyName = "MADT";
+            this.mADTDataGridViewTextBoxColumn.HeaderText = "MADT";
+            this.mADTDataGridViewTextBoxColumn.Name = "mADTDataGridViewTextBoxColumn";
+            // 
+            // tENSPDataGridViewTextBoxColumn
+            // 
+            this.tENSPDataGridViewTextBoxColumn.DataPropertyName = "TENSP";
+            this.tENSPDataGridViewTextBoxColumn.HeaderText = "TENSP";
+            this.tENSPDataGridViewTextBoxColumn.Name = "tENSPDataGridViewTextBoxColumn";
+            // 
+            // dVTDataGridViewTextBoxColumn
+            // 
+            this.dVTDataGridViewTextBoxColumn.DataPropertyName = "DVT";
+            this.dVTDataGridViewTextBoxColumn.HeaderText = "DVT";
+            this.dVTDataGridViewTextBoxColumn.Name = "dVTDataGridViewTextBoxColumn";
+            // 
+            // sLTONDataGridViewTextBoxColumn
+            // 
+            this.sLTONDataGridViewTextBoxColumn.DataPropertyName = "SLTON";
+            this.sLTONDataGridViewTextBoxColumn.HeaderText = "SLTON";
+            this.sLTONDataGridViewTextBoxColumn.Name = "sLTONDataGridViewTextBoxColumn";
+            // 
+            // dONGIADataGridViewTextBoxColumn
+            // 
+            this.dONGIADataGridViewTextBoxColumn.DataPropertyName = "DONGIA";
+            this.dONGIADataGridViewTextBoxColumn.HeaderText = "DONGIA";
+            this.dONGIADataGridViewTextBoxColumn.Name = "dONGIADataGridViewTextBoxColumn";
+            // 
+            // NV_Sellmenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -355,10 +389,12 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Form6";
+            this.Name = "NV_Sellmenu";
             this.Load += new System.EventHandler(this.Form6_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sANPHAMBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -376,13 +412,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label lblPass;
         private System.Windows.Forms.Label lblUser;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -398,5 +427,16 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private DataSet1 dataSet1;
+        private System.Windows.Forms.BindingSource sANPHAMBindingSource;
+        private DataSet1TableAdapters.SANPHAMTableAdapter sANPHAMTableAdapter;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mASPDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mAVLDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mADTDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tENSPDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dVTDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sLTONDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dONGIADataGridViewTextBoxColumn;
     }
 }
