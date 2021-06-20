@@ -150,6 +150,12 @@
     <Compile Include="Admin_Nhaphang.Designer.cs">
       <DependentUpon>Admin_Nhaphang.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin_Phieudichvu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Phieudichvu.Designer.cs">
+      <DependentUpon>Admin_Phieudichvu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin_Vatlieu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -307,6 +313,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_Nhaphang.resx">
       <DependentUpon>Admin_Nhaphang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Phieudichvu.resx">
+      <DependentUpon>Admin_Phieudichvu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_Vatlieu.resx">
       <DependentUpon>Admin_Vatlieu.cs</DependentUpon>
