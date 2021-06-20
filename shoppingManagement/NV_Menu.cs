@@ -27,7 +27,7 @@ namespace shoppingManagement
         private void button_WOC1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            NV_Khachhang f2 = new NV_Khachhang(usertxt.TextName, passtxt.TextName);
+            NV_1Khachhang f2 = new NV_1Khachhang(usertxt.TextName, passtxt.TextName);
             f2.ShowDialog();
         }
 

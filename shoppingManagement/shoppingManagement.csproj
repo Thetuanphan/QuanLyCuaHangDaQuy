@@ -176,23 +176,47 @@
       <DependentUpon>dichvu.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="hoadon1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hoadon1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="nhaphang.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>nhaphang.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="NV_Khachhang.cs">
+    <Compile Include="NV_1Khachhang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NV_Khachhang.Designer.cs">
-      <DependentUpon>NV_Khachhang.cs</DependentUpon>
+    <Compile Include="NV_1Khachhang.Designer.cs">
+      <DependentUpon>NV_1Khachhang.cs</DependentUpon>
     </Compile>
-    <Compile Include="NV_Mahoadon.cs">
+    <Compile Include="NV_2Mahoadon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NV_Mahoadon.Designer.cs">
-      <DependentUpon>NV_Mahoadon.cs</DependentUpon>
+    <Compile Include="NV_2Mahoadon.Designer.cs">
+      <DependentUpon>NV_2Mahoadon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NV_4Khachhang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NV_4Khachhang.Designer.cs">
+      <DependentUpon>NV_4Khachhang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NV_5Maphieudichvu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NV_5Maphieudichvu.Designer.cs">
+      <DependentUpon>NV_5Maphieudichvu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NV_6Dichvu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NV_6Dichvu.Designer.cs">
+      <DependentUpon>NV_6Dichvu.cs</DependentUpon>
     </Compile>
     <Compile Include="NV_Menu.cs">
       <SubType>Form</SubType>
@@ -200,11 +224,11 @@
     <Compile Include="NV_Menu.Designer.cs">
       <DependentUpon>NV_Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="NV_Sanpham.cs">
+    <Compile Include="NV_3Sanpham.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NV_Sanpham.Designer.cs">
-      <DependentUpon>NV_Sanpham.cs</DependentUpon>
+    <Compile Include="NV_3Sanpham.Designer.cs">
+      <DependentUpon>NV_3Sanpham.cs</DependentUpon>
     </Compile>
     <Compile Include="Re_hoadon.cs">
       <SubType>Form</SubType>
@@ -260,24 +284,6 @@
     <Compile Include="NV_Sellmenu.Designer.cs">
       <DependentUpon>NV_Sellmenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form7.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form7.Designer.cs">
-      <DependentUpon>Form7.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form8.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form8.Designer.cs">
-      <DependentUpon>Form8.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form9.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form9.Designer.cs">
-      <DependentUpon>Form9.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Re_Nhaphang.cs">
@@ -318,21 +324,34 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>dichvu.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="hoadon1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>hoadon1.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="nhaphang.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>nhaphang.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="NV_Khachhang.resx">
-      <DependentUpon>NV_Khachhang.cs</DependentUpon>
+    <EmbeddedResource Include="NV_1Khachhang.resx">
+      <DependentUpon>NV_1Khachhang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NV_Mahoadon.resx">
-      <DependentUpon>NV_Mahoadon.cs</DependentUpon>
+    <EmbeddedResource Include="NV_2Mahoadon.resx">
+      <DependentUpon>NV_2Mahoadon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NV_4Khachhang.resx">
+      <DependentUpon>NV_4Khachhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NV_5Maphieudichvu.resx">
+      <DependentUpon>NV_5Maphieudichvu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NV_6Dichvu.resx">
+      <DependentUpon>NV_6Dichvu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NV_Menu.resx">
       <DependentUpon>NV_Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NV_Sanpham.resx">
-      <DependentUpon>NV_Sanpham.cs</DependentUpon>
+    <EmbeddedResource Include="NV_3Sanpham.resx">
+      <DependentUpon>NV_3Sanpham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Re_hoadon.resx">
       <DependentUpon>Re_hoadon.cs</DependentUpon>
@@ -361,15 +380,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NV_Sellmenu.resx">
       <DependentUpon>NV_Sellmenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form7.resx">
-      <DependentUpon>Form7.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form8.resx">
-      <DependentUpon>Form8.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form9.resx">
-      <DependentUpon>Form9.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
