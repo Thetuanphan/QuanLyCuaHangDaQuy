@@ -388,7 +388,7 @@ namespace shoppingManagement
             this.tieptuc.OnHoverTextColor = System.Drawing.Color.Black;
             this.tieptuc.Size = new System.Drawing.Size(109, 36);
             this.tieptuc.TabIndex = 71;
-            this.tieptuc.Text = "Tiếp Tục";
+            this.tieptuc.Text = "Tạo Hóa Đơn";
             this.tieptuc.TextColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tieptuc.UseVisualStyleBackColor = false;
             // 

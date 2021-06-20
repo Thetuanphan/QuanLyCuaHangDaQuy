@@ -15,6 +15,8 @@ namespace shoppingManagement
     public partial class NV_3Sanpham : Form
     {
         private double grandTotal = 0;
+        private double grandTotalGoc = 0;
+        private double itemTotal = 0;
         public NV_3Sanpham(string user, string pass, string makh, string mahd)
         {
             InitializeComponent();
@@ -49,7 +51,7 @@ namespace shoppingManagement
                 dataGridView1.DataSource = dt;
 
                 DataTable dt1 = new DataTable();
-                adapter.Fill(dt1);
+                adapter1.Fill(dt1);
                 dataGridView3.DataSource = dt1;
 
             }
@@ -82,6 +84,7 @@ namespace shoppingManagement
             double total = (Double.Parse(DonGia) * Double.Parse(quantity));
 
             grandTotal = grandTotal + total;
+            grandTotalGoc += total;
 
             dataGridView2.Rows.Add(MaSP, MaVL, MaDT, TenSP, DVT, DonGia, quantity, total.ToString());
 
@@ -103,11 +106,17 @@ namespace shoppingManagement
 
                 string sql = "insert into cthd (MaSP, MaHD, SoLuongSP, TienSP) values ('"
                     + MaSP + "', '" + MaHD.TextName + "', " + quantity + ", " + total + ")";
+                itemTotal++;
+                string sql1 = "update HOADON SET SoLuongSP=" + itemTotal + ", TienChuaTru=" + grandTotalGoc + ", TongTien=" + grandTotal +
+                    " where MaHD= '" + MaHD.TextName + "'";
+
                 OracleCommand cmd = new OracleCommand(sql, con);
+                OracleCommand cmd1 = new OracleCommand(sql1, con);
 
                 con.Open();
 
                 cmd.ExecuteNonQuery();
+                cmd1.ExecuteNonQuery();
                 //MessageBox.Show("Đã thêm sản phẩm thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
@@ -136,15 +145,20 @@ namespace shoppingManagement
 
             try
             {
-                string sql = "DELETE (MaKM, TenKM) FROM HOADON Where MaHD=" + "'" + MaHD.TextName + "'";
+                string sql = "DELETE (MaKM) FROM HOADON Where MaHD=" + "'" + MaHD.TextName + "'";
                 string sql1 = "DELETE FROM cthd Where MaHD=" + "'" + MaHD.TextName + "'";
+                string sql2 = "update HOADON SET SoLuongSP=" + 0 + ", TienChuaTru=" + 0 + ", TongTien=" + 0 +
+                    " where MaHD= '" + MaHD.TextName + "'";
+
                 OracleCommand cmd = new OracleCommand(sql, con);
                 OracleCommand cmd1 = new OracleCommand(sql1, con);
+                OracleCommand cmd2 = new OracleCommand(sql2, con);
 
                 con.Open();
 
                 cmd1.ExecuteNonQuery();
-               cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();
+                cmd2.ExecuteNonQuery();
                 //MessageBox.Show("Xóa sản phẩm thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
@@ -172,15 +186,15 @@ namespace shoppingManagement
 
         private void themkm_Click(object sender, EventArgs e)
         {
-            String MaKM = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            String MaKM = dataGridView3.SelectedRows[0].Cells[0].Value.ToString();
 
-            String TenKM = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            String TenKM = dataGridView3.SelectedRows[0].Cells[1].Value.ToString();
 
-            String TienKM = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+            String TienKM = dataGridView3.SelectedRows[0].Cells[2].Value.ToString();
 
-            double total = Double.Parse(TienKM);
+            //double total = Double.Parse(TienKM);
 
-            grandTotal = grandTotal + total;
+            grandTotal = grandTotal + Int32.Parse(TienKM);
 
             dataGridView4.Rows.Add(MaKM, TenKM, TienKM);
 
@@ -200,8 +214,8 @@ namespace shoppingManagement
             try
             {
 
-                string sql = "insert into HOADON (MaKM, TienKM) values ('"
-                    + MaKM + "', " + TienKM + ")";
+                string sql = "update HOADON set  MaKM='" + MaKM + "', TienKM=" + TienKM + " where MaHD='" + MaHD.TextName + "'";
+
                 OracleCommand cmd = new OracleCommand(sql, con);
 
                 con.Open();

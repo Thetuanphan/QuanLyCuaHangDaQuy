@@ -90,7 +90,7 @@ namespace shoppingManagement
                 dataGridView1.DataSource = dt;
 
                 this.Hide();
-                NV_3Sanpham f3 = new NV_3Sanpham(usertxt.TextName, passtxt.TextName, MaKH.TextName, MaHD.TextName);
+                NV_6Dichvu f3 = new NV_6Dichvu(usertxt.TextName, passtxt.TextName, MaKH.TextName, MaHD.TextName);
                 f3.ShowDialog();
             }
 

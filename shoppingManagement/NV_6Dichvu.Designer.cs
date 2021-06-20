@@ -35,7 +35,7 @@ namespace shoppingManagement
             this.LoaiTimKiem = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.quayve = new ePOSOne.btnProduct.Button_WOC();
-            this.MaHD = new JMaterialTextbox.JMaterialTextbox();
+            this.MaPDV = new JMaterialTextbox.JMaterialTextbox();
             this.txtpass = new JMaterialTextbox.JMaterialTextbox();
             this.txtuser = new JMaterialTextbox.JMaterialTextbox();
             this.MaKH = new JMaterialTextbox.JMaterialTextbox();
@@ -59,6 +59,8 @@ namespace shoppingManagement
             this.txtngaygiao = new JMaterialTextbox.JMaterialTextbox();
             this.label3 = new System.Windows.Forms.Label();
             this.txttinhtrang = new JMaterialTextbox.JMaterialTextbox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtdongia = new JMaterialTextbox.JMaterialTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -159,27 +161,27 @@ namespace shoppingManagement
             this.quayve.TextColor = System.Drawing.Color.Black;
             this.quayve.UseVisualStyleBackColor = true;
             // 
-            // MaHD
+            // MaPDV
             // 
-            this.MaHD.BackColor = System.Drawing.Color.Transparent;
-            this.MaHD.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.MaHD.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.MaHD.ForeColors = System.Drawing.Color.Transparent;
-            this.MaHD.HintText = null;
-            this.MaHD.IsPassword = false;
-            this.MaHD.LineBackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.MaHD.LineThickness = 2;
-            this.MaHD.Location = new System.Drawing.Point(31, 610);
-            this.MaHD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.MaHD.MaxLength = 32767;
-            this.MaHD.Name = "MaHD";
-            this.MaHD.OnFocusedColor = System.Drawing.Color.Black;
-            this.MaHD.OnFocusedTextColor = System.Drawing.Color.Black;
-            this.MaHD.ReadOnly = false;
-            this.MaHD.Size = new System.Drawing.Size(10, 10);
-            this.MaHD.TabIndex = 206;
-            this.MaHD.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.MaHD.TextName = "";
+            this.MaPDV.BackColor = System.Drawing.Color.Transparent;
+            this.MaPDV.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.MaPDV.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.MaPDV.ForeColors = System.Drawing.Color.Transparent;
+            this.MaPDV.HintText = null;
+            this.MaPDV.IsPassword = false;
+            this.MaPDV.LineBackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.MaPDV.LineThickness = 2;
+            this.MaPDV.Location = new System.Drawing.Point(31, 610);
+            this.MaPDV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaPDV.MaxLength = 32767;
+            this.MaPDV.Name = "MaPDV";
+            this.MaPDV.OnFocusedColor = System.Drawing.Color.Black;
+            this.MaPDV.OnFocusedTextColor = System.Drawing.Color.Black;
+            this.MaPDV.ReadOnly = false;
+            this.MaPDV.Size = new System.Drawing.Size(10, 10);
+            this.MaPDV.TabIndex = 206;
+            this.MaPDV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.MaPDV.TextName = "";
             // 
             // txtpass
             // 
@@ -266,6 +268,7 @@ namespace shoppingManagement
             this.lammoi.Text = "Làm mới";
             this.lammoi.TextColor = System.Drawing.Color.Black;
             this.lammoi.UseVisualStyleBackColor = true;
+            this.lammoi.Click += new System.EventHandler(this.lammoi_Click);
             // 
             // tieptuc
             // 
@@ -284,7 +287,7 @@ namespace shoppingManagement
             this.tieptuc.OnHoverTextColor = System.Drawing.Color.Black;
             this.tieptuc.Size = new System.Drawing.Size(109, 36);
             this.tieptuc.TabIndex = 198;
-            this.tieptuc.Text = "Tiếp Tục";
+            this.tieptuc.Text = "Tạo Phiếu DV";
             this.tieptuc.TextColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tieptuc.UseVisualStyleBackColor = false;
             // 
@@ -359,6 +362,7 @@ namespace shoppingManagement
             this.themsp.Text = "Thêm sản phẩm";
             this.themsp.TextColor = System.Drawing.Color.Black;
             this.themsp.UseVisualStyleBackColor = true;
+            this.themsp.Click += new System.EventHandler(this.themsp_Click);
             // 
             // dataGridView2
             // 
@@ -483,12 +487,46 @@ namespace shoppingManagement
             this.txttinhtrang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txttinhtrang.TextName = "";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(849, 293);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(154, 19);
+            this.label7.TabIndex = 218;
+            this.label7.Text = "Đơn giá được tính:";
+            // 
+            // txtdongia
+            // 
+            this.txtdongia.BackColor = System.Drawing.Color.Transparent;
+            this.txtdongia.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtdongia.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtdongia.ForeColors = System.Drawing.Color.Black;
+            this.txtdongia.HintText = null;
+            this.txtdongia.IsPassword = false;
+            this.txtdongia.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtdongia.LineThickness = 2;
+            this.txtdongia.Location = new System.Drawing.Point(853, 325);
+            this.txtdongia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtdongia.MaxLength = 32767;
+            this.txtdongia.Name = "txtdongia";
+            this.txtdongia.OnFocusedColor = System.Drawing.Color.Black;
+            this.txtdongia.OnFocusedTextColor = System.Drawing.Color.Black;
+            this.txtdongia.ReadOnly = false;
+            this.txtdongia.Size = new System.Drawing.Size(79, 23);
+            this.txtdongia.TabIndex = 217;
+            this.txtdongia.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtdongia.TextName = "";
+            // 
             // NV_6Dichvu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1017, 632);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtdongia);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txttinhtrang);
             this.Controls.Add(this.label2);
@@ -499,7 +537,7 @@ namespace shoppingManagement
             this.Controls.Add(this.LoaiTimKiem);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.quayve);
-            this.Controls.Add(this.MaHD);
+            this.Controls.Add(this.MaPDV);
             this.Controls.Add(this.txtpass);
             this.Controls.Add(this.txtuser);
             this.Controls.Add(this.MaKH);
@@ -515,6 +553,7 @@ namespace shoppingManagement
             this.Name = "NV_6Dichvu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chọn Dịch Vụ";
+            this.Load += new System.EventHandler(this.NV_6Dichvu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -530,7 +569,7 @@ namespace shoppingManagement
         private System.Windows.Forms.ComboBox LoaiTimKiem;
         private System.Windows.Forms.Label label6;
         private ePOSOne.btnProduct.Button_WOC quayve;
-        private JMaterialTextbox.JMaterialTextbox MaHD;
+        private JMaterialTextbox.JMaterialTextbox MaPDV;
         private JMaterialTextbox.JMaterialTextbox txtpass;
         private JMaterialTextbox.JMaterialTextbox txtuser;
         private JMaterialTextbox.JMaterialTextbox MaKH;
@@ -554,5 +593,7 @@ namespace shoppingManagement
         private JMaterialTextbox.JMaterialTextbox txtngaygiao;
         private System.Windows.Forms.Label label3;
         private JMaterialTextbox.JMaterialTextbox txttinhtrang;
+        private System.Windows.Forms.Label label7;
+        private JMaterialTextbox.JMaterialTextbox txtdongia;
     }
 }

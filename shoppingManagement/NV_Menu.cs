@@ -33,7 +33,9 @@ namespace shoppingManagement
 
         private void nhanvien_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            NV_4Khachhang f2 = new NV_4Khachhang(usertxt.TextName, passtxt.TextName);
+            f2.ShowDialog();
         }
 
         private void label1_Click(object sender, EventArgs e)

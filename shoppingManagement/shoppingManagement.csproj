@@ -278,12 +278,6 @@
     <Compile Include="Admin_Sanpham.Designer.cs">
       <DependentUpon>Admin_Sanpham.cs</DependentUpon>
     </Compile>
-    <Compile Include="NV_Sellmenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NV_Sellmenu.Designer.cs">
-      <DependentUpon>NV_Sellmenu.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Re_Nhaphang.cs">
@@ -377,9 +371,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_Sanpham.resx">
       <DependentUpon>Admin_Sanpham.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NV_Sellmenu.resx">
-      <DependentUpon>NV_Sellmenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
