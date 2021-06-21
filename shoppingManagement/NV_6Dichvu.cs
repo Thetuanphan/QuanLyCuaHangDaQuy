@@ -80,7 +80,6 @@ namespace shoppingManagement
 
             grandTotal = grandTotal + total;
 
-            dataGridView2.Rows.Add(MaDV, TenDV, TienDV, quantity, total.ToString(), NgayGiao, TinhTrang);
 
             label4.Text = grandTotal.ToString();
 
@@ -98,13 +97,16 @@ namespace shoppingManagement
             try
             {
                 string date = DateTime.UtcNow.ToString("dd-MM-yyyy");
-                string sql = "insert into chitietdv (MaDV, MaPDV, MaNV, NgayLap, SoLuongDV, NgayGiao, DonGiaDuocTinh, ThanhTien, TinhTrang) values ('"
-                    + MaDV + "', '" + MaPDV.TextName + "', '" + txtuser.TextName + "', TO_DATE('" + date + "','dd/mm/yyyy'), " + quantity + ", TO_DATE('" + txtngaygiao.TextName + "','dd/mm/yyyy'), " + txtdongia.TextName + ", " + total + ", '" + txttinhtrang.TextName + "')";
+                double conlai = grandTotal - double.Parse(txttratruoc.TextName);
+                string sql = "insert into chitietdv (MaDV, MaPDV, MaNV, NgayLap, SoLuongDV, NgayGiao, DonGiaDuocTinh, ThanhTien, TinhTrang, TraTruoc, ConLai) values ('"
+                    + MaDV + "', '" + MaPDV.TextName + "', '" + txtuser.TextName + "', TO_DATE('" + date + "','dd/mm/yyyy'), " + quantity + ", TO_DATE('" + txtngaygiao.TextName + "','dd/mm/yyyy'), " + txtdongia.TextName + ", " + total + ", '" + txttinhtrang.TextName + "', " + txttratruoc.TextName + ", " + conlai + ")";
                 OracleCommand cmd = new OracleCommand(sql, con);
 
                 con.Open();
 
                 cmd.ExecuteNonQuery();
+                dataGridView2.Rows.Add(MaDV, TenDV, TienDV, quantity, total.ToString(), txttratruoc.TextName, conlai, NgayGiao, TinhTrang);
+
                 //MessageBox.Show("Đã thêm sản phẩm thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }

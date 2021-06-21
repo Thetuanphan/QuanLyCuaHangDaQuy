@@ -48,19 +48,23 @@ namespace shoppingManagement
             this.themsp = new ePOSOne.btnProduct.Button_WOC();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.MaDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonGiaDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuongDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayGiao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.txtngaygiao = new JMaterialTextbox.JMaterialTextbox();
             this.label3 = new System.Windows.Forms.Label();
             this.txttinhtrang = new JMaterialTextbox.JMaterialTextbox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtdongia = new JMaterialTextbox.JMaterialTextbox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txttratruoc = new JMaterialTextbox.JMaterialTextbox();
+            this.MaDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonGiaDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuongDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TraTruoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ConLai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayGiao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -295,7 +299,7 @@ namespace shoppingManagement
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(849, 474);
+            this.label4.Location = new System.Drawing.Point(807, 474);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 19);
             this.label4.TabIndex = 197;
@@ -305,7 +309,7 @@ namespace shoppingManagement
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(849, 431);
+            this.label1.Location = new System.Drawing.Point(807, 431);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 19);
             this.label1.TabIndex = 196;
@@ -315,7 +319,7 @@ namespace shoppingManagement
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(849, 81);
+            this.label5.Location = new System.Drawing.Point(753, 113);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(87, 19);
             this.label5.TabIndex = 195;
@@ -331,7 +335,7 @@ namespace shoppingManagement
             this.SLsanpham.IsPassword = false;
             this.SLsanpham.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.SLsanpham.LineThickness = 2;
-            this.SLsanpham.Location = new System.Drawing.Point(853, 113);
+            this.SLsanpham.Location = new System.Drawing.Point(757, 145);
             this.SLsanpham.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SLsanpham.MaxLength = 32767;
             this.SLsanpham.Name = "SLsanpham";
@@ -352,7 +356,7 @@ namespace shoppingManagement
             this.themsp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.themsp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.themsp.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.themsp.Location = new System.Drawing.Point(685, 309);
+            this.themsp.Location = new System.Drawing.Point(582, 309);
             this.themsp.Name = "themsp";
             this.themsp.OnHoverBorderColor = System.Drawing.Color.Black;
             this.themsp.OnHoverButtonColor = System.Drawing.Color.Black;
@@ -373,11 +377,13 @@ namespace shoppingManagement
             this.DonGiaDV,
             this.SoLuongDV,
             this.ThanhTien,
+            this.TraTruoc,
+            this.ConLai,
             this.NgayGiao,
             this.TinhTrang});
             this.dataGridView2.Location = new System.Drawing.Point(69, 365);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(739, 203);
+            this.dataGridView2.Size = new System.Drawing.Size(636, 203);
             this.dataGridView2.TabIndex = 192;
             // 
             // dataGridView1
@@ -385,8 +391,136 @@ namespace shoppingManagement
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(69, 113);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(739, 169);
+            this.dataGridView1.Size = new System.Drawing.Size(636, 169);
             this.dataGridView1.TabIndex = 191;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(870, 113);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(92, 19);
+            this.label2.TabIndex = 214;
+            this.label2.Text = "Ngày giao:";
+            // 
+            // txtngaygiao
+            // 
+            this.txtngaygiao.BackColor = System.Drawing.Color.Transparent;
+            this.txtngaygiao.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtngaygiao.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtngaygiao.ForeColors = System.Drawing.Color.Black;
+            this.txtngaygiao.HintText = null;
+            this.txtngaygiao.IsPassword = false;
+            this.txtngaygiao.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtngaygiao.LineThickness = 2;
+            this.txtngaygiao.Location = new System.Drawing.Point(874, 145);
+            this.txtngaygiao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtngaygiao.MaxLength = 32767;
+            this.txtngaygiao.Name = "txtngaygiao";
+            this.txtngaygiao.OnFocusedColor = System.Drawing.Color.Black;
+            this.txtngaygiao.OnFocusedTextColor = System.Drawing.Color.Black;
+            this.txtngaygiao.ReadOnly = false;
+            this.txtngaygiao.Size = new System.Drawing.Size(79, 23);
+            this.txtngaygiao.TabIndex = 213;
+            this.txtngaygiao.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtngaygiao.TextName = "";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(753, 198);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(93, 19);
+            this.label3.TabIndex = 216;
+            this.label3.Text = "Tình trạng:";
+            // 
+            // txttinhtrang
+            // 
+            this.txttinhtrang.BackColor = System.Drawing.Color.Transparent;
+            this.txttinhtrang.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txttinhtrang.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txttinhtrang.ForeColors = System.Drawing.Color.Black;
+            this.txttinhtrang.HintText = null;
+            this.txttinhtrang.IsPassword = false;
+            this.txttinhtrang.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txttinhtrang.LineThickness = 2;
+            this.txttinhtrang.Location = new System.Drawing.Point(757, 230);
+            this.txttinhtrang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txttinhtrang.MaxLength = 32767;
+            this.txttinhtrang.Name = "txttinhtrang";
+            this.txttinhtrang.OnFocusedColor = System.Drawing.Color.Black;
+            this.txttinhtrang.OnFocusedTextColor = System.Drawing.Color.Black;
+            this.txttinhtrang.ReadOnly = false;
+            this.txttinhtrang.Size = new System.Drawing.Size(79, 23);
+            this.txttinhtrang.TabIndex = 215;
+            this.txttinhtrang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txttinhtrang.TextName = "";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(852, 198);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(154, 19);
+            this.label7.TabIndex = 218;
+            this.label7.Text = "Đơn giá được tính:";
+            // 
+            // txtdongia
+            // 
+            this.txtdongia.BackColor = System.Drawing.Color.Transparent;
+            this.txtdongia.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtdongia.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtdongia.ForeColors = System.Drawing.Color.Black;
+            this.txtdongia.HintText = null;
+            this.txtdongia.IsPassword = false;
+            this.txtdongia.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtdongia.LineThickness = 2;
+            this.txtdongia.Location = new System.Drawing.Point(874, 230);
+            this.txtdongia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtdongia.MaxLength = 32767;
+            this.txtdongia.Name = "txtdongia";
+            this.txtdongia.OnFocusedColor = System.Drawing.Color.Black;
+            this.txtdongia.OnFocusedTextColor = System.Drawing.Color.Black;
+            this.txtdongia.ReadOnly = false;
+            this.txtdongia.Size = new System.Drawing.Size(103, 23);
+            this.txtdongia.TabIndex = 217;
+            this.txtdongia.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtdongia.TextName = "";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(753, 286);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(86, 19);
+            this.label8.TabIndex = 220;
+            this.label8.Text = "Trả trước:";
+            // 
+            // txttratruoc
+            // 
+            this.txttratruoc.BackColor = System.Drawing.Color.Transparent;
+            this.txttratruoc.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txttratruoc.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txttratruoc.ForeColors = System.Drawing.Color.Black;
+            this.txttratruoc.HintText = null;
+            this.txttratruoc.IsPassword = false;
+            this.txttratruoc.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txttratruoc.LineThickness = 2;
+            this.txttratruoc.Location = new System.Drawing.Point(757, 313);
+            this.txttratruoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txttratruoc.MaxLength = 32767;
+            this.txttratruoc.Name = "txttratruoc";
+            this.txttratruoc.OnFocusedColor = System.Drawing.Color.Black;
+            this.txttratruoc.OnFocusedTextColor = System.Drawing.Color.Black;
+            this.txttratruoc.ReadOnly = false;
+            this.txttratruoc.Size = new System.Drawing.Size(163, 23);
+            this.txttratruoc.TabIndex = 219;
+            this.txttratruoc.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txttratruoc.TextName = "";
             // 
             // MaDV
             // 
@@ -413,6 +547,16 @@ namespace shoppingManagement
             this.ThanhTien.HeaderText = "ThanhTien";
             this.ThanhTien.Name = "ThanhTien";
             // 
+            // TraTruoc
+            // 
+            this.TraTruoc.HeaderText = "TraTruoc";
+            this.TraTruoc.Name = "TraTruoc";
+            // 
+            // ConLai
+            // 
+            this.ConLai.HeaderText = "ConLai";
+            this.ConLai.Name = "ConLai";
+            // 
             // NgayGiao
             // 
             this.NgayGiao.HeaderText = "NgayGiao";
@@ -423,108 +567,14 @@ namespace shoppingManagement
             this.TinhTrang.HeaderText = "TinhTrang";
             this.TinhTrang.Name = "TinhTrang";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(849, 156);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 19);
-            this.label2.TabIndex = 214;
-            this.label2.Text = "Ngày giao:";
-            // 
-            // txtngaygiao
-            // 
-            this.txtngaygiao.BackColor = System.Drawing.Color.Transparent;
-            this.txtngaygiao.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtngaygiao.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtngaygiao.ForeColors = System.Drawing.Color.Black;
-            this.txtngaygiao.HintText = null;
-            this.txtngaygiao.IsPassword = false;
-            this.txtngaygiao.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtngaygiao.LineThickness = 2;
-            this.txtngaygiao.Location = new System.Drawing.Point(853, 188);
-            this.txtngaygiao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtngaygiao.MaxLength = 32767;
-            this.txtngaygiao.Name = "txtngaygiao";
-            this.txtngaygiao.OnFocusedColor = System.Drawing.Color.Black;
-            this.txtngaygiao.OnFocusedTextColor = System.Drawing.Color.Black;
-            this.txtngaygiao.ReadOnly = false;
-            this.txtngaygiao.Size = new System.Drawing.Size(79, 23);
-            this.txtngaygiao.TabIndex = 213;
-            this.txtngaygiao.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtngaygiao.TextName = "";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(849, 227);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 19);
-            this.label3.TabIndex = 216;
-            this.label3.Text = "Tình trạng:";
-            // 
-            // txttinhtrang
-            // 
-            this.txttinhtrang.BackColor = System.Drawing.Color.Transparent;
-            this.txttinhtrang.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txttinhtrang.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txttinhtrang.ForeColors = System.Drawing.Color.Black;
-            this.txttinhtrang.HintText = null;
-            this.txttinhtrang.IsPassword = false;
-            this.txttinhtrang.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txttinhtrang.LineThickness = 2;
-            this.txttinhtrang.Location = new System.Drawing.Point(853, 259);
-            this.txttinhtrang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txttinhtrang.MaxLength = 32767;
-            this.txttinhtrang.Name = "txttinhtrang";
-            this.txttinhtrang.OnFocusedColor = System.Drawing.Color.Black;
-            this.txttinhtrang.OnFocusedTextColor = System.Drawing.Color.Black;
-            this.txttinhtrang.ReadOnly = false;
-            this.txttinhtrang.Size = new System.Drawing.Size(79, 23);
-            this.txttinhtrang.TabIndex = 215;
-            this.txttinhtrang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txttinhtrang.TextName = "";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(849, 293);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(154, 19);
-            this.label7.TabIndex = 218;
-            this.label7.Text = "Đơn giá được tính:";
-            // 
-            // txtdongia
-            // 
-            this.txtdongia.BackColor = System.Drawing.Color.Transparent;
-            this.txtdongia.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtdongia.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtdongia.ForeColors = System.Drawing.Color.Black;
-            this.txtdongia.HintText = null;
-            this.txtdongia.IsPassword = false;
-            this.txtdongia.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtdongia.LineThickness = 2;
-            this.txtdongia.Location = new System.Drawing.Point(853, 325);
-            this.txtdongia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtdongia.MaxLength = 32767;
-            this.txtdongia.Name = "txtdongia";
-            this.txtdongia.OnFocusedColor = System.Drawing.Color.Black;
-            this.txtdongia.OnFocusedTextColor = System.Drawing.Color.Black;
-            this.txtdongia.ReadOnly = false;
-            this.txtdongia.Size = new System.Drawing.Size(79, 23);
-            this.txtdongia.TabIndex = 217;
-            this.txtdongia.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtdongia.TextName = "";
-            // 
             // NV_6Dichvu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1017, 632);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txttratruoc);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtdongia);
             this.Controls.Add(this.label3);
@@ -581,13 +631,6 @@ namespace shoppingManagement
         private JMaterialTextbox.JMaterialTextbox SLsanpham;
         private ePOSOne.btnProduct.Button_WOC themsp;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaDV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenDV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DonGiaDV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongDV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayGiao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TinhTrang;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
         private JMaterialTextbox.JMaterialTextbox txtngaygiao;
@@ -595,5 +638,16 @@ namespace shoppingManagement
         private JMaterialTextbox.JMaterialTextbox txttinhtrang;
         private System.Windows.Forms.Label label7;
         private JMaterialTextbox.JMaterialTextbox txtdongia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaDV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenDV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DonGiaDV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongDV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TraTruoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ConLai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayGiao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TinhTrang;
+        private System.Windows.Forms.Label label8;
+        private JMaterialTextbox.JMaterialTextbox txttratruoc;
     }
 }
