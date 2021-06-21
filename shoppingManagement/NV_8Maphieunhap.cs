@@ -11,12 +11,12 @@ using Oracle.ManagedDataAccess.Client;
 
 namespace shoppingManagement
 {
-    public partial class NV_2Mahoadon : Form
+    public partial class NV_8Maphieunhap : Form
     {
-        public NV_2Mahoadon(string user, string pass, string makh)
+        public NV_8Maphieunhap(string user, string pass, string madt)
         {
             InitializeComponent();
-            MaKH.TextName = makh;
+            MaKH.TextName = madt;
             usertxt.TextName = user;
             passtxt.TextName = pass;
         }
@@ -34,7 +34,7 @@ namespace shoppingManagement
             try
             {
 
-                string sql = "Select MaHD from HOADON  order by MaHD desc";
+                string sql = "Select MaPH from PHIEUNSP  order by MaPH desc";
 
                 OracleDataAdapter adapter = new OracleDataAdapter(sql, con);
 
@@ -50,7 +50,7 @@ namespace shoppingManagement
             }
         }
 
-        private void NV_Mahoadon_Load(object sender, EventArgs e)
+        private void NV_8Maphieunhap_Load(object sender, EventArgs e)
         {
             connection();
         }
@@ -72,16 +72,16 @@ namespace shoppingManagement
             {
                 string date = DateTime.UtcNow.ToString("dd-MM-yyyy");
 
-                string sql = "INSERT INTO HOADON (MaHD, MaNV, MaKH, ThoiGianLap, SoLuongSP, TienChuaTru, TienKM, TongTien) values " +
-                    "('" + MaHD.TextName + "', '" + usertxt.TextName + "', '" + MaKH.TextName + "', TO_DATE('" + date + "', 'dd/mm/yyyy'), 0, 0, 0, 0)";
+                string sql = "INSERT INTO PHIEUNSP (MaPH, MaNV, MaDT, NgNSP, TongNSP) values " +
+                    "('" + MaHD.TextName + "', '" + usertxt.TextName + "', '" + MaKH.TextName + "', TO_DATE('" + date + "', 'dd/mm/yyyy'), 0)";
                 OracleCommand cmd = new OracleCommand(sql, con);
 
                 con.Open();
 
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Đã tạo hóa đơn thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Đã tạo phiếu thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                OracleDataAdapter adapter = new OracleDataAdapter("select * from HOADON order by MaHD", con);
+                OracleDataAdapter adapter = new OracleDataAdapter("select * from PHIEUNSP order by MaDT", con);
                 DataTable dt = new DataTable();
 
                 adapter.Fill(dt);
@@ -90,13 +90,13 @@ namespace shoppingManagement
                 dataGridView1.DataSource = dt;
 
                 this.Hide();
-                NV_3Sanpham f3 = new NV_3Sanpham(usertxt.TextName, passtxt.TextName, MaKH.TextName, MaHD.TextName);
+                NV_9Phieunhap f3 = new NV_9Phieunhap(usertxt.TextName, passtxt.TextName, MaKH.TextName, MaHD.TextName);
                 f3.ShowDialog();
             }
 
             catch (Exception ex)
             {
-                
+
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
@@ -109,7 +109,7 @@ namespace shoppingManagement
         private void quayve_Click(object sender, EventArgs e)
         {
             this.Hide();
-            NV_1Khachhang f3 = new NV_1Khachhang(usertxt.TextName, passtxt.TextName);
+            NV_7Doitac f3 = new NV_7Doitac(usertxt.TextName, passtxt.TextName);
             f3.ShowDialog();
         }
     }

@@ -87,7 +87,9 @@ namespace shoppingManagement
 
         private void qlnhaphang_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Admin_Nhaphang f4 = new Admin_Nhaphang();
+            f4.ShowDialog();
         }
 
         private void button_WOC1_Click(object sender, EventArgs e)
@@ -106,9 +108,16 @@ namespace shoppingManagement
 
         private void qlhoadon_Click(object sender, EventArgs e)
         {
-            //this.Hide();
-            //Admin_Hoadon f4 = new Admin_Hoadon();
-            //f4.ShowDialog();
+            this.Hide();
+            Admin_Hoadon f4 = new Admin_Hoadon();
+            f4.ShowDialog();
+        }
+
+        private void qlphieudv_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Admin_Phieudichvu f4 = new Admin_Phieudichvu();
+            f4.ShowDialog();
         }
     }
 }

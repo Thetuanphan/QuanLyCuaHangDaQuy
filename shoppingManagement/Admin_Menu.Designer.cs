@@ -364,6 +364,7 @@
             this.qlphieudv.Text = "Quản Lý Phiếu Dịch Vụ";
             this.qlphieudv.TextColor = System.Drawing.Color.Black;
             this.qlphieudv.UseVisualStyleBackColor = true;
+            this.qlphieudv.Click += new System.EventHandler(this.qlphieudv_Click);
             // 
             // Admin_Menu
             // 

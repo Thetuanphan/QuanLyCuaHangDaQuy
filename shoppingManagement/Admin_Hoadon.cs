@@ -66,7 +66,7 @@ namespace shoppingManagement
             txtmanv.TextName = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
             txtmakh.TextName = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
             dLap.TextName = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
-            txtslsp.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
+            txtslsp.TextName = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
             txttongtien.TextName = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
             txttienkm.TextName = dataGridView1.SelectedRows[0].Cells[7].Value.ToString();
             txtconlai.TextName = dataGridView1.SelectedRows[0].Cells[8].Value.ToString();

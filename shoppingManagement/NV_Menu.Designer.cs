@@ -37,6 +37,7 @@ namespace shoppingManagement
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.usertxt = new JMaterialTextbox.JMaterialTextbox();
             this.passtxt = new JMaterialTextbox.JMaterialTextbox();
+            this.button_WOC2 = new ePOSOne.btnProduct.Button_WOC();
             this.SuspendLayout();
             // 
             // nhanvien
@@ -47,7 +48,7 @@ namespace shoppingManagement
             this.nhanvien.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.nhanvien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.nhanvien.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nhanvien.Location = new System.Drawing.Point(438, 276);
+            this.nhanvien.Location = new System.Drawing.Point(308, 294);
             this.nhanvien.Name = "nhanvien";
             this.nhanvien.OnHoverBorderColor = System.Drawing.Color.Black;
             this.nhanvien.OnHoverButtonColor = System.Drawing.Color.White;
@@ -67,7 +68,7 @@ namespace shoppingManagement
             this.button_WOC1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.button_WOC1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_WOC1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_WOC1.Location = new System.Drawing.Point(180, 276);
+            this.button_WOC1.Location = new System.Drawing.Point(308, 223);
             this.button_WOC1.Name = "button_WOC1";
             this.button_WOC1.OnHoverBorderColor = System.Drawing.Color.Black;
             this.button_WOC1.OnHoverButtonColor = System.Drawing.Color.Black;
@@ -158,12 +159,32 @@ namespace shoppingManagement
             this.passtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.passtxt.TextName = "";
             // 
+            // button_WOC2
+            // 
+            this.button_WOC2.BorderColor = System.Drawing.Color.Black;
+            this.button_WOC2.ButtonColor = System.Drawing.Color.White;
+            this.button_WOC2.FlatAppearance.BorderSize = 0;
+            this.button_WOC2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button_WOC2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_WOC2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_WOC2.Location = new System.Drawing.Point(308, 369);
+            this.button_WOC2.Name = "button_WOC2";
+            this.button_WOC2.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.button_WOC2.OnHoverButtonColor = System.Drawing.Color.Black;
+            this.button_WOC2.OnHoverTextColor = System.Drawing.Color.White;
+            this.button_WOC2.Size = new System.Drawing.Size(205, 52);
+            this.button_WOC2.TabIndex = 88;
+            this.button_WOC2.Text = "LẬP PH. NHẬP HÀNG";
+            this.button_WOC2.TextColor = System.Drawing.Color.Black;
+            this.button_WOC2.UseVisualStyleBackColor = true;
+            // 
             // NV_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(839, 459);
+            this.Controls.Add(this.button_WOC2);
             this.Controls.Add(this.passtxt);
             this.Controls.Add(this.usertxt);
             this.Controls.Add(this.nhanvien);
@@ -187,5 +208,6 @@ namespace shoppingManagement
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private JMaterialTextbox.JMaterialTextbox usertxt;
         private JMaterialTextbox.JMaterialTextbox passtxt;
+        private ePOSOne.btnProduct.Button_WOC button_WOC2;
     }
 }

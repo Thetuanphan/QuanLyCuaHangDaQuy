@@ -224,6 +224,24 @@
     <Compile Include="NV_6Dichvu.Designer.cs">
       <DependentUpon>NV_6Dichvu.cs</DependentUpon>
     </Compile>
+    <Compile Include="NV_7Doitac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NV_7Doitac.Designer.cs">
+      <DependentUpon>NV_7Doitac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NV_8Maphieunhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NV_8Maphieunhap.Designer.cs">
+      <DependentUpon>NV_8Maphieunhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NV_9Phieunhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NV_9Phieunhap.Designer.cs">
+      <DependentUpon>NV_9Phieunhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="NV_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -349,6 +367,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NV_6Dichvu.resx">
       <DependentUpon>NV_6Dichvu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NV_7Doitac.resx">
+      <DependentUpon>NV_7Doitac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NV_8Maphieunhap.resx">
+      <DependentUpon>NV_8Maphieunhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NV_9Phieunhap.resx">
+      <DependentUpon>NV_9Phieunhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NV_Menu.resx">
       <DependentUpon>NV_Menu.cs</DependentUpon>
