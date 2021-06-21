@@ -54,7 +54,6 @@ namespace shoppingManagement
             this.lammoi = new ePOSOne.btnProduct.Button_WOC();
             this.capnhat = new ePOSOne.btnProduct.Button_WOC();
             this.xoa = new ePOSOne.btnProduct.Button_WOC();
-            this.them = new ePOSOne.btnProduct.Button_WOC();
             this.label9 = new System.Windows.Forms.Label();
             this.quayve = new ePOSOne.btnProduct.Button_WOC();
             this.label3 = new System.Windows.Forms.Label();
@@ -484,27 +483,6 @@ namespace shoppingManagement
             this.xoa.UseVisualStyleBackColor = true;
             this.xoa.Click += new System.EventHandler(this.xoa_Click);
             // 
-            // them
-            // 
-            this.them.BorderColor = System.Drawing.Color.Black;
-            this.them.ButtonColor = System.Drawing.Color.Black;
-            this.them.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.them.FlatAppearance.BorderSize = 0;
-            this.them.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.them.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.them.Location = new System.Drawing.Point(529, 326);
-            this.them.Name = "them";
-            this.them.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.them.OnHoverButtonColor = System.Drawing.Color.White;
-            this.them.OnHoverTextColor = System.Drawing.Color.Black;
-            this.them.Size = new System.Drawing.Size(138, 38);
-            this.them.TabIndex = 156;
-            this.them.Text = "Thêm phiếu";
-            this.them.TextColor = System.Drawing.Color.White;
-            this.them.UseVisualStyleBackColor = true;
-            this.them.Click += new System.EventHandler(this.them_Click);
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -621,7 +599,6 @@ namespace shoppingManagement
             this.Controls.Add(this.lammoi);
             this.Controls.Add(this.capnhat);
             this.Controls.Add(this.xoa);
-            this.Controls.Add(this.them);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.quayve);
             this.Controls.Add(this.label3);
@@ -663,7 +640,6 @@ namespace shoppingManagement
         private ePOSOne.btnProduct.Button_WOC lammoi;
         private ePOSOne.btnProduct.Button_WOC capnhat;
         private ePOSOne.btnProduct.Button_WOC xoa;
-        private ePOSOne.btnProduct.Button_WOC them;
         private System.Windows.Forms.Label label9;
         private ePOSOne.btnProduct.Button_WOC quayve;
         private System.Windows.Forms.Label label3;

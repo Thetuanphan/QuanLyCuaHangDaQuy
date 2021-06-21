@@ -29,13 +29,13 @@ namespace shoppingManagement
         /// </summary>
         private void InitializeComponent()
         {
-            this.dSinh = new JMaterialTextbox.JMaterialTextbox();
-            this.sdt = new JMaterialTextbox.JMaterialTextbox();
+            this.txttongtien = new JMaterialTextbox.JMaterialTextbox();
+            this.txtconlai = new JMaterialTextbox.JMaterialTextbox();
             this.label16 = new System.Windows.Forms.Label();
-            this.DiaChi = new JMaterialTextbox.JMaterialTextbox();
+            this.txttienkm = new JMaterialTextbox.JMaterialTextbox();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.dVaoLam = new JMaterialTextbox.JMaterialTextbox();
+            this.dLap = new JMaterialTextbox.JMaterialTextbox();
             this.label2 = new System.Windows.Forms.Label();
             this.timkiem = new ePOSOne.btnProduct.Button_WOC();
             this.TraCuu = new JMaterialTextbox.JMaterialTextbox();
@@ -43,70 +43,69 @@ namespace shoppingManagement
             this.LoaiTimKiem = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.ChucVu = new JMaterialTextbox.JMaterialTextbox();
-            this.TenNV = new JMaterialTextbox.JMaterialTextbox();
-            this.MaQL = new JMaterialTextbox.JMaterialTextbox();
-            this.MaNV = new JMaterialTextbox.JMaterialTextbox();
+            this.txtghichu = new JMaterialTextbox.JMaterialTextbox();
+            this.txtslsp = new JMaterialTextbox.JMaterialTextbox();
+            this.txtmakm = new JMaterialTextbox.JMaterialTextbox();
+            this.txtmahd = new JMaterialTextbox.JMaterialTextbox();
             this.label1 = new System.Windows.Forms.Label();
             this.lammoi = new ePOSOne.btnProduct.Button_WOC();
             this.capnhat = new ePOSOne.btnProduct.Button_WOC();
             this.xoa = new ePOSOne.btnProduct.Button_WOC();
-            this.them = new ePOSOne.btnProduct.Button_WOC();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.quayve = new ePOSOne.btnProduct.Button_WOC();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.jMaterialTextbox1 = new JMaterialTextbox.JMaterialTextbox();
+            this.txtmanv = new JMaterialTextbox.JMaterialTextbox();
             this.label4 = new System.Windows.Forms.Label();
-            this.jMaterialTextbox2 = new JMaterialTextbox.JMaterialTextbox();
+            this.txtmakh = new JMaterialTextbox.JMaterialTextbox();
             this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dSinh
+            // txttongtien
             // 
-            this.dSinh.BackColor = System.Drawing.Color.Transparent;
-            this.dSinh.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.dSinh.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.dSinh.ForeColors = System.Drawing.Color.Black;
-            this.dSinh.HintText = null;
-            this.dSinh.IsPassword = false;
-            this.dSinh.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dSinh.LineThickness = 2;
-            this.dSinh.Location = new System.Drawing.Point(129, 216);
-            this.dSinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dSinh.MaxLength = 32767;
-            this.dSinh.Name = "dSinh";
-            this.dSinh.OnFocusedColor = System.Drawing.Color.Black;
-            this.dSinh.OnFocusedTextColor = System.Drawing.Color.Black;
-            this.dSinh.ReadOnly = false;
-            this.dSinh.Size = new System.Drawing.Size(161, 23);
-            this.dSinh.TabIndex = 146;
-            this.dSinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.dSinh.TextName = "";
+            this.txttongtien.BackColor = System.Drawing.Color.Transparent;
+            this.txttongtien.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txttongtien.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txttongtien.ForeColors = System.Drawing.Color.Black;
+            this.txttongtien.HintText = null;
+            this.txttongtien.IsPassword = false;
+            this.txttongtien.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txttongtien.LineThickness = 2;
+            this.txttongtien.Location = new System.Drawing.Point(129, 216);
+            this.txttongtien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txttongtien.MaxLength = 32767;
+            this.txttongtien.Name = "txttongtien";
+            this.txttongtien.OnFocusedColor = System.Drawing.Color.Black;
+            this.txttongtien.OnFocusedTextColor = System.Drawing.Color.Black;
+            this.txttongtien.ReadOnly = false;
+            this.txttongtien.Size = new System.Drawing.Size(161, 23);
+            this.txttongtien.TabIndex = 146;
+            this.txttongtien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txttongtien.TextName = "";
             // 
-            // sdt
+            // txtconlai
             // 
-            this.sdt.BackColor = System.Drawing.Color.Transparent;
-            this.sdt.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.sdt.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.sdt.ForeColors = System.Drawing.Color.Black;
-            this.sdt.HintText = null;
-            this.sdt.IsPassword = false;
-            this.sdt.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.sdt.LineThickness = 2;
-            this.sdt.Location = new System.Drawing.Point(404, 277);
-            this.sdt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.sdt.MaxLength = 32767;
-            this.sdt.Name = "sdt";
-            this.sdt.OnFocusedColor = System.Drawing.Color.Black;
-            this.sdt.OnFocusedTextColor = System.Drawing.Color.Black;
-            this.sdt.ReadOnly = false;
-            this.sdt.Size = new System.Drawing.Size(161, 18);
-            this.sdt.TabIndex = 145;
-            this.sdt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.sdt.TextName = "";
+            this.txtconlai.BackColor = System.Drawing.Color.Transparent;
+            this.txtconlai.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtconlai.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtconlai.ForeColors = System.Drawing.Color.Black;
+            this.txtconlai.HintText = null;
+            this.txtconlai.IsPassword = false;
+            this.txtconlai.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtconlai.LineThickness = 2;
+            this.txtconlai.Location = new System.Drawing.Point(404, 277);
+            this.txtconlai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtconlai.MaxLength = 32767;
+            this.txtconlai.Name = "txtconlai";
+            this.txtconlai.OnFocusedColor = System.Drawing.Color.Black;
+            this.txtconlai.OnFocusedTextColor = System.Drawing.Color.Black;
+            this.txtconlai.ReadOnly = false;
+            this.txtconlai.Size = new System.Drawing.Size(161, 18);
+            this.txtconlai.TabIndex = 145;
+            this.txtconlai.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtconlai.TextName = "";
             // 
             // label16
             // 
@@ -118,27 +117,27 @@ namespace shoppingManagement
             this.label16.TabIndex = 144;
             this.label16.Text = "Còn lại:";
             // 
-            // DiaChi
+            // txttienkm
             // 
-            this.DiaChi.BackColor = System.Drawing.Color.Transparent;
-            this.DiaChi.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.DiaChi.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.DiaChi.ForeColors = System.Drawing.Color.Black;
-            this.DiaChi.HintText = null;
-            this.DiaChi.IsPassword = false;
-            this.DiaChi.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DiaChi.LineThickness = 2;
-            this.DiaChi.Location = new System.Drawing.Point(129, 277);
-            this.DiaChi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.DiaChi.MaxLength = 32767;
-            this.DiaChi.Name = "DiaChi";
-            this.DiaChi.OnFocusedColor = System.Drawing.Color.Black;
-            this.DiaChi.OnFocusedTextColor = System.Drawing.Color.Black;
-            this.DiaChi.ReadOnly = false;
-            this.DiaChi.Size = new System.Drawing.Size(161, 18);
-            this.DiaChi.TabIndex = 143;
-            this.DiaChi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.DiaChi.TextName = "";
+            this.txttienkm.BackColor = System.Drawing.Color.Transparent;
+            this.txttienkm.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txttienkm.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txttienkm.ForeColors = System.Drawing.Color.Black;
+            this.txttienkm.HintText = null;
+            this.txttienkm.IsPassword = false;
+            this.txttienkm.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txttienkm.LineThickness = 2;
+            this.txttienkm.Location = new System.Drawing.Point(129, 277);
+            this.txttienkm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txttienkm.MaxLength = 32767;
+            this.txttienkm.Name = "txttienkm";
+            this.txttienkm.OnFocusedColor = System.Drawing.Color.Black;
+            this.txttienkm.OnFocusedTextColor = System.Drawing.Color.Black;
+            this.txttienkm.ReadOnly = false;
+            this.txttienkm.Size = new System.Drawing.Size(161, 18);
+            this.txttienkm.TabIndex = 143;
+            this.txttienkm.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txttienkm.TextName = "";
             // 
             // label15
             // 
@@ -160,33 +159,33 @@ namespace shoppingManagement
             this.label14.TabIndex = 140;
             this.label14.Text = "Tổng tiền:";
             // 
-            // dVaoLam
+            // dLap
             // 
-            this.dVaoLam.BackColor = System.Drawing.Color.Transparent;
-            this.dVaoLam.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.dVaoLam.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.dVaoLam.ForeColors = System.Drawing.Color.Black;
-            this.dVaoLam.HintText = null;
-            this.dVaoLam.IsPassword = false;
-            this.dVaoLam.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dVaoLam.LineThickness = 2;
-            this.dVaoLam.Location = new System.Drawing.Point(716, 162);
-            this.dVaoLam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dVaoLam.MaxLength = 32767;
-            this.dVaoLam.Name = "dVaoLam";
-            this.dVaoLam.OnFocusedColor = System.Drawing.Color.Black;
-            this.dVaoLam.OnFocusedTextColor = System.Drawing.Color.Black;
-            this.dVaoLam.ReadOnly = false;
-            this.dVaoLam.Size = new System.Drawing.Size(123, 23);
-            this.dVaoLam.TabIndex = 139;
-            this.dVaoLam.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.dVaoLam.TextName = "";
+            this.dLap.BackColor = System.Drawing.Color.Transparent;
+            this.dLap.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.dLap.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.dLap.ForeColors = System.Drawing.Color.Black;
+            this.dLap.HintText = null;
+            this.dLap.IsPassword = false;
+            this.dLap.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dLap.LineThickness = 2;
+            this.dLap.Location = new System.Drawing.Point(456, 164);
+            this.dLap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dLap.MaxLength = 32767;
+            this.dLap.Name = "dLap";
+            this.dLap.OnFocusedColor = System.Drawing.Color.Black;
+            this.dLap.OnFocusedTextColor = System.Drawing.Color.Black;
+            this.dLap.ReadOnly = false;
+            this.dLap.Size = new System.Drawing.Size(123, 23);
+            this.dLap.TabIndex = 139;
+            this.dLap.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.dLap.TextName = "";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(591, 165);
+            this.label2.Location = new System.Drawing.Point(331, 167);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 19);
             this.label2.TabIndex = 138;
@@ -212,6 +211,7 @@ namespace shoppingManagement
             this.timkiem.Text = "Tìm kiếm";
             this.timkiem.TextColor = System.Drawing.SystemColors.ButtonHighlight;
             this.timkiem.UseVisualStyleBackColor = false;
+            this.timkiem.Click += new System.EventHandler(this.timkiem_Click);
             // 
             // TraCuu
             // 
@@ -279,93 +279,93 @@ namespace shoppingManagement
             this.label5.TabIndex = 132;
             this.label5.Text = "Danh sách hóa đơn:";
             // 
-            // ChucVu
+            // txtghichu
             // 
-            this.ChucVu.BackColor = System.Drawing.Color.Transparent;
-            this.ChucVu.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.ChucVu.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.ChucVu.ForeColors = System.Drawing.Color.Black;
-            this.ChucVu.HintText = null;
-            this.ChucVu.IsPassword = false;
-            this.ChucVu.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ChucVu.LineThickness = 2;
-            this.ChucVu.Location = new System.Drawing.Point(473, 167);
-            this.ChucVu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ChucVu.MaxLength = 32767;
-            this.ChucVu.Name = "ChucVu";
-            this.ChucVu.OnFocusedColor = System.Drawing.Color.Black;
-            this.ChucVu.OnFocusedTextColor = System.Drawing.Color.Black;
-            this.ChucVu.ReadOnly = false;
-            this.ChucVu.Size = new System.Drawing.Size(97, 18);
-            this.ChucVu.TabIndex = 131;
-            this.ChucVu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.ChucVu.TextName = "";
+            this.txtghichu.BackColor = System.Drawing.Color.Transparent;
+            this.txtghichu.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtghichu.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtghichu.ForeColors = System.Drawing.Color.Black;
+            this.txtghichu.HintText = null;
+            this.txtghichu.IsPassword = false;
+            this.txtghichu.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtghichu.LineThickness = 2;
+            this.txtghichu.Location = new System.Drawing.Point(412, 221);
+            this.txtghichu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtghichu.MaxLength = 32767;
+            this.txtghichu.Name = "txtghichu";
+            this.txtghichu.OnFocusedColor = System.Drawing.Color.Black;
+            this.txtghichu.OnFocusedTextColor = System.Drawing.Color.Black;
+            this.txtghichu.ReadOnly = false;
+            this.txtghichu.Size = new System.Drawing.Size(327, 18);
+            this.txtghichu.TabIndex = 131;
+            this.txtghichu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtghichu.TextName = "";
             // 
-            // TenNV
+            // txtslsp
             // 
-            this.TenNV.BackColor = System.Drawing.Color.Transparent;
-            this.TenNV.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.TenNV.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.TenNV.ForeColors = System.Drawing.Color.Black;
-            this.TenNV.HintText = null;
-            this.TenNV.IsPassword = false;
-            this.TenNV.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.TenNV.LineThickness = 2;
-            this.TenNV.Location = new System.Drawing.Point(193, 167);
-            this.TenNV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TenNV.MaxLength = 32767;
-            this.TenNV.Name = "TenNV";
-            this.TenNV.OnFocusedColor = System.Drawing.Color.Black;
-            this.TenNV.OnFocusedTextColor = System.Drawing.Color.Black;
-            this.TenNV.ReadOnly = false;
-            this.TenNV.Size = new System.Drawing.Size(97, 18);
-            this.TenNV.TabIndex = 130;
-            this.TenNV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.TenNV.TextName = "";
+            this.txtslsp.BackColor = System.Drawing.Color.Transparent;
+            this.txtslsp.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtslsp.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtslsp.ForeColors = System.Drawing.Color.Black;
+            this.txtslsp.HintText = null;
+            this.txtslsp.IsPassword = false;
+            this.txtslsp.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtslsp.LineThickness = 2;
+            this.txtslsp.Location = new System.Drawing.Point(193, 167);
+            this.txtslsp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtslsp.MaxLength = 32767;
+            this.txtslsp.Name = "txtslsp";
+            this.txtslsp.OnFocusedColor = System.Drawing.Color.Black;
+            this.txtslsp.OnFocusedTextColor = System.Drawing.Color.Black;
+            this.txtslsp.ReadOnly = false;
+            this.txtslsp.Size = new System.Drawing.Size(97, 18);
+            this.txtslsp.TabIndex = 130;
+            this.txtslsp.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtslsp.TextName = "";
             // 
-            // MaQL
+            // txtmakm
             // 
-            this.MaQL.BackColor = System.Drawing.Color.Transparent;
-            this.MaQL.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.MaQL.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.MaQL.ForeColors = System.Drawing.Color.Black;
-            this.MaQL.HintText = null;
-            this.MaQL.IsPassword = false;
-            this.MaQL.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.MaQL.LineThickness = 2;
-            this.MaQL.Location = new System.Drawing.Point(384, 109);
-            this.MaQL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.MaQL.MaxLength = 32767;
-            this.MaQL.Name = "MaQL";
-            this.MaQL.OnFocusedColor = System.Drawing.Color.Black;
-            this.MaQL.OnFocusedTextColor = System.Drawing.Color.Black;
-            this.MaQL.ReadOnly = false;
-            this.MaQL.Size = new System.Drawing.Size(82, 18);
-            this.MaQL.TabIndex = 129;
-            this.MaQL.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.MaQL.TextName = "";
+            this.txtmakm.BackColor = System.Drawing.Color.Transparent;
+            this.txtmakm.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtmakm.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtmakm.ForeColors = System.Drawing.Color.Black;
+            this.txtmakm.HintText = null;
+            this.txtmakm.IsPassword = false;
+            this.txtmakm.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtmakm.LineThickness = 2;
+            this.txtmakm.Location = new System.Drawing.Point(384, 109);
+            this.txtmakm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtmakm.MaxLength = 32767;
+            this.txtmakm.Name = "txtmakm";
+            this.txtmakm.OnFocusedColor = System.Drawing.Color.Black;
+            this.txtmakm.OnFocusedTextColor = System.Drawing.Color.Black;
+            this.txtmakm.ReadOnly = false;
+            this.txtmakm.Size = new System.Drawing.Size(82, 18);
+            this.txtmakm.TabIndex = 129;
+            this.txtmakm.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtmakm.TextName = "";
             // 
-            // MaNV
+            // txtmahd
             // 
-            this.MaNV.BackColor = System.Drawing.Color.Transparent;
-            this.MaNV.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.MaNV.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.MaNV.ForeColors = System.Drawing.Color.Black;
-            this.MaNV.HintText = null;
-            this.MaNV.IsPassword = false;
-            this.MaNV.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.MaNV.LineThickness = 2;
-            this.MaNV.Location = new System.Drawing.Point(149, 104);
-            this.MaNV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.MaNV.MaxLength = 32767;
-            this.MaNV.Name = "MaNV";
-            this.MaNV.OnFocusedColor = System.Drawing.Color.Black;
-            this.MaNV.OnFocusedTextColor = System.Drawing.Color.Black;
-            this.MaNV.ReadOnly = false;
-            this.MaNV.Size = new System.Drawing.Size(82, 23);
-            this.MaNV.TabIndex = 128;
-            this.MaNV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.MaNV.TextName = "";
+            this.txtmahd.BackColor = System.Drawing.Color.Transparent;
+            this.txtmahd.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtmahd.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtmahd.ForeColors = System.Drawing.Color.Black;
+            this.txtmahd.HintText = null;
+            this.txtmahd.IsPassword = false;
+            this.txtmahd.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtmahd.LineThickness = 2;
+            this.txtmahd.Location = new System.Drawing.Point(149, 104);
+            this.txtmahd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtmahd.MaxLength = 32767;
+            this.txtmahd.Name = "txtmahd";
+            this.txtmahd.OnFocusedColor = System.Drawing.Color.Black;
+            this.txtmahd.OnFocusedTextColor = System.Drawing.Color.Black;
+            this.txtmahd.ReadOnly = false;
+            this.txtmahd.Size = new System.Drawing.Size(82, 23);
+            this.txtmahd.TabIndex = 128;
+            this.txtmahd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtmahd.TextName = "";
             // 
             // label1
             // 
@@ -396,6 +396,7 @@ namespace shoppingManagement
             this.lammoi.Text = "Làm mới";
             this.lammoi.TextColor = System.Drawing.Color.Black;
             this.lammoi.UseVisualStyleBackColor = true;
+            this.lammoi.Click += new System.EventHandler(this.lammoi_Click);
             // 
             // capnhat
             // 
@@ -416,6 +417,7 @@ namespace shoppingManagement
             this.capnhat.Text = "Cập nhật hóa đơn";
             this.capnhat.TextColor = System.Drawing.Color.White;
             this.capnhat.UseVisualStyleBackColor = true;
+            this.capnhat.Click += new System.EventHandler(this.capnhat_Click);
             // 
             // xoa
             // 
@@ -436,36 +438,17 @@ namespace shoppingManagement
             this.xoa.Text = "Xóa hóa đơn";
             this.xoa.TextColor = System.Drawing.Color.White;
             this.xoa.UseVisualStyleBackColor = true;
-            // 
-            // them
-            // 
-            this.them.BorderColor = System.Drawing.Color.Black;
-            this.them.ButtonColor = System.Drawing.Color.Black;
-            this.them.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.them.FlatAppearance.BorderSize = 0;
-            this.them.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.them.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.them.Location = new System.Drawing.Point(529, 326);
-            this.them.Name = "them";
-            this.them.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.them.OnHoverButtonColor = System.Drawing.Color.White;
-            this.them.OnHoverTextColor = System.Drawing.Color.Black;
-            this.them.Size = new System.Drawing.Size(138, 38);
-            this.them.TabIndex = 123;
-            this.them.Text = "Thêm hóa đơn";
-            this.them.TextColor = System.Drawing.Color.White;
-            this.them.UseVisualStyleBackColor = true;
+            this.xoa.Click += new System.EventHandler(this.xoa_Click);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(319, 165);
+            this.label9.Location = new System.Drawing.Point(331, 220);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(147, 19);
+            this.label9.Size = new System.Drawing.Size(74, 19);
             this.label9.TabIndex = 121;
-            this.label9.Text = "Số lượng dịch vụ:";
+            this.label9.Text = "Ghi chú:";
             // 
             // label8
             // 
@@ -516,28 +499,29 @@ namespace shoppingManagement
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(983, 217);
             this.dataGridView1.TabIndex = 117;
+            this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
             // 
-            // jMaterialTextbox1
+            // txtmanv
             // 
-            this.jMaterialTextbox1.BackColor = System.Drawing.Color.Transparent;
-            this.jMaterialTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.jMaterialTextbox1.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.jMaterialTextbox1.ForeColors = System.Drawing.Color.Black;
-            this.jMaterialTextbox1.HintText = null;
-            this.jMaterialTextbox1.IsPassword = false;
-            this.jMaterialTextbox1.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.jMaterialTextbox1.LineThickness = 2;
-            this.jMaterialTextbox1.Location = new System.Drawing.Point(615, 109);
-            this.jMaterialTextbox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.jMaterialTextbox1.MaxLength = 32767;
-            this.jMaterialTextbox1.Name = "jMaterialTextbox1";
-            this.jMaterialTextbox1.OnFocusedColor = System.Drawing.Color.Black;
-            this.jMaterialTextbox1.OnFocusedTextColor = System.Drawing.Color.Black;
-            this.jMaterialTextbox1.ReadOnly = false;
-            this.jMaterialTextbox1.Size = new System.Drawing.Size(82, 18);
-            this.jMaterialTextbox1.TabIndex = 148;
-            this.jMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.jMaterialTextbox1.TextName = "";
+            this.txtmanv.BackColor = System.Drawing.Color.Transparent;
+            this.txtmanv.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtmanv.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtmanv.ForeColors = System.Drawing.Color.Black;
+            this.txtmanv.HintText = null;
+            this.txtmanv.IsPassword = false;
+            this.txtmanv.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtmanv.LineThickness = 2;
+            this.txtmanv.Location = new System.Drawing.Point(615, 109);
+            this.txtmanv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtmanv.MaxLength = 32767;
+            this.txtmanv.Name = "txtmanv";
+            this.txtmanv.OnFocusedColor = System.Drawing.Color.Black;
+            this.txtmanv.OnFocusedTextColor = System.Drawing.Color.Black;
+            this.txtmanv.ReadOnly = false;
+            this.txtmanv.Size = new System.Drawing.Size(82, 18);
+            this.txtmanv.TabIndex = 148;
+            this.txtmanv.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtmanv.TextName = "";
             // 
             // label4
             // 
@@ -549,27 +533,27 @@ namespace shoppingManagement
             this.label4.TabIndex = 147;
             this.label4.Text = "Mã nhân viên:";
             // 
-            // jMaterialTextbox2
+            // txtmakh
             // 
-            this.jMaterialTextbox2.BackColor = System.Drawing.Color.Transparent;
-            this.jMaterialTextbox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.jMaterialTextbox2.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.jMaterialTextbox2.ForeColors = System.Drawing.Color.Black;
-            this.jMaterialTextbox2.HintText = null;
-            this.jMaterialTextbox2.IsPassword = false;
-            this.jMaterialTextbox2.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.jMaterialTextbox2.LineThickness = 2;
-            this.jMaterialTextbox2.Location = new System.Drawing.Point(862, 109);
-            this.jMaterialTextbox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.jMaterialTextbox2.MaxLength = 32767;
-            this.jMaterialTextbox2.Name = "jMaterialTextbox2";
-            this.jMaterialTextbox2.OnFocusedColor = System.Drawing.Color.Black;
-            this.jMaterialTextbox2.OnFocusedTextColor = System.Drawing.Color.Black;
-            this.jMaterialTextbox2.ReadOnly = false;
-            this.jMaterialTextbox2.Size = new System.Drawing.Size(82, 18);
-            this.jMaterialTextbox2.TabIndex = 150;
-            this.jMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.jMaterialTextbox2.TextName = "";
+            this.txtmakh.BackColor = System.Drawing.Color.Transparent;
+            this.txtmakh.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtmakh.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtmakh.ForeColors = System.Drawing.Color.Black;
+            this.txtmakh.HintText = null;
+            this.txtmakh.IsPassword = false;
+            this.txtmakh.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtmakh.LineThickness = 2;
+            this.txtmakh.Location = new System.Drawing.Point(862, 109);
+            this.txtmakh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtmakh.MaxLength = 32767;
+            this.txtmakh.Name = "txtmakh";
+            this.txtmakh.OnFocusedColor = System.Drawing.Color.Black;
+            this.txtmakh.OnFocusedTextColor = System.Drawing.Color.Black;
+            this.txtmakh.ReadOnly = false;
+            this.txtmakh.Size = new System.Drawing.Size(82, 18);
+            this.txtmakh.TabIndex = 150;
+            this.txtmakh.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtmakh.TextName = "";
             // 
             // label7
             // 
@@ -587,17 +571,17 @@ namespace shoppingManagement
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1017, 632);
-            this.Controls.Add(this.jMaterialTextbox2);
+            this.Controls.Add(this.txtmakh);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.jMaterialTextbox1);
+            this.Controls.Add(this.txtmanv);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dSinh);
-            this.Controls.Add(this.sdt);
+            this.Controls.Add(this.txttongtien);
+            this.Controls.Add(this.txtconlai);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.DiaChi);
+            this.Controls.Add(this.txttienkm);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.dVaoLam);
+            this.Controls.Add(this.dLap);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.timkiem);
             this.Controls.Add(this.TraCuu);
@@ -605,15 +589,14 @@ namespace shoppingManagement
             this.Controls.Add(this.LoaiTimKiem);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.ChucVu);
-            this.Controls.Add(this.TenNV);
-            this.Controls.Add(this.MaQL);
-            this.Controls.Add(this.MaNV);
+            this.Controls.Add(this.txtghichu);
+            this.Controls.Add(this.txtslsp);
+            this.Controls.Add(this.txtmakm);
+            this.Controls.Add(this.txtmahd);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lammoi);
             this.Controls.Add(this.capnhat);
             this.Controls.Add(this.xoa);
-            this.Controls.Add(this.them);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.quayve);
@@ -622,6 +605,7 @@ namespace shoppingManagement
             this.Name = "Admin_Hoadon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Hóa Đơn";
+            this.Load += new System.EventHandler(this.Admin_Hoadon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -630,13 +614,13 @@ namespace shoppingManagement
 
         #endregion
 
-        private JMaterialTextbox.JMaterialTextbox dSinh;
-        private JMaterialTextbox.JMaterialTextbox sdt;
+        private JMaterialTextbox.JMaterialTextbox txttongtien;
+        private JMaterialTextbox.JMaterialTextbox txtconlai;
         private System.Windows.Forms.Label label16;
-        private JMaterialTextbox.JMaterialTextbox DiaChi;
+        private JMaterialTextbox.JMaterialTextbox txttienkm;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
-        private JMaterialTextbox.JMaterialTextbox dVaoLam;
+        private JMaterialTextbox.JMaterialTextbox dLap;
         private System.Windows.Forms.Label label2;
         private ePOSOne.btnProduct.Button_WOC timkiem;
         private JMaterialTextbox.JMaterialTextbox TraCuu;
@@ -644,23 +628,22 @@ namespace shoppingManagement
         private System.Windows.Forms.ComboBox LoaiTimKiem;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private JMaterialTextbox.JMaterialTextbox ChucVu;
-        private JMaterialTextbox.JMaterialTextbox TenNV;
-        private JMaterialTextbox.JMaterialTextbox MaQL;
-        private JMaterialTextbox.JMaterialTextbox MaNV;
+        private JMaterialTextbox.JMaterialTextbox txtghichu;
+        private JMaterialTextbox.JMaterialTextbox txtslsp;
+        private JMaterialTextbox.JMaterialTextbox txtmakm;
+        private JMaterialTextbox.JMaterialTextbox txtmahd;
         private System.Windows.Forms.Label label1;
         private ePOSOne.btnProduct.Button_WOC lammoi;
         private ePOSOne.btnProduct.Button_WOC capnhat;
         private ePOSOne.btnProduct.Button_WOC xoa;
-        private ePOSOne.btnProduct.Button_WOC them;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private ePOSOne.btnProduct.Button_WOC quayve;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private JMaterialTextbox.JMaterialTextbox jMaterialTextbox1;
+        private JMaterialTextbox.JMaterialTextbox txtmanv;
         private System.Windows.Forms.Label label4;
-        private JMaterialTextbox.JMaterialTextbox jMaterialTextbox2;
+        private JMaterialTextbox.JMaterialTextbox txtmakh;
         private System.Windows.Forms.Label label7;
     }
 }

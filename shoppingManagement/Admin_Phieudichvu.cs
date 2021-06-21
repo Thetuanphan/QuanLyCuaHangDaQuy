@@ -93,13 +93,13 @@ namespace shoppingManagement
             try
             {
 
-                string sql = "INSERT INTO PHIEUDV (MaNV, MaQL, TenNV, ChucVu, NgaySinh, GioiTinh, DiaChi, SDT, NgayVaoLam) values " +
-                    "(" + "'" + MaNV.TextName + "','" + MaQL.TextName + "','" + TenNV.TextName + "','" + ChucVu.TextName + "', TO_DATE('" + dSinh.TextName + "','dd/mm/yyyy hh:mi:ss AM'),'" + GioiTinh.Text + "','" + DiaChi.TextName + "'," + Int32.Parse(sdt.TextName) + "," + " TO_DATE('" + dVaoLam.TextName + "','dd/mm/yyyy hh:mi:ss AM')" + ")";
-                OracleCommand cmd = new OracleCommand(sql, con);
+                //string sql = "INSERT INTO PHIEUDV (MaPDV, MaNV, MaKH, NgayLap, SoLuongDV, TongTien, ThanhToanTruoc, TienConLai, TinhTrang) values " +
+                   // "(" + "'" + MaNV.TextName + "','" + MaQL.TextName + "','" + TenNV.TextName + "','" + ChucVu.TextName + "', TO_DATE('" + dSinh.TextName + "','dd/mm/yyyy hh:mi:ss AM'),'" + GioiTinh.Text + "','" + DiaChi.TextName + "'," + Int32.Parse(sdt.TextName) + "," + " TO_DATE('" + dVaoLam.TextName + "','dd/mm/yyyy hh:mi:ss AM')" + ")";
+                //OracleCommand cmd = new OracleCommand(sql, con);
 
                 con.Open();
 
-                cmd.ExecuteNonQuery();
+                //cmd.ExecuteNonQuery();
                 MessageBox.Show("Đã thêm phiếu thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 OracleDataAdapter adapter = new OracleDataAdapter("select * from PHIEUDV order by MaPDV", con);
@@ -136,7 +136,7 @@ namespace shoppingManagement
 
                 try
                 {
-                    string sql = "DELETE FROM NHANVIEN Where MaNV=" + "'" + MaNV.TextName + "'";
+                    string sql = "DELETE FROM PHIEUDV Where MaPDV=" + "'" + txtmaphieu.TextName + "'";
                     OracleCommand cmd = new OracleCommand(sql, con);
 
                     con.Open();
@@ -184,9 +184,9 @@ namespace shoppingManagement
 
                 try
                 {
-                    string sql = "update NHANVIEN" +
-                         " SET " + "MaQL= '" + MaQL.Text + "', TenNV='" + TenNV.TextName + "', ChucVu='" + ChucVu.TextName + "', NgaySinh=" + "TO_DATE('" + dSinh.TextName + "', 'dd/mm/yyyy hh:mi:ss AM')" + ", GioiTinh='" + GioiTinh.Text + "', DiaChi='" + DiaChi.TextName + "', SDT=" + sdt.TextName + ", NgayVaoLam= " + "TO_DATE('" + dVaoLam.TextName + "', 'dd/mm/yyyy hh:mi:ss AM')" +
-                        " where MaNV ='" + MaNV.TextName + "'";
+                    string sql = "update PHIEUDV" +
+                         " SET " + "MaNV= '" + txtmanv.TextName + "', MaKH='" + txtmakh.TextName + "', SoLuongDV=" + txtsldv.TextName + ", NgayLap=" + "TO_DATE('" + dLap.TextName + "', 'dd/mm/yyyy hh:mi:ss AM')" + ", TongTien=" + txttongtien.Text + ", ThanhToanTruoc=" + txtthanhtoantruoc.TextName + ", TienConLai=" + txtconlai.TextName + ", TinhTrang= '" + txttinhtrang.TextName + "' " +
+                        " where MaPDV ='" + txtmaphieu.TextName + "'";
 
                     /* string sql = "update NHANVIEN SET NgaySinh=" + "TO_DATE('" + dSinh.TextName + "','dd-mm-yyy')" + "where MaNV='" + MaNV.TextName + "'"; */
                     OracleCommand cmd = new OracleCommand(sql, con);
@@ -194,9 +194,9 @@ namespace shoppingManagement
                     con.Open();
 
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Cập nhật nhân viên thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Cập nhật phiếu thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    OracleDataAdapter adapter = new OracleDataAdapter("select * from NHANVIEN order by MaNV", con);
+                    OracleDataAdapter adapter = new OracleDataAdapter("select * from PHIEUDV order by MaPDV", con);
                     DataTable dt = new DataTable();
 
                     adapter.Fill(dt);
@@ -242,15 +242,15 @@ namespace shoppingManagement
             try
             {
 
-                string sql = "Select * from NHANVIEN where MaNV='" + TraCuu.TextName + "' order by MaNV";
-                string sql1 = "Select * from NHANVIEN where MaQL='" + TraCuu.TextName + "' order by MaNV";
-                string sql2 = "Select * from NHANVIEN where TenNV='" + TraCuu.TextName + "' order by MaNV";
+                string sql = "Select * from PHIEUDV where MaPDV='" + TraCuu.TextName + "' order by MaPDV";
+                string sql1 = "Select * from PHIEUDV where MaNV='" + TraCuu.TextName + "' order by MaPDV";
+                string sql2 = "Select * from PHIEUDV where MaKH='" + TraCuu.TextName + "' order by MaPDV";
 
                 OracleDataAdapter adapter = new OracleDataAdapter(sql, con);
                 OracleDataAdapter adapter1 = new OracleDataAdapter(sql1, con);
                 OracleDataAdapter adapter2 = new OracleDataAdapter(sql2, con);
 
-                if (LoaiTimKiem.Text == "MaNV")
+                if (LoaiTimKiem.Text == "MaPDV")
                 {
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);
@@ -258,7 +258,7 @@ namespace shoppingManagement
                 }
                 else
                 {
-                    if (LoaiTimKiem.Text == "MaQL")
+                    if (LoaiTimKiem.Text == "MaNV")
                     {
                         DataTable dt1 = new DataTable();
                         adapter1.Fill(dt1);
@@ -266,7 +266,7 @@ namespace shoppingManagement
                     }
                     else
                     {
-                        if (LoaiTimKiem.Text == "TenNV")
+                        if (LoaiTimKiem.Text == "MaKH")
                         {
                             DataTable dt2 = new DataTable();
                             adapter2.Fill(dt2);
