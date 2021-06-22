@@ -176,22 +176,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="dichvu.cs">
+    <Compile Include="hoadon.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>dichvu.rpt</DependentUpon>
+      <DependentUpon>hoadon.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="hoadon1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>hoadon1.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="nhaphang.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>nhaphang.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="NV_1Khachhang.cs">
@@ -266,12 +260,6 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
-    <Compile Include="hoadon.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>hoadon.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -341,17 +329,13 @@
     <EmbeddedResource Include="Admin_Thongkedoanhthu.resx">
       <DependentUpon>Admin_Thongkedoanhthu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="dichvu.rpt">
+    <EmbeddedResource Include="hoadon.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>dichvu.cs</LastGenOutput>
+      <LastGenOutput>hoadon.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="hoadon1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>hoadon1.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="nhaphang.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>nhaphang.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="NV_1Khachhang.resx">
       <DependentUpon>NV_1Khachhang.cs</DependentUpon>
@@ -388,10 +372,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="hoadon.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>hoadon.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

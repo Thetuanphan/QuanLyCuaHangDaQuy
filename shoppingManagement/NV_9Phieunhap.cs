@@ -99,8 +99,8 @@ namespace shoppingManagement
             try
             {
 
-                string sql = "insert into CHITIETNSP (MaSP, MaPH, SoLuongNhap, DonGiaNhap, MaDT) values ('"
-                    + MaSP + "', '" + MaHD.TextName + "', " + quantity + ", '" + DonGiaNhap + "', '" + MaDT + "')";
+                string sql = "insert into CHITIETNSP (MaSP, MaPH, SoLuongNhap, DonGiaNhap, MaDT, ThanhTien) values ('"
+                    + MaSP + "', '" + MaHD.TextName + "', " + quantity + ", '" + DonGiaNhap + "', '" + MaDT + "'," + total +")";
                 itemTotal++;
                 string sql1 = "update PHIEUNSP SET TongNSP=" + grandTotal + 
                     " where MaPH= '" + MaHD.TextName + "'";

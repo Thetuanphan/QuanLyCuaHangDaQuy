@@ -72,7 +72,6 @@ namespace shoppingManagement
             String SLDV = SLsanpham.TextName;
             String NgayGiao = txtngaygiao.TextName;
             String TinhTrang = txttinhtrang.TextName;
-            
 
             String quantity = SLsanpham.TextName;
 
