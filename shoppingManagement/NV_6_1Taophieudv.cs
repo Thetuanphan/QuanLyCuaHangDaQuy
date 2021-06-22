@@ -12,14 +12,18 @@ using System.IO;
 
 namespace shoppingManagement
 {
-    public partial class Form2 : Form
+    public partial class NV_6_1Taophieudv : Form
     {
-        public Form2()
+        public NV_6_1Taophieudv(string user, string pass, string makh, string mapdv)
         {
             InitializeComponent();
+            txtuser.TextName = user;
+            txtpass.TextName = pass;
+            MaKH.TextName = makh;
+            MaHD.TextName = mapdv;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void NV_6_1Taophieudv_Load(object sender, EventArgs e)
         {
             string connstr = "Data Source=(DESCRIPTION=" +
             "(ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))" +
@@ -33,25 +37,23 @@ namespace shoppingManagement
             {
                 // string m = cthang.Text;
 
-                phieunhaphang sr = new phieunhaphang();
+                Phieudichvu sr1 = new Phieudichvu();
 
-                string sql = "Select * from PHIEUNSP where MaPH = 'HD01'";
+                string sql1 = "Select * from PHIEUDV where MaPDV = '" + MaHD.TextName + "'";
 
-                DataSet s1 = new DataSet();
+                DataSet s2 = new DataSet();
 
-                OracleDataAdapter adapter1 = new OracleDataAdapter(sql, con);
+                OracleDataAdapter adapter2 = new OracleDataAdapter(sql1, con);
 
-
-                adapter1.Fill(s1, "HOADON");
-                DataTable dt = s1.Tables["HOADON"];
-                sr.SetDataSource(s1.Tables["HOADON"]);
-                crystalReportViewer1.ReportSource = sr;
+                adapter2.Fill(s2, "PHIEUDV");
+                DataTable dt = s2.Tables["PHIEUDV"];
+                sr1.SetDataSource(s2.Tables["PHIEUDV"]);
+                crystalReportViewer1.ReportSource = sr1;
                 crystalReportViewer1.Refresh();
 
-
                 /*
-                dichvu sr1 = new dichvu();
-                //sr1.SetDataSource(s1.Tables["table1"]);
+                Phieudichvu sr1 = new Phieudichvu();
+                sr1.SetDataSource(s1.Tables["table1"]);
                 sr1.SetDataSource(s1.DataSet);
                 crystalReportViewer2.ReportSource = sr1;
                 crystalReportViewer2.Refresh(); */
@@ -64,6 +66,13 @@ namespace shoppingManagement
             {
                 con.Close();
             }
+        }
+
+        private void quayve_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            NV_6Dichvu f2 = new NV_6Dichvu(txtuser.TextName, txtpass.TextName, MaKH.TextName, MaHD.TextName);
+            f2.ShowDialog();
         }
     }
 }

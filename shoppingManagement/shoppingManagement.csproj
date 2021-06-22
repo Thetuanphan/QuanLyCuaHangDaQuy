@@ -176,6 +176,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="demopdv.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>demopdv.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="hoadon.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -224,6 +230,12 @@
     <Compile Include="NV_6Dichvu.Designer.cs">
       <DependentUpon>NV_6Dichvu.cs</DependentUpon>
     </Compile>
+    <Compile Include="NV_6_1Taophieudv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NV_6_1Taophieudv.Designer.cs">
+      <DependentUpon>NV_6_1Taophieudv.cs</DependentUpon>
+    </Compile>
     <Compile Include="NV_7Doitac.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,6 +265,18 @@
     </Compile>
     <Compile Include="NV_3Sanpham.Designer.cs">
       <DependentUpon>NV_3Sanpham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Phieudichvu.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Phieudichvu.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="phieunhaphang.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>phieunhaphang.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Re_hoadon.cs">
       <SubType>Form</SubType>
@@ -329,6 +353,10 @@
     <EmbeddedResource Include="Admin_Thongkedoanhthu.resx">
       <DependentUpon>Admin_Thongkedoanhthu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="demopdv.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>demopdv.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="hoadon.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>hoadon.cs</LastGenOutput>
@@ -355,6 +383,9 @@
     <EmbeddedResource Include="NV_6Dichvu.resx">
       <DependentUpon>NV_6Dichvu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NV_6_1Taophieudv.resx">
+      <DependentUpon>NV_6_1Taophieudv.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NV_7Doitac.resx">
       <DependentUpon>NV_7Doitac.cs</DependentUpon>
     </EmbeddedResource>
@@ -369,6 +400,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NV_3Sanpham.resx">
       <DependentUpon>NV_3Sanpham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Phieudichvu.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Phieudichvu.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="phieunhaphang.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>phieunhaphang.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Re_hoadon.resx">
       <DependentUpon>Re_hoadon.cs</DependentUpon>

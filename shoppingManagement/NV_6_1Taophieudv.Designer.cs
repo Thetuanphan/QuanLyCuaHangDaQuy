@@ -1,7 +1,7 @@
 ﻿
 namespace shoppingManagement
 {
-    partial class NV_3
+    partial class NV_6_1Taophieudv
     {
         /// <summary>
         /// Required designer variable.
@@ -29,26 +29,13 @@ namespace shoppingManagement
         /// </summary>
         private void InitializeComponent()
         {
-            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.MaHD = new JMaterialTextbox.JMaterialTextbox();
             this.txtpass = new JMaterialTextbox.JMaterialTextbox();
             this.txtuser = new JMaterialTextbox.JMaterialTextbox();
             this.MaKH = new JMaterialTextbox.JMaterialTextbox();
             this.quayve = new ePOSOne.btnProduct.Button_WOC();
-            this.Phieudichvu1 = new shoppingManagement.Phieudichvu();
+            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.SuspendLayout();
-            // 
-            // crystalReportViewer1
-            // 
-            this.crystalReportViewer1.ActiveViewIndex = 0;
-            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(12, 65);
-            this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.ReportSource = this.Phieudichvu1;
-            this.crystalReportViewer1.Size = new System.Drawing.Size(993, 555);
-            this.crystalReportViewer1.TabIndex = 76;
-            this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
             // MaHD
             // 
@@ -68,7 +55,7 @@ namespace shoppingManagement
             this.MaHD.OnFocusedTextColor = System.Drawing.Color.Black;
             this.MaHD.ReadOnly = false;
             this.MaHD.Size = new System.Drawing.Size(10, 10);
-            this.MaHD.TabIndex = 188;
+            this.MaHD.TabIndex = 194;
             this.MaHD.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.MaHD.TextName = "";
             // 
@@ -90,7 +77,7 @@ namespace shoppingManagement
             this.txtpass.OnFocusedTextColor = System.Drawing.Color.Black;
             this.txtpass.ReadOnly = false;
             this.txtpass.Size = new System.Drawing.Size(10, 10);
-            this.txtpass.TabIndex = 187;
+            this.txtpass.TabIndex = 193;
             this.txtpass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtpass.TextName = "";
             // 
@@ -112,7 +99,7 @@ namespace shoppingManagement
             this.txtuser.OnFocusedTextColor = System.Drawing.Color.Black;
             this.txtuser.ReadOnly = false;
             this.txtuser.Size = new System.Drawing.Size(10, 10);
-            this.txtuser.TabIndex = 186;
+            this.txtuser.TabIndex = 192;
             this.txtuser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtuser.TextName = "";
             // 
@@ -134,7 +121,7 @@ namespace shoppingManagement
             this.MaKH.OnFocusedTextColor = System.Drawing.Color.Black;
             this.MaKH.ReadOnly = false;
             this.MaKH.Size = new System.Drawing.Size(10, 10);
-            this.MaKH.TabIndex = 185;
+            this.MaKH.TabIndex = 191;
             this.MaKH.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.MaKH.TextName = "";
             // 
@@ -153,40 +140,50 @@ namespace shoppingManagement
             this.quayve.OnHoverButtonColor = System.Drawing.Color.Black;
             this.quayve.OnHoverTextColor = System.Drawing.Color.White;
             this.quayve.Size = new System.Drawing.Size(76, 36);
-            this.quayve.TabIndex = 75;
+            this.quayve.TabIndex = 189;
             this.quayve.Text = "<<";
             this.quayve.TextColor = System.Drawing.Color.Black;
             this.quayve.UseVisualStyleBackColor = true;
             this.quayve.Click += new System.EventHandler(this.quayve_Click);
             // 
-            // NV_3
+            // crystalReportViewer1
+            // 
+            this.crystalReportViewer1.ActiveViewIndex = -1;
+            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer1.Location = new System.Drawing.Point(12, 71);
+            this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.Size = new System.Drawing.Size(992, 549);
+            this.crystalReportViewer1.TabIndex = 195;
+            this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
+            // 
+            // NV_6_1Taophieudv
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1017, 632);
+            this.Controls.Add(this.crystalReportViewer1);
             this.Controls.Add(this.MaHD);
             this.Controls.Add(this.txtpass);
             this.Controls.Add(this.txtuser);
             this.Controls.Add(this.MaKH);
-            this.Controls.Add(this.crystalReportViewer1);
             this.Controls.Add(this.quayve);
-            this.Name = "NV_3";
+            this.Name = "NV_6_1Taophieudv";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "NV_3";
-            this.Load += new System.EventHandler(this.NV_3_Load);
+            this.Text = "NV_6_1Taophieudv";
+            this.Load += new System.EventHandler(this.NV_6_1Taophieudv_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private ePOSOne.btnProduct.Button_WOC quayve;
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
         private JMaterialTextbox.JMaterialTextbox MaHD;
         private JMaterialTextbox.JMaterialTextbox txtpass;
         private JMaterialTextbox.JMaterialTextbox txtuser;
         private JMaterialTextbox.JMaterialTextbox MaKH;
-        private Phieudichvu Phieudichvu1;
+        private ePOSOne.btnProduct.Button_WOC quayve;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
     }
 }

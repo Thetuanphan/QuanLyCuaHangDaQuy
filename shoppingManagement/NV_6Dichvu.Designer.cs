@@ -47,15 +47,6 @@ namespace shoppingManagement
             this.SLsanpham = new JMaterialTextbox.JMaterialTextbox();
             this.themsp = new ePOSOne.btnProduct.Button_WOC();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtngaygiao = new JMaterialTextbox.JMaterialTextbox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txttinhtrang = new JMaterialTextbox.JMaterialTextbox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtdongia = new JMaterialTextbox.JMaterialTextbox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txttratruoc = new JMaterialTextbox.JMaterialTextbox();
             this.MaDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonGiaDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,6 +56,15 @@ namespace shoppingManagement
             this.ConLai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayGiao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtngaygiao = new JMaterialTextbox.JMaterialTextbox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txttinhtrang = new JMaterialTextbox.JMaterialTextbox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtdongia = new JMaterialTextbox.JMaterialTextbox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txttratruoc = new JMaterialTextbox.JMaterialTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -294,6 +294,7 @@ namespace shoppingManagement
             this.tieptuc.Text = "Tạo Phiếu DV";
             this.tieptuc.TextColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tieptuc.UseVisualStyleBackColor = false;
+            this.tieptuc.Click += new System.EventHandler(this.tieptuc_Click);
             // 
             // label4
             // 
@@ -385,6 +386,51 @@ namespace shoppingManagement
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(636, 203);
             this.dataGridView2.TabIndex = 192;
+            // 
+            // MaDV
+            // 
+            this.MaDV.HeaderText = "MaDV";
+            this.MaDV.Name = "MaDV";
+            // 
+            // TenDV
+            // 
+            this.TenDV.HeaderText = "TenDV";
+            this.TenDV.Name = "TenDV";
+            // 
+            // DonGiaDV
+            // 
+            this.DonGiaDV.HeaderText = "DonGiaDV";
+            this.DonGiaDV.Name = "DonGiaDV";
+            // 
+            // SoLuongDV
+            // 
+            this.SoLuongDV.HeaderText = "SoLuongDV";
+            this.SoLuongDV.Name = "SoLuongDV";
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.HeaderText = "ThanhTien";
+            this.ThanhTien.Name = "ThanhTien";
+            // 
+            // TraTruoc
+            // 
+            this.TraTruoc.HeaderText = "TraTruoc";
+            this.TraTruoc.Name = "TraTruoc";
+            // 
+            // ConLai
+            // 
+            this.ConLai.HeaderText = "ConLai";
+            this.ConLai.Name = "ConLai";
+            // 
+            // NgayGiao
+            // 
+            this.NgayGiao.HeaderText = "NgayGiao";
+            this.NgayGiao.Name = "NgayGiao";
+            // 
+            // TinhTrang
+            // 
+            this.TinhTrang.HeaderText = "TinhTrang";
+            this.TinhTrang.Name = "TinhTrang";
             // 
             // dataGridView1
             // 
@@ -521,51 +567,6 @@ namespace shoppingManagement
             this.txttratruoc.TabIndex = 219;
             this.txttratruoc.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txttratruoc.TextName = "";
-            // 
-            // MaDV
-            // 
-            this.MaDV.HeaderText = "MaDV";
-            this.MaDV.Name = "MaDV";
-            // 
-            // TenDV
-            // 
-            this.TenDV.HeaderText = "TenDV";
-            this.TenDV.Name = "TenDV";
-            // 
-            // DonGiaDV
-            // 
-            this.DonGiaDV.HeaderText = "DonGiaDV";
-            this.DonGiaDV.Name = "DonGiaDV";
-            // 
-            // SoLuongDV
-            // 
-            this.SoLuongDV.HeaderText = "SoLuongDV";
-            this.SoLuongDV.Name = "SoLuongDV";
-            // 
-            // ThanhTien
-            // 
-            this.ThanhTien.HeaderText = "ThanhTien";
-            this.ThanhTien.Name = "ThanhTien";
-            // 
-            // TraTruoc
-            // 
-            this.TraTruoc.HeaderText = "TraTruoc";
-            this.TraTruoc.Name = "TraTruoc";
-            // 
-            // ConLai
-            // 
-            this.ConLai.HeaderText = "ConLai";
-            this.ConLai.Name = "ConLai";
-            // 
-            // NgayGiao
-            // 
-            this.NgayGiao.HeaderText = "NgayGiao";
-            this.NgayGiao.Name = "NgayGiao";
-            // 
-            // TinhTrang
-            // 
-            this.TinhTrang.HeaderText = "TinhTrang";
-            this.TinhTrang.Name = "TinhTrang";
             // 
             // NV_6Dichvu
             // 

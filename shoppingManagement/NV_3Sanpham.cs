@@ -106,7 +106,7 @@ namespace shoppingManagement
 
                 string sql = "insert into cthd (MaSP, MaHD, SoLuongSP, TienSP) values ('"
                     + MaSP + "', '" + MaHD.TextName + "', " + quantity + ", " + total + ")";
-                itemTotal++;
+                itemTotal += double.Parse(quantity);
                 string sql1 = "update HOADON SET SoLuongSP=" + itemTotal + ", TienChuaTru=" + grandTotalGoc + ", TongTien=" + grandTotal +
                     " where MaHD= '" + MaHD.TextName + "'";
 

@@ -15,6 +15,8 @@ namespace shoppingManagement
     public partial class NV_6Dichvu : Form
     {
         private double grandTotal = 0;
+        private double grandTotalGoc = 0;
+        private double itemTotal = 0;
         public NV_6Dichvu(string user, string pass, string makh, string mapdv)
         {
             InitializeComponent();
@@ -78,6 +80,7 @@ namespace shoppingManagement
             double total = (Double.Parse(TienDV) * Double.Parse(quantity));
 
             grandTotal = grandTotal + total;
+            grandTotalGoc += total;
 
 
             label4.Text = grandTotal.ToString();
@@ -99,11 +102,16 @@ namespace shoppingManagement
                 double conlai = grandTotal - double.Parse(txttratruoc.TextName);
                 string sql = "insert into chitietdv (MaDV, MaPDV, MaNV, NgayLap, SoLuongDV, NgayGiao, DonGiaDuocTinh, ThanhTien, TinhTrang, TraTruoc, ConLai) values ('"
                     + MaDV + "', '" + MaPDV.TextName + "', '" + txtuser.TextName + "', TO_DATE('" + date + "','dd/mm/yyyy'), " + quantity + ", TO_DATE('" + txtngaygiao.TextName + "','dd/mm/yyyy'), " + txtdongia.TextName + ", " + total + ", '" + txttinhtrang.TextName + "', " + txttratruoc.TextName + ", " + conlai + ")";
+                itemTotal += double.Parse(quantity);
+                string sql1 = "update PHIEUDV SET SoLuongDV=" + itemTotal + ", TongTien=" + grandTotal + ", ThanhToanTruoc=" + double.Parse(txttratruoc.TextName) + ", TienConLai=" + conlai + 
+                    " where MaPDV='" + MaPDV.TextName + "'";
                 OracleCommand cmd = new OracleCommand(sql, con);
+                OracleCommand cmd1 = new OracleCommand(sql1, con);
 
                 con.Open();
 
                 cmd.ExecuteNonQuery();
+                cmd1.ExecuteNonQuery();
                 dataGridView2.Rows.Add(MaDV, TenDV, TienDV, quantity, total.ToString(), txttratruoc.TextName, conlai, NgayGiao, TinhTrang);
 
                 //MessageBox.Show("Đã thêm sản phẩm thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -158,6 +166,13 @@ namespace shoppingManagement
             }
             this.Hide();
             NV_6Dichvu f2 = new NV_6Dichvu(txtuser.TextName, txtpass.TextName, MaKH.TextName, MaPDV.TextName);
+            f2.ShowDialog();
+        }
+
+        private void tieptuc_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            NV_6_1Taophieudv f2 = new NV_6_1Taophieudv(txtuser.TextName, txtpass.TextName, MaKH.TextName, MaPDV.TextName);
             f2.ShowDialog();
         }
     }
