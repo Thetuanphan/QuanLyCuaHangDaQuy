@@ -391,6 +391,7 @@ namespace shoppingManagement
             this.tieptuc.Text = "Tạo Hóa Đơn";
             this.tieptuc.TextColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tieptuc.UseVisualStyleBackColor = false;
+            this.tieptuc.Click += new System.EventHandler(this.tieptuc_Click);
             // 
             // themsp
             // 

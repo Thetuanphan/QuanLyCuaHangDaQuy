@@ -200,6 +200,12 @@
     <Compile Include="NV_2Mahoadon.Designer.cs">
       <DependentUpon>NV_2Mahoadon.cs</DependentUpon>
     </Compile>
+    <Compile Include="NV_3_1Taohoadon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NV_3_1Taohoadon.Designer.cs">
+      <DependentUpon>NV_3_1Taohoadon.cs</DependentUpon>
+    </Compile>
     <Compile Include="NV_4Khachhang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -292,12 +298,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Re_Nhaphang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Re_Nhaphang.Designer.cs">
-      <DependentUpon>Re_Nhaphang.cs</DependentUpon>
-    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="Admin_Dichvu.resx">
       <DependentUpon>Admin_Dichvu.cs</DependentUpon>
@@ -342,6 +342,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NV_2Mahoadon.resx">
       <DependentUpon>NV_2Mahoadon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NV_3_1Taohoadon.resx">
+      <DependentUpon>NV_3_1Taohoadon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NV_4Khachhang.resx">
       <DependentUpon>NV_4Khachhang.cs</DependentUpon>
@@ -398,9 +401,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Re_Nhaphang.resx">
-      <DependentUpon>Re_Nhaphang.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>

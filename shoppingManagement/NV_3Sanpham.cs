@@ -278,5 +278,12 @@ namespace shoppingManagement
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void tieptuc_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            NV_3 f2 = new NV_3(txtuser.TextName, txtpass.TextName, MaKH.TextName, MaHD.TextName);
+            f2.ShowDialog();
+        }
     }
 }
