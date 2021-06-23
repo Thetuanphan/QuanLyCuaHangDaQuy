@@ -37,7 +37,7 @@ namespace shoppingManagement
             {
                 // string m = cthang.Text;
 
-                Phieudichvu sr1 = new Phieudichvu();
+                phieudv sr1 = new phieudv();
 
                 string sql1 = "Select * from PHIEUDV where MaPDV = '" + MaHD.TextName + "'";
 
