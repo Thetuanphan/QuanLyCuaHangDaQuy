@@ -212,12 +212,6 @@
       <DependentUpon>hoadon.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="hoadon1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>hoadon1.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="NV_1Khachhang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -306,12 +300,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>phieunh.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="phieunhaphang.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>phieunhaphang.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Re_hoadon.cs">
@@ -411,10 +399,6 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>hoadon.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="hoadon1.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>hoadon1.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="NV_1Khachhang.resx">
       <DependentUpon>NV_1Khachhang.cs</DependentUpon>
     </EmbeddedResource>
@@ -461,10 +445,6 @@
     <EmbeddedResource Include="phieunh.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>phieunh.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="phieunhaphang.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>phieunhaphang.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Re_hoadon.resx">
       <DependentUpon>Re_hoadon.cs</DependentUpon>
