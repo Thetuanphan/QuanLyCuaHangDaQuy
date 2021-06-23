@@ -16,14 +16,14 @@ namespace shoppingManagement {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class demopdv : ReportClass {
+    public class baocaodoanhthu : ReportClass {
         
-        public demopdv() {
+        public baocaodoanhthu() {
         }
         
         public override string ResourceName {
             get {
-                return "demopdv.rpt";
+                return "baocaodoanhthu.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace shoppingManagement {
         
         public override string FullResourceName {
             get {
-                return "shoppingManagement.demopdv.rpt";
+                return "shoppingManagement.baocaodoanhthu.rpt";
             }
             set {
                 // Do nothing
@@ -66,7 +66,7 @@ namespace shoppingManagement {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section3 {
+        public CrystalDecisions.CrystalReports.Engine.Section GroupHeaderSection1 {
             get {
                 return this.ReportDefinition.Sections[2];
             }
@@ -74,7 +74,7 @@ namespace shoppingManagement {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section4 {
+        public CrystalDecisions.CrystalReports.Engine.Section Section3 {
             get {
                 return this.ReportDefinition.Sections[3];
             }
@@ -82,17 +82,33 @@ namespace shoppingManagement {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section5 {
+        public CrystalDecisions.CrystalReports.Engine.Section GroupFooterSection1 {
             get {
                 return this.ReportDefinition.Sections[4];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.CrystalReports.Engine.Section Section4 {
+            get {
+                return this.ReportDefinition.Sections[5];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.CrystalReports.Engine.Section Section5 {
+            get {
+                return this.ReportDefinition.Sections[6];
             }
         }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class Cacheddemopdv : Component, ICachedReport {
+    public class Cachedbaocaodoanhthu : Component, ICachedReport {
         
-        public Cacheddemopdv() {
+        public Cachedbaocaodoanhthu() {
         }
         
         [Browsable(false)]
@@ -129,7 +145,7 @@ namespace shoppingManagement {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            demopdv rpt = new demopdv();
+            baocaodoanhthu rpt = new baocaodoanhthu();
             rpt.Site = this.Site;
             return rpt;
         }

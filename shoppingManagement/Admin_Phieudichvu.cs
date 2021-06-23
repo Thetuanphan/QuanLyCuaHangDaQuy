@@ -280,5 +280,12 @@ namespace shoppingManagement
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void button_WOC1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Admin_DV_Dsphieudv f2 = new Admin_DV_Dsphieudv();
+            f2.ShowDialog();
+        }
     }
 }

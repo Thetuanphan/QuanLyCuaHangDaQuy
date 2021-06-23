@@ -48,9 +48,7 @@ namespace shoppingManagement
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtsldv = new JMaterialTextbox.JMaterialTextbox();
-            this.txtmakm = new JMaterialTextbox.JMaterialTextbox();
             this.txtmaphieu = new JMaterialTextbox.JMaterialTextbox();
-            this.label1 = new System.Windows.Forms.Label();
             this.lammoi = new ePOSOne.btnProduct.Button_WOC();
             this.capnhat = new ePOSOne.btnProduct.Button_WOC();
             this.xoa = new ePOSOne.btnProduct.Button_WOC();
@@ -60,6 +58,7 @@ namespace shoppingManagement
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txttinhtrang = new JMaterialTextbox.JMaterialTextbox();
             this.label8 = new System.Windows.Forms.Label();
+            this.button_WOC1 = new ePOSOne.btnProduct.Button_WOC();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,7 +72,7 @@ namespace shoppingManagement
             this.txtmakh.IsPassword = false;
             this.txtmakh.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtmakh.LineThickness = 2;
-            this.txtmakh.Location = new System.Drawing.Point(862, 109);
+            this.txtmakh.Location = new System.Drawing.Point(634, 109);
             this.txtmakh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtmakh.MaxLength = 32767;
             this.txtmakh.Name = "txtmakh";
@@ -89,7 +88,7 @@ namespace shoppingManagement
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(726, 108);
+            this.label7.Location = new System.Drawing.Point(498, 108);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(131, 19);
             this.label7.TabIndex = 181;
@@ -105,7 +104,7 @@ namespace shoppingManagement
             this.txtmanv.IsPassword = false;
             this.txtmanv.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtmanv.LineThickness = 2;
-            this.txtmanv.Location = new System.Drawing.Point(615, 109);
+            this.txtmanv.Location = new System.Drawing.Point(387, 109);
             this.txtmanv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtmanv.MaxLength = 32767;
             this.txtmanv.Name = "txtmanv";
@@ -121,7 +120,7 @@ namespace shoppingManagement
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(486, 108);
+            this.label4.Location = new System.Drawing.Point(258, 108);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(116, 19);
             this.label4.TabIndex = 179;
@@ -340,9 +339,9 @@ namespace shoppingManagement
             this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(20, 374);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(165, 19);
+            this.label5.Size = new System.Drawing.Size(204, 19);
             this.label5.TabIndex = 165;
-            this.label5.Text = "Danh sách hóa đơn:";
+            this.label5.Text = "Danh sách phiếu dịch vụ:";
             // 
             // txtsldv
             // 
@@ -366,28 +365,6 @@ namespace shoppingManagement
             this.txtsldv.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtsldv.TextName = "";
             // 
-            // txtmakm
-            // 
-            this.txtmakm.BackColor = System.Drawing.Color.Transparent;
-            this.txtmakm.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtmakm.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtmakm.ForeColors = System.Drawing.Color.Black;
-            this.txtmakm.HintText = null;
-            this.txtmakm.IsPassword = false;
-            this.txtmakm.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtmakm.LineThickness = 2;
-            this.txtmakm.Location = new System.Drawing.Point(384, 109);
-            this.txtmakm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtmakm.MaxLength = 32767;
-            this.txtmakm.Name = "txtmakm";
-            this.txtmakm.OnFocusedColor = System.Drawing.Color.Black;
-            this.txtmakm.OnFocusedTextColor = System.Drawing.Color.Black;
-            this.txtmakm.ReadOnly = false;
-            this.txtmakm.Size = new System.Drawing.Size(82, 18);
-            this.txtmakm.TabIndex = 162;
-            this.txtmakm.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtmakm.TextName = "";
-            // 
             // txtmaphieu
             // 
             this.txtmaphieu.BackColor = System.Drawing.Color.Transparent;
@@ -409,16 +386,6 @@ namespace shoppingManagement
             this.txtmaphieu.TabIndex = 161;
             this.txtmaphieu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtmaphieu.TextName = "";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(248, 108);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 19);
-            this.label1.TabIndex = 160;
-            this.label1.Text = "Mã khuyến mãi:";
             // 
             // lammoi
             // 
@@ -566,12 +533,34 @@ namespace shoppingManagement
             this.label8.TabIndex = 183;
             this.label8.Text = "Tình trạng:";
             // 
+            // button_WOC1
+            // 
+            this.button_WOC1.BorderColor = System.Drawing.Color.Black;
+            this.button_WOC1.ButtonColor = System.Drawing.Color.White;
+            this.button_WOC1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button_WOC1.FlatAppearance.BorderSize = 0;
+            this.button_WOC1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button_WOC1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_WOC1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_WOC1.Location = new System.Drawing.Point(829, 268);
+            this.button_WOC1.Name = "button_WOC1";
+            this.button_WOC1.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.button_WOC1.OnHoverButtonColor = System.Drawing.Color.Black;
+            this.button_WOC1.OnHoverTextColor = System.Drawing.Color.White;
+            this.button_WOC1.Size = new System.Drawing.Size(171, 39);
+            this.button_WOC1.TabIndex = 185;
+            this.button_WOC1.Text = "In danh sách phiếu dv";
+            this.button_WOC1.TextColor = System.Drawing.Color.Black;
+            this.button_WOC1.UseVisualStyleBackColor = true;
+            this.button_WOC1.Click += new System.EventHandler(this.button_WOC1_Click);
+            // 
             // Admin_Phieudichvu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1017, 632);
+            this.Controls.Add(this.button_WOC1);
             this.Controls.Add(this.txttinhtrang);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtmakh);
@@ -593,9 +582,7 @@ namespace shoppingManagement
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtsldv);
-            this.Controls.Add(this.txtmakm);
             this.Controls.Add(this.txtmaphieu);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.lammoi);
             this.Controls.Add(this.capnhat);
             this.Controls.Add(this.xoa);
@@ -634,9 +621,7 @@ namespace shoppingManagement
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private JMaterialTextbox.JMaterialTextbox txtsldv;
-        private JMaterialTextbox.JMaterialTextbox txtmakm;
         private JMaterialTextbox.JMaterialTextbox txtmaphieu;
-        private System.Windows.Forms.Label label1;
         private ePOSOne.btnProduct.Button_WOC lammoi;
         private ePOSOne.btnProduct.Button_WOC capnhat;
         private ePOSOne.btnProduct.Button_WOC xoa;
@@ -646,5 +631,6 @@ namespace shoppingManagement
         private System.Windows.Forms.DataGridView dataGridView1;
         private JMaterialTextbox.JMaterialTextbox txttinhtrang;
         private System.Windows.Forms.Label label8;
+        private ePOSOne.btnProduct.Button_WOC button_WOC1;
     }
 }

@@ -12,14 +12,14 @@ using System.IO;
 
 namespace shoppingManagement
 {
-    public partial class Form2 : Form
+    public partial class Admin_Tonkho : Form
     {
-        public Form2()
+        public Admin_Tonkho()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button_WOC1_Click(object sender, EventArgs e)
         {
             string connstr = "Data Source=(DESCRIPTION=" +
             "(ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))" +
@@ -31,11 +31,11 @@ namespace shoppingManagement
             OracleConnection con = new OracleConnection(connstr);
             try
             {
-                // string m = cthang.Text;
+                string m = cthang.Text;
 
-                phieudv sr = new phieudv();
+                bangtonkho sr = new bangtonkho();
 
-                string sql = "Select * from PHIEUDV where MaPDV = 'PDV23'";
+                string sql = "Select * from BANGTONKHO where Thang = '" + m + "'";
 
                 DataSet s1 = new DataSet();
 
@@ -64,6 +64,13 @@ namespace shoppingManagement
             {
                 con.Close();
             }
+        }
+
+        private void quayve_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Admin_Menu f5 = new Admin_Menu();
+            f5.ShowDialog();
         }
     }
 }

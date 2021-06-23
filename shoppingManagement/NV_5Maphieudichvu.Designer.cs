@@ -37,6 +37,8 @@ namespace shoppingManagement
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button_WOC1 = new ePOSOne.btnProduct.Button_WOC();
             this.label2 = new System.Windows.Forms.Label();
+            this.TenKH = new JMaterialTextbox.JMaterialTextbox();
+            this.sdt = new JMaterialTextbox.JMaterialTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -190,12 +192,58 @@ namespace shoppingManagement
             this.label2.TabIndex = 181;
             this.label2.Text = "MỜI BẠN NHẬP MÃ TẠO PHIẾU DỊCH VỤ:";
             // 
+            // TenKH
+            // 
+            this.TenKH.BackColor = System.Drawing.Color.Transparent;
+            this.TenKH.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.TenKH.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.TenKH.ForeColors = System.Drawing.Color.Transparent;
+            this.TenKH.HintText = null;
+            this.TenKH.IsPassword = false;
+            this.TenKH.LineBackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.TenKH.LineThickness = 2;
+            this.TenKH.Location = new System.Drawing.Point(8, 186);
+            this.TenKH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TenKH.MaxLength = 32767;
+            this.TenKH.Name = "TenKH";
+            this.TenKH.OnFocusedColor = System.Drawing.Color.Black;
+            this.TenKH.OnFocusedTextColor = System.Drawing.Color.Black;
+            this.TenKH.ReadOnly = false;
+            this.TenKH.Size = new System.Drawing.Size(10, 10);
+            this.TenKH.TabIndex = 189;
+            this.TenKH.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TenKH.TextName = "";
+            // 
+            // sdt
+            // 
+            this.sdt.BackColor = System.Drawing.Color.Transparent;
+            this.sdt.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.sdt.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.sdt.ForeColors = System.Drawing.Color.Transparent;
+            this.sdt.HintText = null;
+            this.sdt.IsPassword = false;
+            this.sdt.LineBackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.sdt.LineThickness = 2;
+            this.sdt.Location = new System.Drawing.Point(8, 204);
+            this.sdt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sdt.MaxLength = 32767;
+            this.sdt.Name = "sdt";
+            this.sdt.OnFocusedColor = System.Drawing.Color.Black;
+            this.sdt.OnFocusedTextColor = System.Drawing.Color.Black;
+            this.sdt.ReadOnly = false;
+            this.sdt.Size = new System.Drawing.Size(10, 10);
+            this.sdt.TabIndex = 190;
+            this.sdt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.sdt.TextName = "";
+            // 
             // NV_5Maphieudichvu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(839, 459);
+            this.Controls.Add(this.sdt);
+            this.Controls.Add(this.TenKH);
             this.Controls.Add(this.MaKH);
             this.Controls.Add(this.quayve);
             this.Controls.Add(this.passtxt);
@@ -224,5 +272,7 @@ namespace shoppingManagement
         private System.Windows.Forms.DataGridView dataGridView1;
         private ePOSOne.btnProduct.Button_WOC button_WOC1;
         private System.Windows.Forms.Label label2;
+        private JMaterialTextbox.JMaterialTextbox TenKH;
+        private JMaterialTextbox.JMaterialTextbox sdt;
     }
 }

@@ -117,5 +117,12 @@ namespace shoppingManagement
             Admin_Phieudichvu f4 = new Admin_Phieudichvu();
             f4.ShowDialog();
         }
+
+        private void qltonkho_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Admin_Tonkho f4 = new Admin_Tonkho();
+            f4.ShowDialog();
+        }
     }
 }

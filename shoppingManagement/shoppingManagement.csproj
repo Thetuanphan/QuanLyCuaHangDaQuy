@@ -120,6 +120,12 @@
     <Compile Include="Admin_Doitac.Designer.cs">
       <DependentUpon>Admin_Doitac.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin_DV_Dsphieudv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_DV_Dsphieudv.Designer.cs">
+      <DependentUpon>Admin_DV_Dsphieudv.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin_Hoadon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,11 +162,29 @@
     <Compile Include="Admin_Phieudichvu.Designer.cs">
       <DependentUpon>Admin_Phieudichvu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin_Tonkho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Tonkho.Designer.cs">
+      <DependentUpon>Admin_Tonkho.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin_Vatlieu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin_Vatlieu.Designer.cs">
       <DependentUpon>Admin_Vatlieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bangtonkho.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bangtonkho.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="baocaodoanhthu.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>baocaodoanhthu.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Button_WOC.cs">
       <SubType>Component</SubType>
@@ -171,16 +195,16 @@
     <Compile Include="Admin_Thongkedoanhthu.Designer.cs">
       <DependentUpon>Admin_Thongkedoanhthu.cs</DependentUpon>
     </Compile>
+    <Compile Include="danhsachphieudv.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>danhsachphieudv.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="demopdv.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>demopdv.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="hoadon.cs">
       <AutoGen>True</AutoGen>
@@ -272,6 +296,12 @@
       <DependentUpon>Phieudichvu.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="phieudv.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>phieudv.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="phieunhaphang.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -329,6 +359,9 @@
     <EmbeddedResource Include="Admin_Doitac.resx">
       <DependentUpon>Admin_Doitac.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin_DV_Dsphieudv.resx">
+      <DependentUpon>Admin_DV_Dsphieudv.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin_Hoadon.resx">
       <DependentUpon>Admin_Hoadon.cs</DependentUpon>
     </EmbeddedResource>
@@ -347,15 +380,26 @@
     <EmbeddedResource Include="Admin_Phieudichvu.resx">
       <DependentUpon>Admin_Phieudichvu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Tonkho.resx">
+      <DependentUpon>Admin_Tonkho.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin_Vatlieu.resx">
       <DependentUpon>Admin_Vatlieu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_Thongkedoanhthu.resx">
       <DependentUpon>Admin_Thongkedoanhthu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="demopdv.rpt">
+    <EmbeddedResource Include="bangtonkho.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>demopdv.cs</LastGenOutput>
+      <LastGenOutput>bangtonkho.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="baocaodoanhthu.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>baocaodoanhthu.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="danhsachphieudv.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>danhsachphieudv.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="hoadon.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -404,6 +448,10 @@
     <EmbeddedResource Include="Phieudichvu.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Phieudichvu.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="phieudv.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>phieudv.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="phieunhaphang.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

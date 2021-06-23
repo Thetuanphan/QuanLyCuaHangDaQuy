@@ -19,6 +19,7 @@ namespace shoppingManagement
             MaKH.TextName = makh;
             usertxt.TextName = user;
             passtxt.TextName = pass;
+            
         }
 
         public void connection()
@@ -74,6 +75,7 @@ namespace shoppingManagement
 
                 string sql = "INSERT INTO PHIEUDV (MaPDV, MaNV, MaKH, NgayLap, SoLuongDV, TongTien, ThanhToanTruoc, TienConLai, TinhTrang) values " +
                     "('" + MaHD.TextName + "', '" + usertxt.TextName + "', '" + MaKH.TextName + "', TO_DATE('" + date + "', 'dd/mm/yyyy'), 0, 0, 0, 0, 'Da Giao')";
+                
                 OracleCommand cmd = new OracleCommand(sql, con);
 
                 con.Open();

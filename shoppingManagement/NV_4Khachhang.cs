@@ -279,6 +279,8 @@ namespace shoppingManagement
 
             else
             {
+                
+
                 this.Hide();
                 NV_5Maphieudichvu f3 = new NV_5Maphieudichvu(usertxt.TextName, passtxt.TextName, MaKH.TextName);
                 f3.ShowDialog();

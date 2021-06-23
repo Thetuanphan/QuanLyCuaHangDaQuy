@@ -105,6 +105,9 @@ namespace shoppingManagement
                 itemTotal += double.Parse(quantity);
                 string sql1 = "update PHIEUDV SET SoLuongDV=" + itemTotal + ", TongTien=" + grandTotal + ", ThanhToanTruoc=" + double.Parse(txttratruoc.TextName) + ", TienConLai=" + conlai + 
                     " where MaPDV='" + MaPDV.TextName + "'";
+
+                //string sqltmp = "insert into taophieudichvu values ('" + TenDV + "'," + TienDV + ", '" + TenKH.TextName + "'," + sdt.TextName + ", '" + MaPDV.TextName + "', TO_DATE('" + date + "', 'dd/mm/yyyy'), " + grandTotal + ", " + txttratruoc.TextName + ", " + conlai + ", " + itemTotal + ", TO_DATE('" + txtngaygiao.TextName + "', 'dd/mm/yyyy'), 0, 0, 0, 0, ' ')";
+
                 OracleCommand cmd = new OracleCommand(sql, con);
                 OracleCommand cmd1 = new OracleCommand(sql1, con);
 

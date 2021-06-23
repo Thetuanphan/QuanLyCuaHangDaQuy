@@ -43,11 +43,10 @@ namespace shoppingManagement
                 DataSet s = new DataSet();
                 adapter1.Fill(s);
 
-                //baocaothang sr = new baocaothang();
-                //sr.SetDataSource(s.Tables["table"]);
-                //MessageBox.Show(sr.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                baocaodoanhthu sr = new baocaodoanhthu();
+                sr.SetDataSource(s.Tables["table"]);
 
-                //crystalReportViewer2.ReportSource = sr; 
+                crystalReportViewer2.ReportSource = sr; 
             }
             catch (Exception ex)
             {

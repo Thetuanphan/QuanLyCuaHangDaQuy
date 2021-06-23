@@ -65,6 +65,8 @@ namespace shoppingManagement
             this.txtdongia = new JMaterialTextbox.JMaterialTextbox();
             this.label8 = new System.Windows.Forms.Label();
             this.txttratruoc = new JMaterialTextbox.JMaterialTextbox();
+            this.sdt = new JMaterialTextbox.JMaterialTextbox();
+            this.TenKH = new JMaterialTextbox.JMaterialTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -568,12 +570,58 @@ namespace shoppingManagement
             this.txttratruoc.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txttratruoc.TextName = "";
             // 
+            // sdt
+            // 
+            this.sdt.BackColor = System.Drawing.Color.Transparent;
+            this.sdt.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.sdt.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.sdt.ForeColors = System.Drawing.Color.Transparent;
+            this.sdt.HintText = null;
+            this.sdt.IsPassword = false;
+            this.sdt.LineBackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.sdt.LineThickness = 2;
+            this.sdt.Location = new System.Drawing.Point(12, 398);
+            this.sdt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sdt.MaxLength = 32767;
+            this.sdt.Name = "sdt";
+            this.sdt.OnFocusedColor = System.Drawing.Color.Black;
+            this.sdt.OnFocusedTextColor = System.Drawing.Color.Black;
+            this.sdt.ReadOnly = false;
+            this.sdt.Size = new System.Drawing.Size(10, 10);
+            this.sdt.TabIndex = 222;
+            this.sdt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.sdt.TextName = "";
+            // 
+            // TenKH
+            // 
+            this.TenKH.BackColor = System.Drawing.Color.Transparent;
+            this.TenKH.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.TenKH.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.TenKH.ForeColors = System.Drawing.Color.Transparent;
+            this.TenKH.HintText = null;
+            this.TenKH.IsPassword = false;
+            this.TenKH.LineBackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.TenKH.LineThickness = 2;
+            this.TenKH.Location = new System.Drawing.Point(12, 380);
+            this.TenKH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TenKH.MaxLength = 32767;
+            this.TenKH.Name = "TenKH";
+            this.TenKH.OnFocusedColor = System.Drawing.Color.Black;
+            this.TenKH.OnFocusedTextColor = System.Drawing.Color.Black;
+            this.TenKH.ReadOnly = false;
+            this.TenKH.Size = new System.Drawing.Size(10, 10);
+            this.TenKH.TabIndex = 221;
+            this.TenKH.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TenKH.TextName = "";
+            // 
             // NV_6Dichvu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1017, 632);
+            this.Controls.Add(this.sdt);
+            this.Controls.Add(this.TenKH);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txttratruoc);
             this.Controls.Add(this.label7);
@@ -650,5 +698,7 @@ namespace shoppingManagement
         private System.Windows.Forms.DataGridViewTextBoxColumn TinhTrang;
         private System.Windows.Forms.Label label8;
         private JMaterialTextbox.JMaterialTextbox txttratruoc;
+        private JMaterialTextbox.JMaterialTextbox sdt;
+        private JMaterialTextbox.JMaterialTextbox TenKH;
     }
 }

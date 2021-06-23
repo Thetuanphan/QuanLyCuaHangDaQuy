@@ -30,7 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.qltaikhoan = new ePOSOne.btnProduct.Button_WOC();
+            this.qltonkho = new ePOSOne.btnProduct.Button_WOC();
             this.tkdoanhthu = new ePOSOne.btnProduct.Button_WOC();
             this.quayve = new ePOSOne.btnProduct.Button_WOC();
             this.qlkhachhang = new ePOSOne.btnProduct.Button_WOC();
@@ -67,24 +67,25 @@
             this.label4.TabIndex = 29;
             this.label4.Text = "Chọn Chức Năng Quản Lý";
             // 
-            // qltaikhoan
+            // qltonkho
             // 
-            this.qltaikhoan.BorderColor = System.Drawing.Color.Black;
-            this.qltaikhoan.ButtonColor = System.Drawing.Color.White;
-            this.qltaikhoan.FlatAppearance.BorderSize = 0;
-            this.qltaikhoan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.qltaikhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.qltaikhoan.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qltaikhoan.Location = new System.Drawing.Point(37, 363);
-            this.qltaikhoan.Name = "qltaikhoan";
-            this.qltaikhoan.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.qltaikhoan.OnHoverButtonColor = System.Drawing.Color.Black;
-            this.qltaikhoan.OnHoverTextColor = System.Drawing.Color.White;
-            this.qltaikhoan.Size = new System.Drawing.Size(229, 38);
-            this.qltaikhoan.TabIndex = 32;
-            this.qltaikhoan.Text = "Quản Lý Tài Khoản";
-            this.qltaikhoan.TextColor = System.Drawing.Color.Black;
-            this.qltaikhoan.UseVisualStyleBackColor = true;
+            this.qltonkho.BorderColor = System.Drawing.Color.Black;
+            this.qltonkho.ButtonColor = System.Drawing.Color.White;
+            this.qltonkho.FlatAppearance.BorderSize = 0;
+            this.qltonkho.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.qltonkho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.qltonkho.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qltonkho.Location = new System.Drawing.Point(37, 363);
+            this.qltonkho.Name = "qltonkho";
+            this.qltonkho.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.qltonkho.OnHoverButtonColor = System.Drawing.Color.Black;
+            this.qltonkho.OnHoverTextColor = System.Drawing.Color.White;
+            this.qltonkho.Size = new System.Drawing.Size(229, 38);
+            this.qltonkho.TabIndex = 32;
+            this.qltonkho.Text = "Tồn Kho";
+            this.qltonkho.TextColor = System.Drawing.Color.Black;
+            this.qltonkho.UseVisualStyleBackColor = true;
+            this.qltonkho.Click += new System.EventHandler(this.qltonkho_Click);
             // 
             // tkdoanhthu
             // 
@@ -375,7 +376,7 @@
             this.Controls.Add(this.qlphieudv);
             this.Controls.Add(this.button_WOC2);
             this.Controls.Add(this.button_WOC1);
-            this.Controls.Add(this.qltaikhoan);
+            this.Controls.Add(this.qltonkho);
             this.Controls.Add(this.tkdoanhthu);
             this.Controls.Add(this.quayve);
             this.Controls.Add(this.label4);
@@ -414,7 +415,7 @@
         private System.Windows.Forms.Label label4;
         private ePOSOne.btnProduct.Button_WOC quayve;
         private ePOSOne.btnProduct.Button_WOC tkdoanhthu;
-        private ePOSOne.btnProduct.Button_WOC qltaikhoan;
+        private ePOSOne.btnProduct.Button_WOC qltonkho;
         private ePOSOne.btnProduct.Button_WOC button_WOC1;
         private ePOSOne.btnProduct.Button_WOC button_WOC2;
         private ePOSOne.btnProduct.Button_WOC qlphieudv;
