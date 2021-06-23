@@ -449,7 +449,7 @@ namespace shoppingManagement
             this.Controls.Add(this.dataGridView1);
             this.Name = "NV_7Doitac";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "NV_7Doitac";
+            this.Text = "Chọn Đối Tác";
             this.Load += new System.EventHandler(this.NV_7Doitac_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

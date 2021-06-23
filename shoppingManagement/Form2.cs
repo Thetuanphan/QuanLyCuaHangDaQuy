@@ -33,9 +33,9 @@ namespace shoppingManagement
             {
                 // string m = cthang.Text;
 
-                phieudv sr = new phieudv();
+                phieunh sr = new phieunh();
 
-                string sql = "Select * from PHIEUDV where MaPDV = 'PDV23'";
+                string sql = "Select * from PHIEUNSP where MaPH = 'PH03'";
 
                 DataSet s1 = new DataSet();
 

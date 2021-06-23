@@ -278,6 +278,12 @@
     <Compile Include="NV_9Phieunhap.Designer.cs">
       <DependentUpon>NV_9Phieunhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="NV_9_1Taophieunhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NV_9_1Taophieunhap.Designer.cs">
+      <DependentUpon>NV_9_1Taophieunhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="NV_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -290,16 +296,16 @@
     <Compile Include="NV_3Sanpham.Designer.cs">
       <DependentUpon>NV_3Sanpham.cs</DependentUpon>
     </Compile>
-    <Compile Include="Phieudichvu.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Phieudichvu.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="phieudv.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>phieudv.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="phieunh.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>phieunh.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="phieunhaphang.cs">
@@ -445,13 +451,13 @@
     <EmbeddedResource Include="NV_3Sanpham.resx">
       <DependentUpon>NV_3Sanpham.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Phieudichvu.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Phieudichvu.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="phieudv.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>phieudv.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="phieunh.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>phieunh.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="phieunhaphang.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

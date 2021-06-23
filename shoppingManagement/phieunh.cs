@@ -16,14 +16,14 @@ namespace shoppingManagement {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class Phieudichvu : ReportClass {
+    public class phieunh : ReportClass {
         
-        public Phieudichvu() {
+        public phieunh() {
         }
         
         public override string ResourceName {
             get {
-                return "Phieudichvu.rpt";
+                return "phieunh.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace shoppingManagement {
         
         public override string FullResourceName {
             get {
-                return "shoppingManagement.Phieudichvu.rpt";
+                return "shoppingManagement.phieunh.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace shoppingManagement {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedPhieudichvu : Component, ICachedReport {
+    public class Cachedphieunh : Component, ICachedReport {
         
-        public CachedPhieudichvu() {
+        public Cachedphieunh() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace shoppingManagement {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            Phieudichvu rpt = new Phieudichvu();
+            phieunh rpt = new phieunh();
             rpt.Site = this.Site;
             return rpt;
         }

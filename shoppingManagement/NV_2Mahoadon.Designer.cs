@@ -190,7 +190,7 @@ namespace shoppingManagement
             this.MaKH.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.MaKH.TextName = "";
             // 
-            // NV_Mahoadon
+            // NV_2Mahoadon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -204,9 +204,9 @@ namespace shoppingManagement
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button_WOC1);
             this.Controls.Add(this.label2);
-            this.Name = "NV_Mahoadon";
+            this.Name = "NV_2Mahoadon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "NV_Mahoadon";
+            this.Text = "Tạo Mã Hóa Đơn";
             this.Load += new System.EventHandler(this.NV_Mahoadon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

@@ -570,7 +570,7 @@ namespace shoppingManagement
             this.quayve.UseVisualStyleBackColor = true;
             this.quayve.Click += new System.EventHandler(this.quayve_Click);
             // 
-            // NV_Khachhang
+            // NV_1Khachhang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -607,9 +607,9 @@ namespace shoppingManagement
             this.Controls.Add(this.quayve);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "NV_Khachhang";
+            this.Name = "NV_1Khachhang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "NV_Khachhang";
+            this.Text = "Chọn Khách Hàng";
             this.Load += new System.EventHandler(this.NV_Khachhang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

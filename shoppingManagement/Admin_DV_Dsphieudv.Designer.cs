@@ -74,7 +74,7 @@ namespace shoppingManagement
             this.Controls.Add(this.crystalReportViewer1);
             this.Name = "Admin_DV_Dsphieudv";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Admin_DV_Dsphieudv";
+            this.Text = "In Danh Sách Phiếu Dịch Vụ";
             this.Load += new System.EventHandler(this.Admin_DV_Dsphieudv_Load);
             this.ResumeLayout(false);
 

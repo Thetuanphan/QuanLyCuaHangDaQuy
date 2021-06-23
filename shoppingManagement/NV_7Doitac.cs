@@ -58,7 +58,7 @@ namespace shoppingManagement
         {
             MaDT.TextName = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
             TenDT.TextName = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
-            DiaChi.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+            DiaChi.TextName = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
             sdt.TextName = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
             GhiChu.TextName = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
         }

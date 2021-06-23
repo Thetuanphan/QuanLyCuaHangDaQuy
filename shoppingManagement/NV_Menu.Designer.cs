@@ -177,6 +177,7 @@ namespace shoppingManagement
             this.button_WOC2.Text = "LẬP PH. NHẬP HÀNG";
             this.button_WOC2.TextColor = System.Drawing.Color.Black;
             this.button_WOC2.UseVisualStyleBackColor = true;
+            this.button_WOC2.Click += new System.EventHandler(this.button_WOC2_Click);
             // 
             // NV_Menu
             // 
@@ -193,7 +194,7 @@ namespace shoppingManagement
             this.Controls.Add(this.label1);
             this.Name = "NV_Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "NV_Menu";
+            this.Text = "Menu Nhân Viên";
             this.ResumeLayout(false);
             this.PerformLayout();
 

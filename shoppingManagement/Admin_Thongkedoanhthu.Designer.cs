@@ -34,6 +34,8 @@ namespace shoppingManagement
             this.label3 = new System.Windows.Forms.Label();
             this.quayve = new ePOSOne.btnProduct.Button_WOC();
             this.crystalReportViewer2 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cNam = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lapbc
@@ -45,7 +47,7 @@ namespace shoppingManagement
             this.lapbc.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.lapbc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lapbc.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lapbc.Location = new System.Drawing.Point(39, 190);
+            this.lapbc.Location = new System.Drawing.Point(39, 269);
             this.lapbc.Name = "lapbc";
             this.lapbc.OnHoverBorderColor = System.Drawing.Color.Black;
             this.lapbc.OnHoverButtonColor = System.Drawing.Color.Black;
@@ -74,7 +76,7 @@ namespace shoppingManagement
             "10",
             "11",
             "12"});
-            this.cthang.Location = new System.Drawing.Point(39, 136);
+            this.cthang.Location = new System.Drawing.Point(39, 215);
             this.cthang.Name = "cthang";
             this.cthang.Size = new System.Drawing.Size(166, 21);
             this.cthang.TabIndex = 86;
@@ -83,7 +85,7 @@ namespace shoppingManagement
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(35, 97);
+            this.label3.Location = new System.Drawing.Point(35, 176);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(170, 19);
             this.label3.TabIndex = 87;
@@ -121,10 +123,43 @@ namespace shoppingManagement
             this.crystalReportViewer2.TabIndex = 85;
             this.crystalReportViewer2.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(35, 98);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(159, 19);
+            this.label1.TabIndex = 90;
+            this.label1.Text = "Chọn năm báo cáo:";
+            // 
+            // cNam
+            // 
+            this.cNam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cNam.FormattingEnabled = true;
+            this.cNam.Items.AddRange(new object[] {
+            "2019",
+            "2020",
+            "2021",
+            "2022",
+            "2023",
+            "2024",
+            "2025",
+            "2026",
+            "2027",
+            "2028",
+            "2029"});
+            this.cNam.Location = new System.Drawing.Point(39, 137);
+            this.cNam.Name = "cNam";
+            this.cNam.Size = new System.Drawing.Size(166, 21);
+            this.cNam.TabIndex = 89;
+            // 
             // Admin_Thongkedoanhthu
             // 
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1017, 632);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cNam);
             this.Controls.Add(this.quayve);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cthang);
@@ -132,6 +167,8 @@ namespace shoppingManagement
             this.Controls.Add(this.lapbc);
             this.Name = "Admin_Thongkedoanhthu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Thống Kê Doanh Thu";
+            this.Load += new System.EventHandler(this.Admin_Thongkedoanhthu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,5 +185,7 @@ namespace shoppingManagement
         private System.Windows.Forms.ComboBox cthang;
         private System.Windows.Forms.Label label3;
         private ePOSOne.btnProduct.Button_WOC quayve;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cNam;
     }
 }

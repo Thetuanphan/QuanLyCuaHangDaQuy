@@ -592,7 +592,7 @@ namespace shoppingManagement
             this.Controls.Add(this.dataGridView1);
             this.Name = "Admin_Phieudichvu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Admin_Phieudichvu";
+            this.Text = "Quản Lý Phiếu Dịch Vụ";
             this.Load += new System.EventHandler(this.Admin_Phieudichvu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

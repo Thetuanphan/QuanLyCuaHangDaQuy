@@ -42,5 +42,12 @@ namespace shoppingManagement
         {
 
         }
+
+        private void button_WOC2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            NV_7Doitac f2 = new NV_7Doitac(usertxt.TextName, passtxt.TextName);
+            f2.ShowDialog();
+        }
     }
 }

@@ -47,9 +47,6 @@ namespace shoppingManagement
             this.SLsanpham = new JMaterialTextbox.JMaterialTextbox();
             this.themsp = new ePOSOne.btnProduct.Button_WOC();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Dongianhap = new JMaterialTextbox.JMaterialTextbox();
             this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaVL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,6 +55,9 @@ namespace shoppingManagement
             this.GiaNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TongCong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Dongianhap = new JMaterialTextbox.JMaterialTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -378,46 +378,6 @@ namespace shoppingManagement
             this.dataGridView2.Size = new System.Drawing.Size(727, 203);
             this.dataGridView2.TabIndex = 192;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(81, 113);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(727, 169);
-            this.dataGridView1.TabIndex = 191;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(849, 134);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 19);
-            this.label2.TabIndex = 214;
-            this.label2.Text = "Đơn Giá Nhập:";
-            // 
-            // Dongianhap
-            // 
-            this.Dongianhap.BackColor = System.Drawing.Color.Transparent;
-            this.Dongianhap.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.Dongianhap.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.Dongianhap.ForeColors = System.Drawing.Color.Black;
-            this.Dongianhap.HintText = null;
-            this.Dongianhap.IsPassword = false;
-            this.Dongianhap.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Dongianhap.LineThickness = 2;
-            this.Dongianhap.Location = new System.Drawing.Point(853, 166);
-            this.Dongianhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Dongianhap.MaxLength = 32767;
-            this.Dongianhap.Name = "Dongianhap";
-            this.Dongianhap.OnFocusedColor = System.Drawing.Color.Black;
-            this.Dongianhap.OnFocusedTextColor = System.Drawing.Color.Black;
-            this.Dongianhap.ReadOnly = false;
-            this.Dongianhap.Size = new System.Drawing.Size(79, 23);
-            this.Dongianhap.TabIndex = 213;
-            this.Dongianhap.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Dongianhap.TextName = "";
-            // 
             // MaSP
             // 
             this.MaSP.HeaderText = "MaSP";
@@ -458,6 +418,46 @@ namespace shoppingManagement
             this.ThanhTien.HeaderText = "ThanhTien";
             this.ThanhTien.Name = "ThanhTien";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(81, 113);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(727, 169);
+            this.dataGridView1.TabIndex = 191;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(849, 134);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(122, 19);
+            this.label2.TabIndex = 214;
+            this.label2.Text = "Đơn Giá Nhập:";
+            // 
+            // Dongianhap
+            // 
+            this.Dongianhap.BackColor = System.Drawing.Color.Transparent;
+            this.Dongianhap.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.Dongianhap.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.Dongianhap.ForeColors = System.Drawing.Color.Black;
+            this.Dongianhap.HintText = null;
+            this.Dongianhap.IsPassword = false;
+            this.Dongianhap.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Dongianhap.LineThickness = 2;
+            this.Dongianhap.Location = new System.Drawing.Point(853, 166);
+            this.Dongianhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Dongianhap.MaxLength = 32767;
+            this.Dongianhap.Name = "Dongianhap";
+            this.Dongianhap.OnFocusedColor = System.Drawing.Color.Black;
+            this.Dongianhap.OnFocusedTextColor = System.Drawing.Color.Black;
+            this.Dongianhap.ReadOnly = false;
+            this.Dongianhap.Size = new System.Drawing.Size(79, 23);
+            this.Dongianhap.TabIndex = 213;
+            this.Dongianhap.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Dongianhap.TextName = "";
+            // 
             // NV_9Phieunhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -487,7 +487,7 @@ namespace shoppingManagement
             this.Controls.Add(this.dataGridView1);
             this.Name = "NV_9Phieunhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "NV_9Phieunhap";
+            this.Text = "Chọn Sản Phẩm Nhập";
             this.Load += new System.EventHandler(this.NV_9Phieunhap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

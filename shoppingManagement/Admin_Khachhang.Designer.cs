@@ -57,7 +57,6 @@ namespace shoppingManagement
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Loai = new System.Windows.Forms.ComboBox();
-            this.jMaterialTextbox1 = new JMaterialTextbox.JMaterialTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -503,35 +502,12 @@ namespace shoppingManagement
             this.Loai.Size = new System.Drawing.Size(92, 21);
             this.Loai.TabIndex = 147;
             // 
-            // jMaterialTextbox1
-            // 
-            this.jMaterialTextbox1.BackColor = System.Drawing.Color.Transparent;
-            this.jMaterialTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.jMaterialTextbox1.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.jMaterialTextbox1.ForeColors = System.Drawing.Color.Black;
-            this.jMaterialTextbox1.HintText = null;
-            this.jMaterialTextbox1.IsPassword = false;
-            this.jMaterialTextbox1.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.jMaterialTextbox1.LineThickness = 2;
-            this.jMaterialTextbox1.Location = new System.Drawing.Point(811, 201);
-            this.jMaterialTextbox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.jMaterialTextbox1.MaxLength = 32767;
-            this.jMaterialTextbox1.Name = "jMaterialTextbox1";
-            this.jMaterialTextbox1.OnFocusedColor = System.Drawing.Color.Black;
-            this.jMaterialTextbox1.OnFocusedTextColor = System.Drawing.Color.Black;
-            this.jMaterialTextbox1.ReadOnly = false;
-            this.jMaterialTextbox1.Size = new System.Drawing.Size(82, 23);
-            this.jMaterialTextbox1.TabIndex = 148;
-            this.jMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.jMaterialTextbox1.TextName = "";
-            // 
             // Admin_Khachhang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1017, 632);
-            this.Controls.Add(this.jMaterialTextbox1);
             this.Controls.Add(this.Loai);
             this.Controls.Add(this.dSinh);
             this.Controls.Add(this.sdt);
@@ -600,6 +576,5 @@ namespace shoppingManagement
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox Loai;
-        private JMaterialTextbox.JMaterialTextbox jMaterialTextbox1;
     }
 }

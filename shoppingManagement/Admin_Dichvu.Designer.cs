@@ -111,9 +111,9 @@ namespace shoppingManagement
             this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(423, 72);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(135, 19);
+            this.label5.Size = new System.Drawing.Size(116, 19);
             this.label5.TabIndex = 93;
-            this.label5.Text = "Bảng sản phẩm:";
+            this.label5.Text = "Bảng dịch vụ:";
             // 
             // DonGia
             // 

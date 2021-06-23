@@ -30,12 +30,13 @@ namespace shoppingManagement
         private void InitializeComponent()
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            //this.Phieudichvu1 = new shoppingManagement.Phieudichvu();
             this.MaHD = new JMaterialTextbox.JMaterialTextbox();
             this.txtpass = new JMaterialTextbox.JMaterialTextbox();
             this.txtuser = new JMaterialTextbox.JMaterialTextbox();
             this.MaKH = new JMaterialTextbox.JMaterialTextbox();
             this.quayve = new ePOSOne.btnProduct.Button_WOC();
-            this.Phieudichvu1 = new shoppingManagement.Phieudichvu();
+            this.hoadon1 = new shoppingManagement.hoadon();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
@@ -45,7 +46,7 @@ namespace shoppingManagement
             this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
             this.crystalReportViewer1.Location = new System.Drawing.Point(12, 65);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.ReportSource = this.Phieudichvu1;
+            this.crystalReportViewer1.ReportSource = this.hoadon1;
             this.crystalReportViewer1.Size = new System.Drawing.Size(993, 555);
             this.crystalReportViewer1.TabIndex = 76;
             this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
@@ -173,7 +174,7 @@ namespace shoppingManagement
             this.Controls.Add(this.quayve);
             this.Name = "NV_3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "NV_3";
+            this.Text = "Hóa Đơn";
             this.Load += new System.EventHandler(this.NV_3_Load);
             this.ResumeLayout(false);
 
@@ -187,6 +188,7 @@ namespace shoppingManagement
         private JMaterialTextbox.JMaterialTextbox txtpass;
         private JMaterialTextbox.JMaterialTextbox txtuser;
         private JMaterialTextbox.JMaterialTextbox MaKH;
-        private Phieudichvu Phieudichvu1;
+        //private Phieudichvu Phieudichvu1;
+        private hoadon hoadon1;
     }
 }

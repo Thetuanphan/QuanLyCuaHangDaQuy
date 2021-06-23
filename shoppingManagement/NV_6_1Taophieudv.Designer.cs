@@ -171,7 +171,7 @@ namespace shoppingManagement
             this.Controls.Add(this.quayve);
             this.Name = "NV_6_1Taophieudv";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "NV_6_1Taophieudv";
+            this.Text = "Phiếu Dịch Vụ";
             this.Load += new System.EventHandler(this.NV_6_1Taophieudv_Load);
             this.ResumeLayout(false);
 

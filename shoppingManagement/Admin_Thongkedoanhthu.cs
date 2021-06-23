@@ -35,7 +35,7 @@ namespace shoppingManagement
                 
                 string m = cthang.Text;
 
-                string sql = "Select * from HOADON where to_char(thoigianlap, 'mm') = " + Int32.Parse(m);
+                string sql = "Select * from HOADON where to_char(thoigianlap, 'mm') = " + Int32.Parse(m) + " and to_char(thoigianlap, 'yyyy') = '" + cNam.Text + "'";
 
                 OracleDataAdapter adapter1 = new OracleDataAdapter(sql, con);
 
@@ -64,6 +64,11 @@ namespace shoppingManagement
             this.Hide();
             Admin_Menu f4 = new Admin_Menu();
             f4.ShowDialog();
+        }
+
+        private void Admin_Thongkedoanhthu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

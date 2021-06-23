@@ -132,7 +132,7 @@ namespace shoppingManagement
             this.Controls.Add(this.cthang);
             this.Name = "Admin_Tonkho";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Admin_Tonkho";
+            this.Text = "Báo Cáo Tồn Kho";
             this.ResumeLayout(false);
             this.PerformLayout();
 

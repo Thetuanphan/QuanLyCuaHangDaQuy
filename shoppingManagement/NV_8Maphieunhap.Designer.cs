@@ -186,9 +186,9 @@ namespace shoppingManagement
             this.label2.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(187, 52);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(472, 31);
+            this.label2.Size = new System.Drawing.Size(435, 31);
             this.label2.TabIndex = 181;
-            this.label2.Text = "MỜI BẠN NHẬP MÃ PHIẾU DỊCH VỤ";
+            this.label2.Text = "MỜI BẠN NHẬP MÃ PHIẾU NHẬP";
             // 
             // NV_8Maphieunhap
             // 
@@ -206,7 +206,7 @@ namespace shoppingManagement
             this.Controls.Add(this.label2);
             this.Name = "NV_8Maphieunhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "NV_8Maphieunhap";
+            this.Text = "Tạo Phiếu Nhập Hàng";
             this.Load += new System.EventHandler(this.NV_8Maphieunhap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
