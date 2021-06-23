@@ -170,5 +170,19 @@ namespace shoppingManagement
             NV_9Phieunhap f2 = new NV_9Phieunhap(txtuser.TextName, txtpass.TextName, MaKH.TextName, MaHD.TextName);
             f2.ShowDialog();
         }
+
+        private void tieptuc_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            NV_9_1Taophieunhap f2 = new NV_9_1Taophieunhap(txtuser.TextName, txtpass.TextName, MaKH.TextName, MaHD.TextName);
+            f2.ShowDialog();
+        }
+
+        private void quayve_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            NV_8Maphieunhap f2 = new NV_8Maphieunhap(txtuser.TextName, txtpass.TextName, MaKH.TextName);
+            f2.ShowDialog();
+        }
     }
 }

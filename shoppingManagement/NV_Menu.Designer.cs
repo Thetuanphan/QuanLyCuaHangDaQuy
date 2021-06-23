@@ -38,6 +38,7 @@ namespace shoppingManagement
             this.usertxt = new JMaterialTextbox.JMaterialTextbox();
             this.passtxt = new JMaterialTextbox.JMaterialTextbox();
             this.button_WOC2 = new ePOSOne.btnProduct.Button_WOC();
+            this.quayve = new ePOSOne.btnProduct.Button_WOC();
             this.SuspendLayout();
             // 
             // nhanvien
@@ -179,12 +180,34 @@ namespace shoppingManagement
             this.button_WOC2.UseVisualStyleBackColor = true;
             this.button_WOC2.Click += new System.EventHandler(this.button_WOC2_Click);
             // 
+            // quayve
+            // 
+            this.quayve.BorderColor = System.Drawing.Color.Black;
+            this.quayve.ButtonColor = System.Drawing.Color.White;
+            this.quayve.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.quayve.FlatAppearance.BorderSize = 0;
+            this.quayve.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.quayve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.quayve.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quayve.Location = new System.Drawing.Point(12, 12);
+            this.quayve.Name = "quayve";
+            this.quayve.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.quayve.OnHoverButtonColor = System.Drawing.Color.Black;
+            this.quayve.OnHoverTextColor = System.Drawing.Color.White;
+            this.quayve.Size = new System.Drawing.Size(76, 36);
+            this.quayve.TabIndex = 152;
+            this.quayve.Text = "<<";
+            this.quayve.TextColor = System.Drawing.Color.Black;
+            this.quayve.UseVisualStyleBackColor = true;
+            this.quayve.Click += new System.EventHandler(this.quayve_Click);
+            // 
             // NV_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(839, 459);
+            this.Controls.Add(this.quayve);
             this.Controls.Add(this.button_WOC2);
             this.Controls.Add(this.passtxt);
             this.Controls.Add(this.usertxt);
@@ -210,5 +233,6 @@ namespace shoppingManagement
         private JMaterialTextbox.JMaterialTextbox usertxt;
         private JMaterialTextbox.JMaterialTextbox passtxt;
         private ePOSOne.btnProduct.Button_WOC button_WOC2;
+        private ePOSOne.btnProduct.Button_WOC quayve;
     }
 }

@@ -37,18 +37,19 @@ namespace shoppingManagement
             {
                 // string m = cthang.Text;
 
-                phieudv sr1 = new phieudv();
+                phieudv sr = new phieudv();
 
-                string sql1 = "Select * from PHIEUDV where MaPDV = '" + MaHD.TextName + "'";
+                string sql = "Select * from PHIEUDV where MaPDV = '" + MaHD.TextName + "'";
 
-                DataSet s2 = new DataSet();
+                DataSet s1 = new DataSet();
 
-                OracleDataAdapter adapter2 = new OracleDataAdapter(sql1, con);
+                OracleDataAdapter adapter1 = new OracleDataAdapter(sql, con);
 
-                adapter2.Fill(s2, "PHIEUDV");
-                DataTable dt = s2.Tables["PHIEUDV"];
-                sr1.SetDataSource(s2.Tables["PHIEUDV"]);
-                crystalReportViewer1.ReportSource = sr1;
+
+                adapter1.Fill(s1, "HOADON");
+                DataTable dt = s1.Tables["HOADON"];
+                sr.SetDataSource(s1.Tables["HOADON"]);
+                crystalReportViewer1.ReportSource = sr;
                 crystalReportViewer1.Refresh();
 
                 /*

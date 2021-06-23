@@ -166,6 +166,7 @@ namespace shoppingManagement
             this.quayve.Text = "<<";
             this.quayve.TextColor = System.Drawing.Color.Black;
             this.quayve.UseVisualStyleBackColor = true;
+            this.quayve.Click += new System.EventHandler(this.quayve_Click);
             // 
             // MaPDV
             // 

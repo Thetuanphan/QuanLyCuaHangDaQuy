@@ -45,6 +45,8 @@ namespace shoppingManagement
             this.xoa = new ePOSOne.btnProduct.Button_WOC();
             this.them = new ePOSOne.btnProduct.Button_WOC();
             this.quayve = new ePOSOne.btnProduct.Button_WOC();
+            this.TienKM = new JMaterialTextbox.JMaterialTextbox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -239,7 +241,7 @@ namespace shoppingManagement
             this.capnhat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.capnhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.capnhat.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.capnhat.Location = new System.Drawing.Point(114, 348);
+            this.capnhat.Location = new System.Drawing.Point(114, 390);
             this.capnhat.Name = "capnhat";
             this.capnhat.OnHoverBorderColor = System.Drawing.Color.Black;
             this.capnhat.OnHoverButtonColor = System.Drawing.Color.White;
@@ -260,7 +262,7 @@ namespace shoppingManagement
             this.xoa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.xoa.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xoa.Location = new System.Drawing.Point(215, 293);
+            this.xoa.Location = new System.Drawing.Point(215, 335);
             this.xoa.Name = "xoa";
             this.xoa.OnHoverBorderColor = System.Drawing.Color.Black;
             this.xoa.OnHoverButtonColor = System.Drawing.Color.White;
@@ -281,7 +283,7 @@ namespace shoppingManagement
             this.them.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.them.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.them.Location = new System.Drawing.Point(13, 293);
+            this.them.Location = new System.Drawing.Point(13, 335);
             this.them.Name = "them";
             this.them.OnHoverBorderColor = System.Drawing.Color.Black;
             this.them.OnHoverButtonColor = System.Drawing.Color.White;
@@ -314,12 +316,46 @@ namespace shoppingManagement
             this.quayve.UseVisualStyleBackColor = true;
             this.quayve.Click += new System.EventHandler(this.quayve_Click);
             // 
+            // TienKM
+            // 
+            this.TienKM.BackColor = System.Drawing.Color.Transparent;
+            this.TienKM.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.TienKM.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.TienKM.ForeColors = System.Drawing.Color.Black;
+            this.TienKM.HintText = null;
+            this.TienKM.IsPassword = false;
+            this.TienKM.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.TienKM.LineThickness = 2;
+            this.TienKM.Location = new System.Drawing.Point(163, 261);
+            this.TienKM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TienKM.MaxLength = 32767;
+            this.TienKM.Name = "TienKM";
+            this.TienKM.OnFocusedColor = System.Drawing.Color.Black;
+            this.TienKM.OnFocusedTextColor = System.Drawing.Color.Black;
+            this.TienKM.ReadOnly = false;
+            this.TienKM.Size = new System.Drawing.Size(171, 23);
+            this.TienKM.TabIndex = 116;
+            this.TienKM.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TienKM.TextName = "";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(24, 264);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(140, 19);
+            this.label1.TabIndex = 115;
+            this.label1.Text = "Tiền khuyến mãi:";
+            // 
             // Admin_Khuyenmai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1017, 632);
+            this.Controls.Add(this.TienKM);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.timkiem);
             this.Controls.Add(this.TraCuu);
             this.Controls.Add(this.label11);
@@ -364,5 +400,7 @@ namespace shoppingManagement
         private ePOSOne.btnProduct.Button_WOC quayve;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private JMaterialTextbox.JMaterialTextbox TienKM;
+        private System.Windows.Forms.Label label1;
     }
 }

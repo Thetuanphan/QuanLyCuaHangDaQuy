@@ -76,8 +76,8 @@ namespace shoppingManagement
             try
             {
 
-                string sql = "INSERT INTO KHUYENMAI (MaKM, TenKM) values " +
-                    "('" + MaKM.TextName + "','" + TenKM.TextName + "')";
+                string sql = "INSERT INTO KHUYENMAI (MaKM, TenKM, TienKM) values " +
+                    "('" + MaKM.TextName + "','" + TenKM.TextName + "'," + TienKM.TextName + ")";
                 OracleCommand cmd = new OracleCommand(sql, con);
 
                 con.Open();
@@ -169,7 +169,7 @@ namespace shoppingManagement
                 try
                 {
                     string sql = "update KHUYENMAI" +
-                         " SET " + "TenKM= '" + TenKM.TextName + "'" +
+                         " SET " + "TenKM= '" + TenKM.TextName + "', TienKM=" + TienKM.TextName + 
                         " where MaKM ='" + MaKM.TextName + "'";
                     OracleCommand cmd = new OracleCommand(sql, con);
 
@@ -257,6 +257,7 @@ namespace shoppingManagement
         {
             MaKM.TextName = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
             TenKM.TextName = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            TienKM.TextName = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
         }
     }
 }

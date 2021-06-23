@@ -445,6 +445,9 @@
     <EmbeddedResource Include="NV_9Phieunhap.resx">
       <DependentUpon>NV_9Phieunhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NV_9_1Taophieunhap.resx">
+      <DependentUpon>NV_9_1Taophieunhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NV_Menu.resx">
       <DependentUpon>NV_Menu.cs</DependentUpon>
     </EmbeddedResource>

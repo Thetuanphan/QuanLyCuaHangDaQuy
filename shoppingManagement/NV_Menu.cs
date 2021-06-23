@@ -49,5 +49,12 @@ namespace shoppingManagement
             NV_7Doitac f2 = new NV_7Doitac(usertxt.TextName, passtxt.TextName);
             f2.ShowDialog();
         }
+
+        private void quayve_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login_NV f2 = new Login_NV();
+            f2.ShowDialog();
+        }
     }
 }

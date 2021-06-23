@@ -178,5 +178,12 @@ namespace shoppingManagement
             NV_6_1Taophieudv f2 = new NV_6_1Taophieudv(txtuser.TextName, txtpass.TextName, MaKH.TextName, MaPDV.TextName);
             f2.ShowDialog();
         }
+
+        private void quayve_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            NV_5Maphieudichvu f2 = new NV_5Maphieudichvu(txtuser.TextName, txtpass.TextName, MaKH.TextName);
+            f2.ShowDialog();
+        }
     }
 }

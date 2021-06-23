@@ -35,7 +35,7 @@ namespace shoppingManagement
 
                 phieunh sr = new phieunh();
 
-                string sql = "Select * from PHIEUNSP where MaPH = 'PH03'";
+                string sql = "Select * from PHIEUNSP where MaPH = 'PH07'";
 
                 DataSet s1 = new DataSet();
 
