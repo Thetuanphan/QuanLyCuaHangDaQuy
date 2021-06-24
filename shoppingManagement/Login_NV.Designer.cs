@@ -163,7 +163,7 @@
             this.label1.Text = "NHÂN VIÊN";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // Login_Stuff
+            // Login_NV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -177,9 +177,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Login_Stuff";
+            this.Name = "Login_NV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Stuff Login";
+            this.Text = "Nhân Viên Đăng Nhập";
             this.Load += new System.EventHandler(this.Form3_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
