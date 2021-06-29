@@ -93,7 +93,7 @@ namespace shoppingManagement
                     con.Open();
 
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Xóa nhân viên thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Xóa hóa đơn thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     OracleDataAdapter adapter = new OracleDataAdapter("select * from HOADON order by MaHD", con);
                     DataTable dt = new DataTable();

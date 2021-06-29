@@ -38,7 +38,6 @@ namespace shoppingManagement
             this.GioiTinh = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.timkiem = new ePOSOne.btnProduct.Button_WOC();
             this.TraCuu = new JMaterialTextbox.JMaterialTextbox();
             this.label11 = new System.Windows.Forms.Label();
             this.LoaiTimKiem = new System.Windows.Forms.ComboBox();
@@ -47,14 +46,9 @@ namespace shoppingManagement
             this.Email = new JMaterialTextbox.JMaterialTextbox();
             this.TenKH = new JMaterialTextbox.JMaterialTextbox();
             this.MaKH = new JMaterialTextbox.JMaterialTextbox();
-            this.lammoi = new ePOSOne.btnProduct.Button_WOC();
-            this.capnhat = new ePOSOne.btnProduct.Button_WOC();
-            this.xoa = new ePOSOne.btnProduct.Button_WOC();
-            this.them = new ePOSOne.btnProduct.Button_WOC();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.quayve = new ePOSOne.btnProduct.Button_WOC();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Loai = new System.Windows.Forms.ComboBox();
@@ -63,6 +57,12 @@ namespace shoppingManagement
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timkiem = new ePOSOne.btnProduct.Button_WOC();
+            this.lammoi = new ePOSOne.btnProduct.Button_WOC();
+            this.capnhat = new ePOSOne.btnProduct.Button_WOC();
+            this.xoa = new ePOSOne.btnProduct.Button_WOC();
+            this.them = new ePOSOne.btnProduct.Button_WOC();
+            this.quayve = new ePOSOne.btnProduct.Button_WOC();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -164,7 +164,7 @@ namespace shoppingManagement
             this.GioiTinh.FormattingEnabled = true;
             this.GioiTinh.Items.AddRange(new object[] {
             "Nam",
-            "Nu",
+            "Nữ",
             "Khac"});
             this.GioiTinh.Location = new System.Drawing.Point(449, 160);
             this.GioiTinh.Name = "GioiTinh";
@@ -190,28 +190,6 @@ namespace shoppingManagement
             this.label2.Size = new System.Drawing.Size(52, 19);
             this.label2.TabIndex = 138;
             this.label2.Text = "Loại: ";
-            // 
-            // timkiem
-            // 
-            this.timkiem.BackColor = System.Drawing.Color.White;
-            this.timkiem.BorderColor = System.Drawing.Color.Black;
-            this.timkiem.ButtonColor = System.Drawing.Color.White;
-            this.timkiem.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.timkiem.FlatAppearance.BorderSize = 0;
-            this.timkiem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.timkiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.timkiem.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timkiem.Location = new System.Drawing.Point(790, 29);
-            this.timkiem.Name = "timkiem";
-            this.timkiem.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.timkiem.OnHoverButtonColor = System.Drawing.Color.White;
-            this.timkiem.OnHoverTextColor = System.Drawing.Color.Black;
-            this.timkiem.Size = new System.Drawing.Size(58, 38);
-            this.timkiem.TabIndex = 137;
-            this.timkiem.Text = " ";
-            this.timkiem.TextColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.timkiem.UseVisualStyleBackColor = false;
-            this.timkiem.Click += new System.EventHandler(this.timkiem_Click);
             // 
             // TraCuu
             // 
@@ -345,6 +323,141 @@ namespace shoppingManagement
             this.MaKH.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.MaKH.TextName = "";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(353, 162);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(79, 19);
+            this.label10.TabIndex = 122;
+            this.label10.Text = "Giới tính:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(81, 222);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(57, 19);
+            this.label9.TabIndex = 121;
+            this.label9.Text = "Email:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(353, 98);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(138, 19);
+            this.label8.TabIndex = 120;
+            this.label8.Text = "Tên khách hàng:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(81, 98);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(131, 19);
+            this.label3.TabIndex = 118;
+            this.label3.Text = "Mã khách hàng:";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(85, 308);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(856, 312);
+            this.dataGridView1.TabIndex = 117;
+            this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
+            // 
+            // Loai
+            // 
+            this.Loai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Loai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Loai.FormattingEnabled = true;
+            this.Loai.Items.AddRange(new object[] {
+            "VIP",
+            "Thuong"});
+            this.Loai.Location = new System.Drawing.Point(792, 96);
+            this.Loai.Name = "Loai";
+            this.Loai.Size = new System.Drawing.Size(76, 21);
+            this.Loai.TabIndex = 147;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(887, 38);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(23, 22);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 152;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(794, 244);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(23, 22);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 151;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(887, 244);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(23, 22);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 150;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(709, 244);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(23, 22);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 149;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(809, 38);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(23, 22);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 148;
+            this.pictureBox1.TabStop = false;
+            // 
+            // timkiem
+            // 
+            this.timkiem.BackColor = System.Drawing.Color.White;
+            this.timkiem.BorderColor = System.Drawing.Color.Black;
+            this.timkiem.ButtonColor = System.Drawing.Color.White;
+            this.timkiem.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.timkiem.FlatAppearance.BorderSize = 0;
+            this.timkiem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.timkiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.timkiem.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timkiem.Location = new System.Drawing.Point(790, 29);
+            this.timkiem.Name = "timkiem";
+            this.timkiem.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.timkiem.OnHoverButtonColor = System.Drawing.Color.White;
+            this.timkiem.OnHoverTextColor = System.Drawing.Color.Black;
+            this.timkiem.Size = new System.Drawing.Size(58, 38);
+            this.timkiem.TabIndex = 137;
+            this.timkiem.Text = " ";
+            this.timkiem.TextColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.timkiem.UseVisualStyleBackColor = false;
+            this.timkiem.Click += new System.EventHandler(this.timkiem_Click);
+            // 
             // lammoi
             // 
             this.lammoi.BorderColor = System.Drawing.Color.Black;
@@ -429,36 +542,6 @@ namespace shoppingManagement
             this.them.UseVisualStyleBackColor = true;
             this.them.Click += new System.EventHandler(this.them_Click);
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(353, 162);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(79, 19);
-            this.label10.TabIndex = 122;
-            this.label10.Text = "Giới tính:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(81, 222);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(57, 19);
-            this.label9.TabIndex = 121;
-            this.label9.Text = "Email:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(353, 98);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(138, 19);
-            this.label8.TabIndex = 120;
-            this.label8.Text = "Tên khách hàng:";
-            // 
             // quayve
             // 
             this.quayve.BorderColor = System.Drawing.Color.Black;
@@ -479,89 +562,6 @@ namespace shoppingManagement
             this.quayve.TextColor = System.Drawing.Color.Black;
             this.quayve.UseVisualStyleBackColor = true;
             this.quayve.Click += new System.EventHandler(this.quayve_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(81, 98);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 19);
-            this.label3.TabIndex = 118;
-            this.label3.Text = "Mã khách hàng:";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(85, 308);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(856, 312);
-            this.dataGridView1.TabIndex = 117;
-            this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
-            // 
-            // Loai
-            // 
-            this.Loai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Loai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Loai.FormattingEnabled = true;
-            this.Loai.Items.AddRange(new object[] {
-            "VIP",
-            "Thuong"});
-            this.Loai.Location = new System.Drawing.Point(792, 96);
-            this.Loai.Name = "Loai";
-            this.Loai.Size = new System.Drawing.Size(76, 21);
-            this.Loai.TabIndex = 147;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(887, 38);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(23, 22);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 152;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(794, 244);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(23, 22);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 151;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(887, 244);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(23, 22);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 150;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(709, 244);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(23, 22);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 149;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(809, 38);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(23, 22);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 148;
-            this.pictureBox1.TabStop = false;
             // 
             // Admin_Khachhang
             // 
