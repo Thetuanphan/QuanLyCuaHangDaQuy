@@ -29,15 +29,18 @@ namespace shoppingManagement
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NV_8Maphieunhap));
             this.MaKH = new JMaterialTextbox.JMaterialTextbox();
-            this.quayve = new ePOSOne.btnProduct.Button_WOC();
             this.passtxt = new JMaterialTextbox.JMaterialTextbox();
             this.usertxt = new JMaterialTextbox.JMaterialTextbox();
             this.MaHD = new JMaterialTextbox.JMaterialTextbox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button_WOC1 = new ePOSOne.btnProduct.Button_WOC();
             this.label2 = new System.Windows.Forms.Label();
+            this.quayve = new ePOSOne.btnProduct.Button_WOC();
+            this.button_WOC1 = new ePOSOne.btnProduct.Button_WOC();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // MaKH
@@ -61,27 +64,6 @@ namespace shoppingManagement
             this.MaKH.TabIndex = 188;
             this.MaKH.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.MaKH.TextName = "";
-            // 
-            // quayve
-            // 
-            this.quayve.BorderColor = System.Drawing.Color.Black;
-            this.quayve.ButtonColor = System.Drawing.Color.White;
-            this.quayve.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.quayve.FlatAppearance.BorderSize = 0;
-            this.quayve.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.quayve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.quayve.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quayve.Location = new System.Drawing.Point(9, 8);
-            this.quayve.Name = "quayve";
-            this.quayve.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.quayve.OnHoverButtonColor = System.Drawing.Color.Black;
-            this.quayve.OnHoverTextColor = System.Drawing.Color.White;
-            this.quayve.Size = new System.Drawing.Size(76, 36);
-            this.quayve.TabIndex = 187;
-            this.quayve.Text = "<<";
-            this.quayve.TextColor = System.Drawing.Color.Black;
-            this.quayve.UseVisualStyleBackColor = true;
-            this.quayve.Click += new System.EventHandler(this.quayve_Click);
             // 
             // passtxt
             // 
@@ -137,7 +119,7 @@ namespace shoppingManagement
             this.MaHD.IsPassword = false;
             this.MaHD.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.MaHD.LineThickness = 2;
-            this.MaHD.Location = new System.Drawing.Point(407, 185);
+            this.MaHD.Location = new System.Drawing.Point(202, 174);
             this.MaHD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaHD.MaxLength = 32767;
             this.MaHD.Name = "MaHD";
@@ -152,30 +134,10 @@ namespace shoppingManagement
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(249, 185);
+            this.dataGridView1.Location = new System.Drawing.Point(44, 137);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(131, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(131, 222);
             this.dataGridView1.TabIndex = 183;
-            // 
-            // button_WOC1
-            // 
-            this.button_WOC1.BorderColor = System.Drawing.Color.Black;
-            this.button_WOC1.ButtonColor = System.Drawing.Color.White;
-            this.button_WOC1.FlatAppearance.BorderSize = 0;
-            this.button_WOC1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.button_WOC1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_WOC1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_WOC1.Location = new System.Drawing.Point(407, 283);
-            this.button_WOC1.Name = "button_WOC1";
-            this.button_WOC1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.button_WOC1.OnHoverButtonColor = System.Drawing.Color.Black;
-            this.button_WOC1.OnHoverTextColor = System.Drawing.Color.White;
-            this.button_WOC1.Size = new System.Drawing.Size(159, 52);
-            this.button_WOC1.TabIndex = 182;
-            this.button_WOC1.Text = "Tiếp Tục";
-            this.button_WOC1.TextColor = System.Drawing.Color.Black;
-            this.button_WOC1.UseVisualStyleBackColor = true;
-            this.button_WOC1.Click += new System.EventHandler(this.button_WOC1_Click);
             // 
             // label2
             // 
@@ -190,12 +152,64 @@ namespace shoppingManagement
             this.label2.TabIndex = 181;
             this.label2.Text = "MỜI BẠN NHẬP MÃ PHIẾU NHẬP";
             // 
+            // quayve
+            // 
+            this.quayve.BorderColor = System.Drawing.Color.Black;
+            this.quayve.ButtonColor = System.Drawing.Color.White;
+            this.quayve.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.quayve.FlatAppearance.BorderSize = 0;
+            this.quayve.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.quayve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.quayve.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quayve.Location = new System.Drawing.Point(9, 8);
+            this.quayve.Name = "quayve";
+            this.quayve.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.quayve.OnHoverButtonColor = System.Drawing.Color.Black;
+            this.quayve.OnHoverTextColor = System.Drawing.Color.White;
+            this.quayve.Size = new System.Drawing.Size(76, 36);
+            this.quayve.TabIndex = 187;
+            this.quayve.Text = "<<";
+            this.quayve.TextColor = System.Drawing.Color.Black;
+            this.quayve.UseVisualStyleBackColor = true;
+            this.quayve.Click += new System.EventHandler(this.quayve_Click);
+            // 
+            // button_WOC1
+            // 
+            this.button_WOC1.BorderColor = System.Drawing.Color.Black;
+            this.button_WOC1.ButtonColor = System.Drawing.Color.White;
+            this.button_WOC1.FlatAppearance.BorderSize = 0;
+            this.button_WOC1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button_WOC1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_WOC1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_WOC1.Location = new System.Drawing.Point(202, 272);
+            this.button_WOC1.Name = "button_WOC1";
+            this.button_WOC1.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.button_WOC1.OnHoverButtonColor = System.Drawing.Color.Black;
+            this.button_WOC1.OnHoverTextColor = System.Drawing.Color.White;
+            this.button_WOC1.Size = new System.Drawing.Size(159, 52);
+            this.button_WOC1.TabIndex = 182;
+            this.button_WOC1.Text = "Tiếp Tục";
+            this.button_WOC1.TextColor = System.Drawing.Color.Black;
+            this.button_WOC1.UseVisualStyleBackColor = true;
+            this.button_WOC1.Click += new System.EventHandler(this.button_WOC1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(398, 86);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(429, 369);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 192;
+            this.pictureBox1.TabStop = false;
+            // 
             // NV_8Maphieunhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(839, 459);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.MaKH);
             this.Controls.Add(this.quayve);
             this.Controls.Add(this.passtxt);
@@ -209,6 +223,7 @@ namespace shoppingManagement
             this.Text = "Tạo Phiếu Nhập Hàng";
             this.Load += new System.EventHandler(this.NV_8Maphieunhap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,5 +239,6 @@ namespace shoppingManagement
         private System.Windows.Forms.DataGridView dataGridView1;
         private ePOSOne.btnProduct.Button_WOC button_WOC1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

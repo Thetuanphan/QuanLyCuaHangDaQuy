@@ -29,6 +29,7 @@ namespace shoppingManagement
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NV_5Maphieudichvu));
             this.MaKH = new JMaterialTextbox.JMaterialTextbox();
             this.passtxt = new JMaterialTextbox.JMaterialTextbox();
             this.usertxt = new JMaterialTextbox.JMaterialTextbox();
@@ -39,7 +40,9 @@ namespace shoppingManagement
             this.sdt = new JMaterialTextbox.JMaterialTextbox();
             this.quayve = new ePOSOne.btnProduct.Button_WOC();
             this.button_WOC1 = new ePOSOne.btnProduct.Button_WOC();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // MaKH
@@ -118,7 +121,7 @@ namespace shoppingManagement
             this.MaHD.IsPassword = false;
             this.MaHD.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.MaHD.LineThickness = 2;
-            this.MaHD.Location = new System.Drawing.Point(405, 186);
+            this.MaHD.Location = new System.Drawing.Point(201, 190);
             this.MaHD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaHD.MaxLength = 32767;
             this.MaHD.Name = "MaHD";
@@ -133,9 +136,9 @@ namespace shoppingManagement
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(247, 186);
+            this.dataGridView1.Location = new System.Drawing.Point(51, 141);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(131, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(131, 243);
             this.dataGridView1.TabIndex = 183;
             // 
             // label2
@@ -145,7 +148,7 @@ namespace shoppingManagement
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(148, 67);
+            this.label2.Location = new System.Drawing.Point(150, 38);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(544, 31);
             this.label2.TabIndex = 181;
@@ -224,7 +227,7 @@ namespace shoppingManagement
             this.button_WOC1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.button_WOC1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_WOC1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_WOC1.Location = new System.Drawing.Point(405, 284);
+            this.button_WOC1.Location = new System.Drawing.Point(201, 288);
             this.button_WOC1.Name = "button_WOC1";
             this.button_WOC1.OnHoverBorderColor = System.Drawing.Color.Black;
             this.button_WOC1.OnHoverButtonColor = System.Drawing.Color.Black;
@@ -236,12 +239,23 @@ namespace shoppingManagement
             this.button_WOC1.UseVisualStyleBackColor = true;
             this.button_WOC1.Click += new System.EventHandler(this.button_WOC1_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(398, 78);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(429, 369);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 191;
+            this.pictureBox1.TabStop = false;
+            // 
             // NV_5Maphieudichvu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(839, 459);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.sdt);
             this.Controls.Add(this.TenKH);
             this.Controls.Add(this.MaKH);
@@ -257,6 +271,7 @@ namespace shoppingManagement
             this.Text = "Tạo Phiếu Dịch Vụ";
             this.Load += new System.EventHandler(this.NV_5Maphieudichvu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -274,5 +289,6 @@ namespace shoppingManagement
         private System.Windows.Forms.Label label2;
         private JMaterialTextbox.JMaterialTextbox TenKH;
         private JMaterialTextbox.JMaterialTextbox sdt;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -81,54 +81,64 @@ namespace shoppingManagement
 
             String quantity = SLsanpham.TextName;
 
-            double total = (Double.Parse(DonGia) * Double.Parse(quantity));
+            
 
-            grandTotal = grandTotal + total;
-            grandTotalGoc += total;
-
-            dataGridView2.Rows.Add(MaSP, MaVL, MaDT, TenSP, DVT, DonGia, quantity, total.ToString());
-
-            label4.Text = grandTotal.ToString();
-
-            string connstr = "Data Source=(DESCRIPTION=" +
-            "(ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))" +
-            "(CONNECT_DATA =" +
-            "(SERVER = DEDICATED)" +
-            "(SERVICE_NAME = orcl)" + ")" +
-            "); User Id=ttp; Password=123456Az";
-
-            OracleConnection con = new OracleConnection(connstr);
-            OracleCommand cmdn = con.CreateCommand();
-            cmdn.CommandType = CommandType.Text;
-
-            try
+            if ( double.Parse(quantity) <= double.Parse(SLTon))
             {
+                double total = (Double.Parse(DonGia) * Double.Parse(quantity));
 
-                string sql = "insert into cthd (MaSP, MaHD, SoLuongSP, TienSP) values ('"
-                    + MaSP + "', '" + MaHD.TextName + "', " + quantity + ", " + total + ")";
-                itemTotal += double.Parse(quantity);
-                string sql1 = "update HOADON SET SoLuongSP=" + itemTotal + ", TienChuaTru=" + grandTotalGoc + ", TongTien=" + grandTotal +
-                    " where MaHD= '" + MaHD.TextName + "'";
+                grandTotal = grandTotal + total;
+                grandTotalGoc += total;
 
-                OracleCommand cmd = new OracleCommand(sql, con);
-                OracleCommand cmd1 = new OracleCommand(sql1, con);
+                dataGridView2.Rows.Add(MaSP, MaVL, MaDT, TenSP, DVT, DonGia, quantity, total.ToString());
 
-                con.Open();
+                label4.Text = grandTotal.ToString();
 
-                cmd.ExecuteNonQuery();
-                cmd1.ExecuteNonQuery();
-                //MessageBox.Show("Đã thêm sản phẩm thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string connstr = "Data Source=(DESCRIPTION=" +
+                "(ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))" +
+                "(CONNECT_DATA =" +
+                "(SERVER = DEDICATED)" +
+                "(SERVICE_NAME = orcl)" + ")" +
+                "); User Id=ttp; Password=123456Az";
 
+                OracleConnection con = new OracleConnection(connstr);
+                OracleCommand cmdn = con.CreateCommand();
+                cmdn.CommandType = CommandType.Text;
+
+                try
+                {
+
+                    string sql = "insert into cthd (MaSP, MaHD, SoLuongSP, TienSP) values ('"
+                        + MaSP + "', '" + MaHD.TextName + "', " + quantity + ", " + total + ")";
+                    itemTotal += double.Parse(quantity);
+                    string sql1 = "update HOADON SET SoLuongSP=" + itemTotal + ", TienChuaTru=" + grandTotalGoc + ", TongTien=" + grandTotal +
+                        " where MaHD= '" + MaHD.TextName + "'";
+
+                    OracleCommand cmd = new OracleCommand(sql, con);
+                    OracleCommand cmd1 = new OracleCommand(sql1, con);
+
+                    con.Open();
+
+                    cmd.ExecuteNonQuery();
+                    cmd1.ExecuteNonQuery();
+                    //MessageBox.Show("Đã thêm sản phẩm thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                finally
+                {
+                    con.Close();
+                }
             }
 
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            finally
-            {
-                con.Close();
+                MessageBox.Show("Số lượng hàng không đủ!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }
@@ -284,6 +294,11 @@ namespace shoppingManagement
             this.Hide();
             NV_3 f2 = new NV_3(txtuser.TextName, txtpass.TextName, MaKH.TextName, MaHD.TextName);
             f2.ShowDialog();
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

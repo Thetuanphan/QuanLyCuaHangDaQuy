@@ -136,7 +136,7 @@ namespace shoppingManagement
                 try
                 {
                     string sql = "update HOADON" +
-                         " SET " + "MaNV= '" + txtmanv.TextName + "', MaKH='" + txtmakh.TextName + "', SoLuongSP=" + txtslsp.TextName + ", NgayLap=" + "TO_DATE('" + dLap.TextName + "', 'dd/mm/yyyy hh:mi:ss AM')" + ", TienChuaTru=" + txttongtien.Text + ", TienKM=" + txttienkm.TextName + ", TongTien=" + txtconlai.TextName + ", GhiChu= '" + txtghichu.TextName + "', MaKM='" + txtmakm.TextName + "' " +
+                         " SET " + "MaNV= '" + txtmanv.TextName + "', MaKH='" + txtmakh.TextName + "', SoLuongSP=" + txtslsp.TextName + ", NgayLap=" + "TO_DATE('" + dLap.TextName + "', 'dd/mm/yyyy hh:mi:ss AM')" + ", TienChuaTru=" + txttongtien.TextName + ", TienKM=" + txttienkm.TextName + ", TongTien=" + txtconlai.TextName + ", GhiChu= '" + txtghichu.TextName + "', MaKM='" + txtmakm.TextName + "' " +
                         " where MaHD ='" + txtmahd.TextName + "'";
 
                     /* string sql = "update NHANVIEN SET NgaySinh=" + "TO_DATE('" + dSinh.TextName + "','dd-mm-yyy')" + "where MaNV='" + MaNV.TextName + "'"; */
@@ -193,7 +193,7 @@ namespace shoppingManagement
             try
             {
 
-                string sql = "Select * from HOADON where MaPDV='" + TraCuu.TextName + "' order by MaHD";
+                string sql = "Select * from HOADON where MaHD='" + TraCuu.TextName + "' order by MaHD";
                 string sql1 = "Select * from HOADON where MaNV='" + TraCuu.TextName + "' order by MaHD";
                 string sql2 = "Select * from HOADON where MaKH='" + TraCuu.TextName + "' order by MaHD";
 
@@ -201,7 +201,7 @@ namespace shoppingManagement
                 OracleDataAdapter adapter1 = new OracleDataAdapter(sql1, con);
                 OracleDataAdapter adapter2 = new OracleDataAdapter(sql2, con);
 
-                if (LoaiTimKiem.Text == "MaPDV")
+                if (LoaiTimKiem.Text == "MaHD")
                 {
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);

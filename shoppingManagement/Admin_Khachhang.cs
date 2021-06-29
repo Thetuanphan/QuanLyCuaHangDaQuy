@@ -132,7 +132,7 @@ namespace shoppingManagement
                 try
                 {
                     string sql = "update KHACHHANG" +
-                         " SET " + "TenKH= '" + TenKH.TextName + "', GioiTinh='" + GioiTinh.Text + "', Email='" + Email.TextName + "', NgSinh=" + "TO_DATE('" + dSinh.TextName + "', 'dd/mm/yyyy hh:mi:ss AM')" + ", SDT=" + sdt.TextName + ", Diem=" + Diem.TextName + ", Loai='" + sdt.TextName + "'" +
+                         " SET " + "TenKH= '" + TenKH.TextName + "', GioiTinh='" + GioiTinh.Text + "', Email='" + Email.TextName + "', NgSinh=" + "TO_DATE('" + dSinh.TextName + "', 'dd/mm/yyyy hh:mi:ss AM')" + ", SDT=" + sdt.TextName + ", Diem=" + Diem.TextName + ", Loai='" + Loai.Text + "'" +
                         " where MaKH ='" + MaKH.TextName + "'";
 
                     /* string sql = "update NHANVIEN SET NgaySinh=" + "TO_DATE('" + dSinh.TextName + "','dd-mm-yyy')" + "where MaNV='" + MaNV.TextName + "'"; */

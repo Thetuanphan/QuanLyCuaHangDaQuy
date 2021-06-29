@@ -33,6 +33,7 @@ namespace shoppingManagement
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.label3 = new System.Windows.Forms.Label();
             this.cthang = new System.Windows.Forms.ComboBox();
+            this.bangtonkho1 = new shoppingManagement.bangtonkho();
             this.SuspendLayout();
             // 
             // button1
@@ -47,11 +48,12 @@ namespace shoppingManagement
             // 
             // crystalReportViewer1
             // 
-            this.crystalReportViewer1.ActiveViewIndex = -1;
+            this.crystalReportViewer1.ActiveViewIndex = 0;
             this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
             this.crystalReportViewer1.Location = new System.Drawing.Point(220, 40);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.ReportSource = this.bangtonkho1;
             this.crystalReportViewer1.Size = new System.Drawing.Size(593, 487);
             this.crystalReportViewer1.TabIndex = 98;
             this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
@@ -110,5 +112,6 @@ namespace shoppingManagement
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cthang;
+        private bangtonkho bangtonkho1;
     }
 }

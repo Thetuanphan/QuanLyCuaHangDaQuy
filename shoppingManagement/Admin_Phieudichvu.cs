@@ -142,9 +142,9 @@ namespace shoppingManagement
                     con.Open();
 
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Xóa nhân viên thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Xóa phiếu thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    OracleDataAdapter adapter = new OracleDataAdapter("select * from NHANVIEN order by MaNV", con);
+                    OracleDataAdapter adapter = new OracleDataAdapter("select * from PHIEUDV order by MaPDV", con);
                     DataTable dt = new DataTable();
 
                     adapter.Fill(dt);

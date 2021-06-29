@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_Sanpham));
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -58,9 +59,19 @@
             this.quayve = new ePOSOne.btnProduct.Button_WOC();
             this.label12 = new System.Windows.Forms.Label();
             this.DVT = new System.Windows.Forms.ComboBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView2
@@ -106,7 +117,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(25, 141);
+            this.label7.Location = new System.Drawing.Point(25, 127);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(127, 19);
             this.label7.TabIndex = 43;
@@ -148,7 +159,7 @@
             "VL08",
             "VL09",
             "VL10"});
-            this.MaVL.Location = new System.Drawing.Point(164, 142);
+            this.MaVL.Location = new System.Drawing.Point(164, 128);
             this.MaVL.Name = "MaVL";
             this.MaVL.Size = new System.Drawing.Size(171, 21);
             this.MaVL.TabIndex = 39;
@@ -202,7 +213,7 @@
             this.MaDT.OnFocusedColor = System.Drawing.Color.Black;
             this.MaDT.OnFocusedTextColor = System.Drawing.Color.Black;
             this.MaDT.ReadOnly = false;
-            this.MaDT.Size = new System.Drawing.Size(82, 18);
+            this.MaDT.Size = new System.Drawing.Size(171, 18);
             this.MaDT.TabIndex = 58;
             this.MaDT.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.MaDT.TextName = "";
@@ -341,7 +352,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(389, 26);
+            this.label11.Location = new System.Drawing.Point(424, 24);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(119, 19);
             this.label11.TabIndex = 68;
@@ -357,7 +368,7 @@
             this.TraCuu.IsPassword = false;
             this.TraCuu.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.TraCuu.LineThickness = 2;
-            this.TraCuu.Location = new System.Drawing.Point(516, 25);
+            this.TraCuu.Location = new System.Drawing.Point(551, 23);
             this.TraCuu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TraCuu.MaxLength = 32767;
             this.TraCuu.Name = "TraCuu";
@@ -373,20 +384,20 @@
             // 
             this.timkiem.BackColor = System.Drawing.Color.White;
             this.timkiem.BorderColor = System.Drawing.Color.Black;
-            this.timkiem.ButtonColor = System.Drawing.Color.Black;
+            this.timkiem.ButtonColor = System.Drawing.Color.White;
             this.timkiem.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.timkiem.FlatAppearance.BorderSize = 0;
             this.timkiem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.timkiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.timkiem.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timkiem.Location = new System.Drawing.Point(795, 23);
+            this.timkiem.Location = new System.Drawing.Point(830, 21);
             this.timkiem.Name = "timkiem";
             this.timkiem.OnHoverBorderColor = System.Drawing.Color.Black;
             this.timkiem.OnHoverButtonColor = System.Drawing.Color.White;
             this.timkiem.OnHoverTextColor = System.Drawing.Color.Black;
-            this.timkiem.Size = new System.Drawing.Size(117, 36);
+            this.timkiem.Size = new System.Drawing.Size(58, 38);
             this.timkiem.TabIndex = 70;
-            this.timkiem.Text = "Tìm kiếm";
+            this.timkiem.Text = " ";
             this.timkiem.TextColor = System.Drawing.SystemColors.ButtonHighlight;
             this.timkiem.UseVisualStyleBackColor = false;
             this.timkiem.Click += new System.EventHandler(this.timkiem_Click);
@@ -400,14 +411,14 @@
             this.lammoi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.lammoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lammoi.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lammoi.Location = new System.Drawing.Point(926, 23);
+            this.lammoi.Location = new System.Drawing.Point(906, 21);
             this.lammoi.Name = "lammoi";
             this.lammoi.OnHoverBorderColor = System.Drawing.Color.Black;
             this.lammoi.OnHoverButtonColor = System.Drawing.Color.Black;
             this.lammoi.OnHoverTextColor = System.Drawing.Color.White;
-            this.lammoi.Size = new System.Drawing.Size(79, 39);
+            this.lammoi.Size = new System.Drawing.Size(58, 38);
             this.lammoi.TabIndex = 51;
-            this.lammoi.Text = "Làm mới";
+            this.lammoi.Text = " ";
             this.lammoi.TextColor = System.Drawing.Color.Black;
             this.lammoi.UseVisualStyleBackColor = true;
             this.lammoi.Click += new System.EventHandler(this.lammoi_Click);
@@ -415,20 +426,20 @@
             // capnhatsanpham
             // 
             this.capnhatsanpham.BorderColor = System.Drawing.Color.Black;
-            this.capnhatsanpham.ButtonColor = System.Drawing.Color.Black;
+            this.capnhatsanpham.ButtonColor = System.Drawing.Color.White;
             this.capnhatsanpham.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.capnhatsanpham.FlatAppearance.BorderSize = 0;
             this.capnhatsanpham.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.capnhatsanpham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.capnhatsanpham.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.capnhatsanpham.Location = new System.Drawing.Point(115, 513);
+            this.capnhatsanpham.Location = new System.Drawing.Point(152, 464);
             this.capnhatsanpham.Name = "capnhatsanpham";
             this.capnhatsanpham.OnHoverBorderColor = System.Drawing.Color.Black;
             this.capnhatsanpham.OnHoverButtonColor = System.Drawing.Color.White;
             this.capnhatsanpham.OnHoverTextColor = System.Drawing.Color.Black;
-            this.capnhatsanpham.Size = new System.Drawing.Size(145, 38);
+            this.capnhatsanpham.Size = new System.Drawing.Size(58, 38);
             this.capnhatsanpham.TabIndex = 49;
-            this.capnhatsanpham.Text = "Cập nhật sản phẩm";
+            this.capnhatsanpham.Text = " ";
             this.capnhatsanpham.TextColor = System.Drawing.Color.White;
             this.capnhatsanpham.UseVisualStyleBackColor = true;
             this.capnhatsanpham.Click += new System.EventHandler(this.capnhatsanpham_Click);
@@ -436,20 +447,20 @@
             // xoasanpham
             // 
             this.xoasanpham.BorderColor = System.Drawing.Color.Black;
-            this.xoasanpham.ButtonColor = System.Drawing.Color.Black;
+            this.xoasanpham.ButtonColor = System.Drawing.Color.White;
             this.xoasanpham.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.xoasanpham.FlatAppearance.BorderSize = 0;
             this.xoasanpham.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.xoasanpham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.xoasanpham.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xoasanpham.Location = new System.Drawing.Point(216, 458);
+            this.xoasanpham.Location = new System.Drawing.Point(245, 464);
             this.xoasanpham.Name = "xoasanpham";
             this.xoasanpham.OnHoverBorderColor = System.Drawing.Color.Black;
             this.xoasanpham.OnHoverButtonColor = System.Drawing.Color.White;
             this.xoasanpham.OnHoverTextColor = System.Drawing.Color.Black;
-            this.xoasanpham.Size = new System.Drawing.Size(138, 38);
+            this.xoasanpham.Size = new System.Drawing.Size(58, 38);
             this.xoasanpham.TabIndex = 48;
-            this.xoasanpham.Text = "Xóa sản phẩm";
+            this.xoasanpham.Text = " ";
             this.xoasanpham.TextColor = System.Drawing.Color.White;
             this.xoasanpham.UseVisualStyleBackColor = true;
             this.xoasanpham.Click += new System.EventHandler(this.xoasanpham_Click);
@@ -457,20 +468,20 @@
             // themsanpham
             // 
             this.themsanpham.BorderColor = System.Drawing.Color.Black;
-            this.themsanpham.ButtonColor = System.Drawing.Color.Black;
+            this.themsanpham.ButtonColor = System.Drawing.Color.White;
             this.themsanpham.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.themsanpham.FlatAppearance.BorderSize = 0;
             this.themsanpham.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.themsanpham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.themsanpham.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.themsanpham.Location = new System.Drawing.Point(14, 458);
+            this.themsanpham.Location = new System.Drawing.Point(59, 464);
             this.themsanpham.Name = "themsanpham";
             this.themsanpham.OnHoverBorderColor = System.Drawing.Color.Black;
             this.themsanpham.OnHoverButtonColor = System.Drawing.Color.White;
             this.themsanpham.OnHoverTextColor = System.Drawing.Color.Black;
-            this.themsanpham.Size = new System.Drawing.Size(138, 38);
+            this.themsanpham.Size = new System.Drawing.Size(58, 38);
             this.themsanpham.TabIndex = 47;
-            this.themsanpham.Text = "Thêm sản phẩm";
+            this.themsanpham.Text = " ";
             this.themsanpham.TextColor = System.Drawing.Color.White;
             this.themsanpham.UseVisualStyleBackColor = true;
             this.themsanpham.Click += new System.EventHandler(this.themsanpham_Click);
@@ -500,7 +511,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(25, 184);
+            this.label12.Location = new System.Drawing.Point(25, 178);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(92, 19);
             this.label12.TabIndex = 71;
@@ -514,10 +525,60 @@
             this.DVT.Items.AddRange(new object[] {
             "Cai",
             "Vien"});
-            this.DVT.Location = new System.Drawing.Point(164, 182);
+            this.DVT.Location = new System.Drawing.Point(164, 176);
             this.DVT.Name = "DVT";
             this.DVT.Size = new System.Drawing.Size(171, 21);
             this.DVT.TabIndex = 72;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(925, 29);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(23, 22);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 142;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(169, 472);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(23, 22);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 141;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(264, 472);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(23, 22);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 140;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(76, 472);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(23, 22);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 139;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(848, 29);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(23, 22);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 138;
+            this.pictureBox1.TabStop = false;
             // 
             // Admin_Sanpham
             // 
@@ -525,6 +586,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1017, 632);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.DVT);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.timkiem);
@@ -562,6 +628,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -599,5 +670,10 @@
         private ePOSOne.btnProduct.Button_WOC timkiem;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox DVT;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

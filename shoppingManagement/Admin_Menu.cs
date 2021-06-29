@@ -124,5 +124,12 @@ namespace shoppingManagement
             Admin_Tonkho f4 = new Admin_Tonkho();
             f4.ShowDialog();
         }
+
+        private void button_WOC1_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            Admin_Tonkho f4 = new Admin_Tonkho();
+            f4.ShowDialog();
+        }
     }
 }

@@ -29,6 +29,7 @@ namespace shoppingManagement
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_Khachhang));
             this.dSinh = new JMaterialTextbox.JMaterialTextbox();
             this.sdt = new JMaterialTextbox.JMaterialTextbox();
             this.label16 = new System.Windows.Forms.Label();
@@ -57,7 +58,17 @@ namespace shoppingManagement
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Loai = new System.Windows.Forms.ComboBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dSinh
@@ -70,14 +81,14 @@ namespace shoppingManagement
             this.dSinh.IsPassword = false;
             this.dSinh.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dSinh.LineThickness = 2;
-            this.dSinh.Location = new System.Drawing.Point(129, 216);
+            this.dSinh.Location = new System.Drawing.Point(190, 158);
             this.dSinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dSinh.MaxLength = 32767;
             this.dSinh.Name = "dSinh";
             this.dSinh.OnFocusedColor = System.Drawing.Color.Black;
             this.dSinh.OnFocusedTextColor = System.Drawing.Color.Black;
             this.dSinh.ReadOnly = false;
-            this.dSinh.Size = new System.Drawing.Size(160, 23);
+            this.dSinh.Size = new System.Drawing.Size(147, 23);
             this.dSinh.TabIndex = 146;
             this.dSinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.dSinh.TextName = "";
@@ -92,14 +103,14 @@ namespace shoppingManagement
             this.sdt.IsPassword = false;
             this.sdt.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.sdt.LineThickness = 2;
-            this.sdt.Location = new System.Drawing.Point(73, 275);
+            this.sdt.Location = new System.Drawing.Point(584, 161);
             this.sdt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sdt.MaxLength = 32767;
             this.sdt.Name = "sdt";
             this.sdt.OnFocusedColor = System.Drawing.Color.Black;
             this.sdt.OnFocusedTextColor = System.Drawing.Color.Black;
             this.sdt.ReadOnly = false;
-            this.sdt.Size = new System.Drawing.Size(158, 18);
+            this.sdt.Size = new System.Drawing.Size(127, 18);
             this.sdt.TabIndex = 145;
             this.sdt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.sdt.TextName = "";
@@ -108,7 +119,7 @@ namespace shoppingManagement
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(20, 275);
+            this.label16.Location = new System.Drawing.Point(531, 161);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(46, 19);
             this.label16.TabIndex = 144;
@@ -124,7 +135,7 @@ namespace shoppingManagement
             this.Diem.IsPassword = false;
             this.Diem.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Diem.LineThickness = 2;
-            this.Diem.Location = new System.Drawing.Point(352, 275);
+            this.Diem.Location = new System.Drawing.Point(807, 161);
             this.Diem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Diem.MaxLength = 32767;
             this.Diem.Name = "Diem";
@@ -140,7 +151,7 @@ namespace shoppingManagement
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(278, 275);
+            this.label15.Location = new System.Drawing.Point(733, 161);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(54, 19);
             this.label15.TabIndex = 142;
@@ -155,16 +166,16 @@ namespace shoppingManagement
             "Nam",
             "Nu",
             "Khac"});
-            this.GioiTinh.Location = new System.Drawing.Point(392, 218);
+            this.GioiTinh.Location = new System.Drawing.Point(449, 160);
             this.GioiTinh.Name = "GioiTinh";
-            this.GioiTinh.Size = new System.Drawing.Size(92, 21);
+            this.GioiTinh.Size = new System.Drawing.Size(71, 21);
             this.GioiTinh.TabIndex = 141;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(20, 220);
+            this.label14.Location = new System.Drawing.Point(81, 162);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(92, 19);
             this.label14.TabIndex = 140;
@@ -174,7 +185,7 @@ namespace shoppingManagement
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(445, 274);
+            this.label2.Location = new System.Drawing.Point(733, 98);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 19);
             this.label2.TabIndex = 138;
@@ -184,7 +195,7 @@ namespace shoppingManagement
             // 
             this.timkiem.BackColor = System.Drawing.Color.White;
             this.timkiem.BorderColor = System.Drawing.Color.Black;
-            this.timkiem.ButtonColor = System.Drawing.Color.Black;
+            this.timkiem.ButtonColor = System.Drawing.Color.White;
             this.timkiem.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.timkiem.FlatAppearance.BorderSize = 0;
             this.timkiem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
@@ -195,9 +206,9 @@ namespace shoppingManagement
             this.timkiem.OnHoverBorderColor = System.Drawing.Color.Black;
             this.timkiem.OnHoverButtonColor = System.Drawing.Color.White;
             this.timkiem.OnHoverTextColor = System.Drawing.Color.Black;
-            this.timkiem.Size = new System.Drawing.Size(117, 36);
+            this.timkiem.Size = new System.Drawing.Size(58, 38);
             this.timkiem.TabIndex = 137;
-            this.timkiem.Text = "Tìm kiếm";
+            this.timkiem.Text = " ";
             this.timkiem.TextColor = System.Drawing.SystemColors.ButtonHighlight;
             this.timkiem.UseVisualStyleBackColor = false;
             this.timkiem.Click += new System.EventHandler(this.timkiem_Click);
@@ -243,7 +254,7 @@ namespace shoppingManagement
             "TenKH",
             "MaKH",
             "SDT"});
-            this.LoaiTimKiem.Location = new System.Drawing.Point(282, 31);
+            this.LoaiTimKiem.Location = new System.Drawing.Point(256, 31);
             this.LoaiTimKiem.Name = "LoaiTimKiem";
             this.LoaiTimKiem.Size = new System.Drawing.Size(92, 21);
             this.LoaiTimKiem.TabIndex = 134;
@@ -252,7 +263,7 @@ namespace shoppingManagement
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(155, 30);
+            this.label6.Location = new System.Drawing.Point(129, 30);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(121, 19);
             this.label6.TabIndex = 133;
@@ -262,7 +273,7 @@ namespace shoppingManagement
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(20, 374);
+            this.label5.Location = new System.Drawing.Point(81, 272);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(150, 19);
             this.label5.TabIndex = 132;
@@ -278,14 +289,14 @@ namespace shoppingManagement
             this.Email.IsPassword = false;
             this.Email.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Email.LineThickness = 2;
-            this.Email.Location = new System.Drawing.Point(473, 166);
+            this.Email.Location = new System.Drawing.Point(164, 223);
             this.Email.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Email.MaxLength = 32767;
             this.Email.Name = "Email";
             this.Email.OnFocusedColor = System.Drawing.Color.Black;
             this.Email.OnFocusedTextColor = System.Drawing.Color.Black;
             this.Email.ReadOnly = false;
-            this.Email.Size = new System.Drawing.Size(194, 18);
+            this.Email.Size = new System.Drawing.Size(173, 18);
             this.Email.TabIndex = 131;
             this.Email.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Email.TextName = "";
@@ -300,14 +311,14 @@ namespace shoppingManagement
             this.TenKH.IsPassword = false;
             this.TenKH.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.TenKH.LineThickness = 2;
-            this.TenKH.Location = new System.Drawing.Point(159, 165);
+            this.TenKH.Location = new System.Drawing.Point(492, 98);
             this.TenKH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TenKH.MaxLength = 32767;
             this.TenKH.Name = "TenKH";
             this.TenKH.OnFocusedColor = System.Drawing.Color.Black;
             this.TenKH.OnFocusedTextColor = System.Drawing.Color.Black;
             this.TenKH.ReadOnly = false;
-            this.TenKH.Size = new System.Drawing.Size(190, 18);
+            this.TenKH.Size = new System.Drawing.Size(219, 18);
             this.TenKH.TabIndex = 130;
             this.TenKH.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.TenKH.TextName = "";
@@ -322,14 +333,14 @@ namespace shoppingManagement
             this.MaKH.IsPassword = false;
             this.MaKH.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.MaKH.LineThickness = 2;
-            this.MaKH.Location = new System.Drawing.Point(162, 104);
+            this.MaKH.Location = new System.Drawing.Point(223, 94);
             this.MaKH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaKH.MaxLength = 32767;
             this.MaKH.Name = "MaKH";
             this.MaKH.OnFocusedColor = System.Drawing.Color.Black;
             this.MaKH.OnFocusedTextColor = System.Drawing.Color.Black;
             this.MaKH.ReadOnly = false;
-            this.MaKH.Size = new System.Drawing.Size(82, 23);
+            this.MaKH.Size = new System.Drawing.Size(114, 23);
             this.MaKH.TabIndex = 128;
             this.MaKH.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.MaKH.TextName = "";
@@ -343,14 +354,14 @@ namespace shoppingManagement
             this.lammoi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.lammoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lammoi.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lammoi.Location = new System.Drawing.Point(921, 29);
+            this.lammoi.Location = new System.Drawing.Point(868, 29);
             this.lammoi.Name = "lammoi";
             this.lammoi.OnHoverBorderColor = System.Drawing.Color.Black;
             this.lammoi.OnHoverButtonColor = System.Drawing.Color.Black;
             this.lammoi.OnHoverTextColor = System.Drawing.Color.White;
-            this.lammoi.Size = new System.Drawing.Size(79, 39);
+            this.lammoi.Size = new System.Drawing.Size(58, 38);
             this.lammoi.TabIndex = 126;
-            this.lammoi.Text = "Làm mới";
+            this.lammoi.Text = " ";
             this.lammoi.TextColor = System.Drawing.Color.Black;
             this.lammoi.UseVisualStyleBackColor = true;
             this.lammoi.Click += new System.EventHandler(this.lammoi_Click);
@@ -358,20 +369,20 @@ namespace shoppingManagement
             // capnhat
             // 
             this.capnhat.BorderColor = System.Drawing.Color.Black;
-            this.capnhat.ButtonColor = System.Drawing.Color.Black;
+            this.capnhat.ButtonColor = System.Drawing.Color.White;
             this.capnhat.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.capnhat.FlatAppearance.BorderSize = 0;
             this.capnhat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.capnhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.capnhat.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.capnhat.Location = new System.Drawing.Point(691, 326);
+            this.capnhat.Location = new System.Drawing.Point(776, 236);
             this.capnhat.Name = "capnhat";
             this.capnhat.OnHoverBorderColor = System.Drawing.Color.Black;
             this.capnhat.OnHoverButtonColor = System.Drawing.Color.White;
             this.capnhat.OnHoverTextColor = System.Drawing.Color.Black;
-            this.capnhat.Size = new System.Drawing.Size(145, 38);
+            this.capnhat.Size = new System.Drawing.Size(58, 38);
             this.capnhat.TabIndex = 125;
-            this.capnhat.Text = "Cập nhật khách hàng";
+            this.capnhat.Text = " ";
             this.capnhat.TextColor = System.Drawing.Color.White;
             this.capnhat.UseVisualStyleBackColor = true;
             this.capnhat.Click += new System.EventHandler(this.capnhat_Click);
@@ -379,20 +390,20 @@ namespace shoppingManagement
             // xoa
             // 
             this.xoa.BorderColor = System.Drawing.Color.Black;
-            this.xoa.ButtonColor = System.Drawing.Color.Black;
+            this.xoa.ButtonColor = System.Drawing.Color.White;
             this.xoa.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.xoa.FlatAppearance.BorderSize = 0;
             this.xoa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.xoa.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xoa.Location = new System.Drawing.Point(862, 326);
+            this.xoa.Location = new System.Drawing.Point(868, 236);
             this.xoa.Name = "xoa";
             this.xoa.OnHoverBorderColor = System.Drawing.Color.Black;
             this.xoa.OnHoverButtonColor = System.Drawing.Color.White;
             this.xoa.OnHoverTextColor = System.Drawing.Color.Black;
-            this.xoa.Size = new System.Drawing.Size(138, 38);
+            this.xoa.Size = new System.Drawing.Size(58, 38);
             this.xoa.TabIndex = 124;
-            this.xoa.Text = "Xóa khách hàng";
+            this.xoa.Text = " ";
             this.xoa.TextColor = System.Drawing.Color.White;
             this.xoa.UseVisualStyleBackColor = true;
             this.xoa.Click += new System.EventHandler(this.xoa_Click);
@@ -400,20 +411,20 @@ namespace shoppingManagement
             // them
             // 
             this.them.BorderColor = System.Drawing.Color.Black;
-            this.them.ButtonColor = System.Drawing.Color.Black;
+            this.them.ButtonColor = System.Drawing.Color.White;
             this.them.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.them.FlatAppearance.BorderSize = 0;
             this.them.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.them.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.them.Location = new System.Drawing.Point(529, 326);
+            this.them.Location = new System.Drawing.Point(690, 236);
             this.them.Name = "them";
             this.them.OnHoverBorderColor = System.Drawing.Color.Black;
             this.them.OnHoverButtonColor = System.Drawing.Color.White;
             this.them.OnHoverTextColor = System.Drawing.Color.Black;
-            this.them.Size = new System.Drawing.Size(138, 38);
+            this.them.Size = new System.Drawing.Size(58, 38);
             this.them.TabIndex = 123;
-            this.them.Text = "Thêm khách hàng";
+            this.them.Text = " ";
             this.them.TextColor = System.Drawing.Color.White;
             this.them.UseVisualStyleBackColor = true;
             this.them.Click += new System.EventHandler(this.them_Click);
@@ -422,7 +433,7 @@ namespace shoppingManagement
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(296, 220);
+            this.label10.Location = new System.Drawing.Point(353, 162);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(79, 19);
             this.label10.TabIndex = 122;
@@ -432,7 +443,7 @@ namespace shoppingManagement
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(390, 165);
+            this.label9.Location = new System.Drawing.Point(81, 222);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(57, 19);
             this.label9.TabIndex = 121;
@@ -442,7 +453,7 @@ namespace shoppingManagement
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(20, 165);
+            this.label8.Location = new System.Drawing.Point(353, 98);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(138, 19);
             this.label8.TabIndex = 120;
@@ -473,7 +484,7 @@ namespace shoppingManagement
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(20, 108);
+            this.label3.Location = new System.Drawing.Point(81, 98);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(131, 19);
             this.label3.TabIndex = 118;
@@ -482,10 +493,10 @@ namespace shoppingManagement
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 396);
+            this.dataGridView1.Location = new System.Drawing.Point(85, 308);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(983, 217);
+            this.dataGridView1.Size = new System.Drawing.Size(856, 312);
             this.dataGridView1.TabIndex = 117;
             this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
             // 
@@ -497,10 +508,60 @@ namespace shoppingManagement
             this.Loai.Items.AddRange(new object[] {
             "VIP",
             "Thuong"});
-            this.Loai.Location = new System.Drawing.Point(504, 272);
+            this.Loai.Location = new System.Drawing.Point(792, 96);
             this.Loai.Name = "Loai";
-            this.Loai.Size = new System.Drawing.Size(92, 21);
+            this.Loai.Size = new System.Drawing.Size(76, 21);
             this.Loai.TabIndex = 147;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(887, 38);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(23, 22);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 152;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(794, 244);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(23, 22);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 151;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(887, 244);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(23, 22);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 150;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(709, 244);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(23, 22);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 149;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(809, 38);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(23, 22);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 148;
+            this.pictureBox1.TabStop = false;
             // 
             // Admin_Khachhang
             // 
@@ -508,6 +569,11 @@ namespace shoppingManagement
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1017, 632);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Loai);
             this.Controls.Add(this.dSinh);
             this.Controls.Add(this.sdt);
@@ -541,6 +607,11 @@ namespace shoppingManagement
             this.Text = "Quản Lý Khách Hàng";
             this.Load += new System.EventHandler(this.Admin_Khachhang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -576,5 +647,10 @@ namespace shoppingManagement
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox Loai;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

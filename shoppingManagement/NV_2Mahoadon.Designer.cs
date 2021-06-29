@@ -29,6 +29,7 @@ namespace shoppingManagement
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NV_2Mahoadon));
             this.button_WOC1 = new ePOSOne.btnProduct.Button_WOC();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -37,7 +38,9 @@ namespace shoppingManagement
             this.usertxt = new JMaterialTextbox.JMaterialTextbox();
             this.quayve = new ePOSOne.btnProduct.Button_WOC();
             this.MaKH = new JMaterialTextbox.JMaterialTextbox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button_WOC1
@@ -48,7 +51,7 @@ namespace shoppingManagement
             this.button_WOC1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.button_WOC1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_WOC1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_WOC1.Location = new System.Drawing.Point(410, 287);
+            this.button_WOC1.Location = new System.Drawing.Point(196, 285);
             this.button_WOC1.Name = "button_WOC1";
             this.button_WOC1.OnHoverBorderColor = System.Drawing.Color.Black;
             this.button_WOC1.OnHoverButtonColor = System.Drawing.Color.Black;
@@ -76,9 +79,9 @@ namespace shoppingManagement
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(252, 189);
+            this.dataGridView1.Location = new System.Drawing.Point(38, 152);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(131, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(131, 210);
             this.dataGridView1.TabIndex = 17;
             // 
             // MaHD
@@ -91,7 +94,7 @@ namespace shoppingManagement
             this.MaHD.IsPassword = false;
             this.MaHD.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.MaHD.LineThickness = 2;
-            this.MaHD.Location = new System.Drawing.Point(410, 189);
+            this.MaHD.Location = new System.Drawing.Point(196, 187);
             this.MaHD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaHD.MaxLength = 32767;
             this.MaHD.Name = "MaHD";
@@ -190,12 +193,23 @@ namespace shoppingManagement
             this.MaKH.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.MaKH.TextName = "";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(398, 87);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(429, 369);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 192;
+            this.pictureBox1.TabStop = false;
+            // 
             // NV_2Mahoadon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(839, 459);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.MaKH);
             this.Controls.Add(this.quayve);
             this.Controls.Add(this.passtxt);
@@ -209,6 +223,7 @@ namespace shoppingManagement
             this.Text = "Tạo Mã Hóa Đơn";
             this.Load += new System.EventHandler(this.NV_Mahoadon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,5 +239,6 @@ namespace shoppingManagement
         private JMaterialTextbox.JMaterialTextbox usertxt;
         private ePOSOne.btnProduct.Button_WOC quayve;
         private JMaterialTextbox.JMaterialTextbox MaKH;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
