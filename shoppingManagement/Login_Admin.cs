@@ -42,7 +42,7 @@ namespace shoppingManagement
             try
             {
                 OracleConnection con = new OracleConnection(connstr);
-                OracleDataAdapter adapter = new OracleDataAdapter("Select count(*) from TAIKHOAN join NHANVIEN using (MaNV) where TENTK='" + txtUsername.TextName + "' and MATKHAU='" + txtPassword.TextName + "' and MaNV='QL'", connstr);
+                OracleDataAdapter adapter = new OracleDataAdapter("Select count(*) from TAIKHOAN join NHANVIEN using (MaNV) where TENTK='" + txtUsername.TextName + "' and MATKHAU='" + txtPassword.TextName + "' and MaQL='QL'", connstr);
                 DataTable data = new DataTable();
                 adapter.Fill(data);
 
