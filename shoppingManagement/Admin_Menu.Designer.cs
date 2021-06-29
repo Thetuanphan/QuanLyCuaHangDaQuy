@@ -30,6 +30,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.button_WOC1 = new ePOSOne.btnProduct.Button_WOC();
+            this.qlphieudv = new ePOSOne.btnProduct.Button_WOC();
             this.tkdoanhthu = new ePOSOne.btnProduct.Button_WOC();
             this.quayve = new ePOSOne.btnProduct.Button_WOC();
             this.qlkhachhang = new ePOSOne.btnProduct.Button_WOC();
@@ -41,8 +43,6 @@
             this.qldoitac = new ePOSOne.btnProduct.Button_WOC();
             this.qlnhanvien = new ePOSOne.btnProduct.Button_WOC();
             this.qlsanpham = new ePOSOne.btnProduct.Button_WOC();
-            this.qlphieudv = new ePOSOne.btnProduct.Button_WOC();
-            this.button_WOC1 = new ePOSOne.btnProduct.Button_WOC();
             this.SuspendLayout();
             // 
             // label1
@@ -64,6 +64,46 @@
             this.label4.Size = new System.Drawing.Size(337, 31);
             this.label4.TabIndex = 29;
             this.label4.Text = "Chọn Chức Năng Quản Lý";
+            // 
+            // button_WOC1
+            // 
+            this.button_WOC1.BorderColor = System.Drawing.Color.Black;
+            this.button_WOC1.ButtonColor = System.Drawing.Color.White;
+            this.button_WOC1.FlatAppearance.BorderSize = 0;
+            this.button_WOC1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button_WOC1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_WOC1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_WOC1.Location = new System.Drawing.Point(317, 363);
+            this.button_WOC1.Name = "button_WOC1";
+            this.button_WOC1.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.button_WOC1.OnHoverButtonColor = System.Drawing.Color.Black;
+            this.button_WOC1.OnHoverTextColor = System.Drawing.Color.White;
+            this.button_WOC1.Size = new System.Drawing.Size(229, 38);
+            this.button_WOC1.TabIndex = 36;
+            this.button_WOC1.Text = "Báo Cáo Tồn Kho";
+            this.button_WOC1.TextColor = System.Drawing.Color.Black;
+            this.button_WOC1.UseVisualStyleBackColor = true;
+            this.button_WOC1.Click += new System.EventHandler(this.button_WOC1_Click_4);
+            // 
+            // qlphieudv
+            // 
+            this.qlphieudv.BorderColor = System.Drawing.Color.Black;
+            this.qlphieudv.ButtonColor = System.Drawing.Color.White;
+            this.qlphieudv.FlatAppearance.BorderSize = 0;
+            this.qlphieudv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.qlphieudv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.qlphieudv.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qlphieudv.Location = new System.Drawing.Point(593, 363);
+            this.qlphieudv.Name = "qlphieudv";
+            this.qlphieudv.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.qlphieudv.OnHoverButtonColor = System.Drawing.Color.Black;
+            this.qlphieudv.OnHoverTextColor = System.Drawing.Color.White;
+            this.qlphieudv.Size = new System.Drawing.Size(229, 38);
+            this.qlphieudv.TabIndex = 35;
+            this.qlphieudv.Text = "Quản Lý Phiếu Dịch Vụ";
+            this.qlphieudv.TextColor = System.Drawing.Color.Black;
+            this.qlphieudv.UseVisualStyleBackColor = true;
+            this.qlphieudv.Click += new System.EventHandler(this.qlphieudv_Click);
             // 
             // tkdoanhthu
             // 
@@ -284,45 +324,6 @@
             this.qlsanpham.TextColor = System.Drawing.Color.Black;
             this.qlsanpham.UseVisualStyleBackColor = true;
             this.qlsanpham.Click += new System.EventHandler(this.qlsanpham_Click);
-            // 
-            // qlphieudv
-            // 
-            this.qlphieudv.BorderColor = System.Drawing.Color.Black;
-            this.qlphieudv.ButtonColor = System.Drawing.Color.White;
-            this.qlphieudv.FlatAppearance.BorderSize = 0;
-            this.qlphieudv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.qlphieudv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.qlphieudv.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qlphieudv.Location = new System.Drawing.Point(593, 363);
-            this.qlphieudv.Name = "qlphieudv";
-            this.qlphieudv.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.qlphieudv.OnHoverButtonColor = System.Drawing.Color.Black;
-            this.qlphieudv.OnHoverTextColor = System.Drawing.Color.White;
-            this.qlphieudv.Size = new System.Drawing.Size(229, 38);
-            this.qlphieudv.TabIndex = 35;
-            this.qlphieudv.Text = "Quản Lý Phiếu Dịch Vụ";
-            this.qlphieudv.TextColor = System.Drawing.Color.Black;
-            this.qlphieudv.UseVisualStyleBackColor = true;
-            this.qlphieudv.Click += new System.EventHandler(this.qlphieudv_Click);
-            // 
-            // button_WOC1
-            // 
-            this.button_WOC1.BorderColor = System.Drawing.Color.Black;
-            this.button_WOC1.ButtonColor = System.Drawing.Color.White;
-            this.button_WOC1.FlatAppearance.BorderSize = 0;
-            this.button_WOC1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.button_WOC1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_WOC1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_WOC1.Location = new System.Drawing.Point(317, 363);
-            this.button_WOC1.Name = "button_WOC1";
-            this.button_WOC1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.button_WOC1.OnHoverButtonColor = System.Drawing.Color.Black;
-            this.button_WOC1.OnHoverTextColor = System.Drawing.Color.White;
-            this.button_WOC1.Size = new System.Drawing.Size(229, 38);
-            this.button_WOC1.TabIndex = 36;
-            this.button_WOC1.Text = "Báo Cáo Tồn Kho";
-            this.button_WOC1.TextColor = System.Drawing.Color.Black;
-            this.button_WOC1.UseVisualStyleBackColor = true;
             // 
             // Admin_Menu
             // 

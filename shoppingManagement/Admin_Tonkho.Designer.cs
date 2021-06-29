@@ -34,15 +34,17 @@ namespace shoppingManagement
             this.cthang = new System.Windows.Forms.ComboBox();
             this.button_WOC1 = new ePOSOne.btnProduct.Button_WOC();
             this.quayve = new ePOSOne.btnProduct.Button_WOC();
+            this.bangtonkho1 = new shoppingManagement.bangtonkho();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
             // 
-            this.crystalReportViewer1.ActiveViewIndex = -1;
+            this.crystalReportViewer1.ActiveViewIndex = 0;
             this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
             this.crystalReportViewer1.Location = new System.Drawing.Point(207, 12);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.ReportSource = this.bangtonkho1;
             this.crystalReportViewer1.Size = new System.Drawing.Size(798, 608);
             this.crystalReportViewer1.TabIndex = 102;
             this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
@@ -144,5 +146,6 @@ namespace shoppingManagement
         private System.Windows.Forms.ComboBox cthang;
         private ePOSOne.btnProduct.Button_WOC button_WOC1;
         private ePOSOne.btnProduct.Button_WOC quayve;
+        private bangtonkho bangtonkho1;
     }
 }
