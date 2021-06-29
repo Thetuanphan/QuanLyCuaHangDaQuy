@@ -323,7 +323,6 @@
             this.button_WOC1.Text = "Báo Cáo Tồn Kho";
             this.button_WOC1.TextColor = System.Drawing.Color.Black;
             this.button_WOC1.UseVisualStyleBackColor = true;
-            this.button_WOC1.Click += new System.EventHandler(this.button_WOC1_Click_3);
             // 
             // Admin_Menu
             // 
