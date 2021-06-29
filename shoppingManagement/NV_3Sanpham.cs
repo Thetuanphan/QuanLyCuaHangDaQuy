@@ -224,7 +224,7 @@ namespace shoppingManagement
             try
             {
 
-                string sql = "update HOADON set  MaKM='" + MaKM + "', TienKM=" + TienKM + " where MaHD='" + MaHD.TextName + "'";
+                string sql = "update HOADON set  MaKM='" + MaKM + "', TienKM=" + TienKM + ", TongTien=" + grandTotal + " where MaHD='" + MaHD.TextName + "'";
 
                 OracleCommand cmd = new OracleCommand(sql, con);
 

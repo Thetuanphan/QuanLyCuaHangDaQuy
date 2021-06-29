@@ -76,54 +76,64 @@ namespace shoppingManagement
             String DonGiaNhap = Dongianhap.TextName;
             String quantity = SLsanpham.TextName;
 
-            double total = (Double.Parse(DonGiaNhap) * Double.Parse(quantity));
+            
 
-            grandTotal = grandTotal + total;
-            grandTotalGoc += total;
-
-            dataGridView2.Rows.Add(MaSP, MaVL, MaDT, TenSP, DVT, DonGiaNhap, quantity, total.ToString());
-
-            label4.Text = grandTotal.ToString();
-
-            string connstr = "Data Source=(DESCRIPTION=" +
-            "(ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))" +
-            "(CONNECT_DATA =" +
-            "(SERVER = DEDICATED)" +
-            "(SERVICE_NAME = orcl)" + ")" +
-            "); User Id=ttp; Password=123456Az";
-
-            OracleConnection con = new OracleConnection(connstr);
-            OracleCommand cmdn = con.CreateCommand();
-            cmdn.CommandType = CommandType.Text;
-
-            try
+            if (double.Parse(DonGiaNhap) > 0 && double.Parse(DonGiaNhap) < double.Parse(DonGia))
             {
+                double total = (Double.Parse(DonGiaNhap) * Double.Parse(quantity));
 
-                string sql = "insert into CHITIETNSP (MaSP, MaPH, SoLuongNhap, DonGiaNhap, MaDT, ThanhTien) values ('"
-                    + MaSP + "', '" + MaHD.TextName + "', " + quantity + ", '" + DonGiaNhap + "', '" + MaDT + "'," + total +")";
-                itemTotal++;
-                string sql1 = "update PHIEUNSP SET TongNSP=" + grandTotal + 
-                    " where MaPH= '" + MaHD.TextName + "'";
+                grandTotal = grandTotal + total;
+                grandTotalGoc += total;
 
-                OracleCommand cmd = new OracleCommand(sql, con);
-                OracleCommand cmd1 = new OracleCommand(sql1, con);
+                dataGridView2.Rows.Add(MaSP, MaVL, MaDT, TenSP, DVT, DonGiaNhap, quantity, total.ToString());
 
-                con.Open();
+                label4.Text = grandTotal.ToString();
 
-                cmd.ExecuteNonQuery();
-                cmd1.ExecuteNonQuery();
-                //MessageBox.Show("Đã thêm sản phẩm thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string connstr = "Data Source=(DESCRIPTION=" +
+                "(ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))" +
+                "(CONNECT_DATA =" +
+                "(SERVER = DEDICATED)" +
+                "(SERVICE_NAME = orcl)" + ")" +
+                "); User Id=ttp; Password=123456Az";
 
+                OracleConnection con = new OracleConnection(connstr);
+                OracleCommand cmdn = con.CreateCommand();
+                cmdn.CommandType = CommandType.Text;
+
+                try
+                {
+
+                    string sql = "insert into CHITIETNSP (MaSP, MaPH, SoLuongNhap, DonGiaNhap, MaDT, ThanhTien) values ('"
+                        + MaSP + "', '" + MaHD.TextName + "', " + quantity + ", '" + DonGiaNhap + "', '" + MaDT + "'," + total + ")";
+                    itemTotal++;
+                    string sql1 = "update PHIEUNSP SET TongNSP=" + grandTotal +
+                        " where MaPH= '" + MaHD.TextName + "'";
+
+                    OracleCommand cmd = new OracleCommand(sql, con);
+                    OracleCommand cmd1 = new OracleCommand(sql1, con);
+
+                    con.Open();
+
+                    cmd.ExecuteNonQuery();
+                    cmd1.ExecuteNonQuery();
+                    //MessageBox.Show("Đã thêm sản phẩm thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                finally
+                {
+                    con.Close();
+                }
             }
 
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            finally
-            {
-                con.Close();
+                MessageBox.Show("Giá nhập phải nhỏ hơn đơn giá!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

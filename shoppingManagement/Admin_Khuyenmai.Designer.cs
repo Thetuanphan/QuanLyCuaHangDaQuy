@@ -284,7 +284,7 @@ namespace shoppingManagement
             this.capnhat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.capnhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.capnhat.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.capnhat.Location = new System.Drawing.Point(303, 238);
+            this.capnhat.Location = new System.Drawing.Point(193, 238);
             this.capnhat.Name = "capnhat";
             this.capnhat.OnHoverBorderColor = System.Drawing.Color.Black;
             this.capnhat.OnHoverButtonColor = System.Drawing.Color.White;
@@ -304,7 +304,7 @@ namespace shoppingManagement
             this.xoa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.xoa.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xoa.Location = new System.Drawing.Point(190, 238);
+            this.xoa.Location = new System.Drawing.Point(303, 238);
             this.xoa.Name = "xoa";
             this.xoa.OnHoverBorderColor = System.Drawing.Color.Black;
             this.xoa.OnHoverButtonColor = System.Drawing.Color.White;

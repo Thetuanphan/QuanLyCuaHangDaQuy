@@ -245,7 +245,7 @@ namespace shoppingManagement
             this.GioiTinh.FormattingEnabled = true;
             this.GioiTinh.Items.AddRange(new object[] {
             "Nam",
-            "Nu",
+            "Nữ",
             "Khac"});
             this.GioiTinh.Location = new System.Drawing.Point(390, 163);
             this.GioiTinh.Name = "GioiTinh";

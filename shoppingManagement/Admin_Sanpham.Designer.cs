@@ -523,8 +523,8 @@
             this.DVT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DVT.FormattingEnabled = true;
             this.DVT.Items.AddRange(new object[] {
-            "Cai",
-            "Vien"});
+            "Cái",
+            "Viên"});
             this.DVT.Location = new System.Drawing.Point(164, 176);
             this.DVT.Name = "DVT";
             this.DVT.Size = new System.Drawing.Size(171, 21);
