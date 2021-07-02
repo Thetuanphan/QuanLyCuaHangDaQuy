@@ -77,7 +77,7 @@ namespace shoppingManagement
 
             String quantity = SLsanpham.TextName;
 
-            double total = (Double.Parse(TienDV) * Double.Parse(quantity));
+            double total = (Double.Parse(txtdongia.TextName) * Double.Parse(quantity));
 
 
             if (double.Parse(txttratruoc.TextName) >= total / 2)
@@ -104,7 +104,7 @@ namespace shoppingManagement
                 try
                 {
                     string date = DateTime.UtcNow.ToString("dd-MM-yyyy");
-                    double conlai = grandTotal - double.Parse(txttratruoc.TextName);
+                    double conlai = total - double.Parse(txttratruoc.TextName);
                     string sql = "insert into chitietdv (MaDV, MaPDV, MaNV, NgayLap, SoLuongDV, NgayGiao, DonGiaDuocTinh, ThanhTien, TinhTrang, TraTruoc, ConLai) values ('"
                         + MaDV + "', '" + MaPDV.TextName + "', '" + txtuser.TextName + "', TO_DATE('" + date + "','dd/mm/yyyy'), " + quantity + ", TO_DATE('" + txtngaygiao.TextName + "','dd/mm/yyyy'), " + txtdongia.TextName + ", " + total + ", '" + txttinhtrang.TextName + "', " + txttratruoc.TextName + ", " + conlai + ")";
                     itemTotal += double.Parse(quantity);

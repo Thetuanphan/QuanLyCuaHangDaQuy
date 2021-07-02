@@ -168,6 +168,12 @@
     <Compile Include="Admin_Tonkho.Designer.cs">
       <DependentUpon>Admin_Tonkho.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin_Topsp.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Admin_Topsp.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Admin_Vatlieu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -376,6 +382,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_Tonkho.resx">
       <DependentUpon>Admin_Tonkho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Topsp.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Admin_Topsp.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_Vatlieu.resx">
       <DependentUpon>Admin_Vatlieu.cs</DependentUpon>

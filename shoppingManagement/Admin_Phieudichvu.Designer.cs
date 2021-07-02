@@ -454,7 +454,7 @@ namespace shoppingManagement
             this.xoa.OnHoverTextColor = System.Drawing.Color.Black;
             this.xoa.Size = new System.Drawing.Size(58, 38);
             this.xoa.TabIndex = 157;
-            this.xoa.Text = " ";
+            this.xoa.Text = "i";
             this.xoa.TextColor = System.Drawing.Color.White;
             this.xoa.UseVisualStyleBackColor = true;
             this.xoa.Click += new System.EventHandler(this.xoa_Click);

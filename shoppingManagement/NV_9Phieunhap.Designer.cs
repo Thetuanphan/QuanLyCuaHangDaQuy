@@ -34,12 +34,10 @@ namespace shoppingManagement
             this.label11 = new System.Windows.Forms.Label();
             this.LoaiTimKiem = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.quayve = new ePOSOne.btnProduct.Button_WOC();
             this.MaHD = new JMaterialTextbox.JMaterialTextbox();
             this.txtpass = new JMaterialTextbox.JMaterialTextbox();
             this.txtuser = new JMaterialTextbox.JMaterialTextbox();
             this.MaKH = new JMaterialTextbox.JMaterialTextbox();
-            this.tieptuc = new ePOSOne.btnProduct.Button_WOC();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -56,12 +54,14 @@ namespace shoppingManagement
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.Dongianhap = new JMaterialTextbox.JMaterialTextbox();
-            this.themsp = new ePOSOne.btnProduct.Button_WOC();
-            this.lammoi = new ePOSOne.btnProduct.Button_WOC();
-            this.timkiem = new ePOSOne.btnProduct.Button_WOC();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.timkiem = new ePOSOne.btnProduct.Button_WOC();
+            this.quayve = new ePOSOne.btnProduct.Button_WOC();
+            this.lammoi = new ePOSOne.btnProduct.Button_WOC();
+            this.tieptuc = new ePOSOne.btnProduct.Button_WOC();
+            this.themsp = new ePOSOne.btnProduct.Button_WOC();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -123,27 +123,6 @@ namespace shoppingManagement
             this.label6.Size = new System.Drawing.Size(121, 19);
             this.label6.TabIndex = 208;
             this.label6.Text = "Tìm kiếm theo:";
-            // 
-            // quayve
-            // 
-            this.quayve.BorderColor = System.Drawing.Color.Black;
-            this.quayve.ButtonColor = System.Drawing.Color.White;
-            this.quayve.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.quayve.FlatAppearance.BorderSize = 0;
-            this.quayve.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.quayve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.quayve.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quayve.Location = new System.Drawing.Point(12, 12);
-            this.quayve.Name = "quayve";
-            this.quayve.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.quayve.OnHoverButtonColor = System.Drawing.Color.Black;
-            this.quayve.OnHoverTextColor = System.Drawing.Color.White;
-            this.quayve.Size = new System.Drawing.Size(76, 36);
-            this.quayve.TabIndex = 207;
-            this.quayve.Text = "<<";
-            this.quayve.TextColor = System.Drawing.Color.Black;
-            this.quayve.UseVisualStyleBackColor = true;
-            this.quayve.Click += new System.EventHandler(this.quayve_Click);
             // 
             // MaHD
             // 
@@ -233,33 +212,11 @@ namespace shoppingManagement
             this.MaKH.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.MaKH.TextName = "";
             // 
-            // tieptuc
-            // 
-            this.tieptuc.BackColor = System.Drawing.Color.White;
-            this.tieptuc.BorderColor = System.Drawing.Color.Black;
-            this.tieptuc.ButtonColor = System.Drawing.Color.Black;
-            this.tieptuc.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.tieptuc.FlatAppearance.BorderSize = 0;
-            this.tieptuc.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.tieptuc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tieptuc.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tieptuc.Location = new System.Drawing.Point(870, 584);
-            this.tieptuc.Name = "tieptuc";
-            this.tieptuc.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.tieptuc.OnHoverButtonColor = System.Drawing.Color.White;
-            this.tieptuc.OnHoverTextColor = System.Drawing.Color.Black;
-            this.tieptuc.Size = new System.Drawing.Size(134, 36);
-            this.tieptuc.TabIndex = 198;
-            this.tieptuc.Text = "Tạo Phiếu Nhập";
-            this.tieptuc.TextColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tieptuc.UseVisualStyleBackColor = false;
-            this.tieptuc.Click += new System.EventHandler(this.tieptuc_Click);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(801, 592);
+            this.label4.Location = new System.Drawing.Point(753, 592);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 19);
             this.label4.TabIndex = 197;
@@ -269,7 +226,7 @@ namespace shoppingManagement
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(649, 591);
+            this.label1.Location = new System.Drawing.Point(588, 592);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 19);
             this.label1.TabIndex = 196;
@@ -319,9 +276,9 @@ namespace shoppingManagement
             this.GiaNhap,
             this.TongCong,
             this.ThanhTien});
-            this.dataGridView2.Location = new System.Drawing.Point(12, 361);
+            this.dataGridView2.Location = new System.Drawing.Point(62, 354);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(843, 203);
+            this.dataGridView2.Size = new System.Drawing.Size(766, 203);
             this.dataGridView2.TabIndex = 192;
             // 
             // MaSP
@@ -367,9 +324,9 @@ namespace shoppingManagement
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 91);
+            this.dataGridView1.Location = new System.Drawing.Point(62, 84);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(843, 224);
+            this.dataGridView1.Size = new System.Drawing.Size(766, 224);
             this.dataGridView1.TabIndex = 191;
             // 
             // label2
@@ -404,68 +361,6 @@ namespace shoppingManagement
             this.Dongianhap.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Dongianhap.TextName = "";
             // 
-            // themsp
-            // 
-            this.themsp.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.themsp.BorderColor = System.Drawing.Color.Black;
-            this.themsp.ButtonColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.themsp.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.themsp.FlatAppearance.BorderSize = 0;
-            this.themsp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.themsp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.themsp.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.themsp.Location = new System.Drawing.Point(928, 278);
-            this.themsp.Name = "themsp";
-            this.themsp.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.themsp.OnHoverButtonColor = System.Drawing.Color.Black;
-            this.themsp.OnHoverTextColor = System.Drawing.Color.White;
-            this.themsp.Size = new System.Drawing.Size(58, 38);
-            this.themsp.TabIndex = 193;
-            this.themsp.TextColor = System.Drawing.Color.Black;
-            this.themsp.UseVisualStyleBackColor = false;
-            this.themsp.Click += new System.EventHandler(this.themsp_Click);
-            // 
-            // lammoi
-            // 
-            this.lammoi.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lammoi.BorderColor = System.Drawing.Color.Black;
-            this.lammoi.ButtonColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lammoi.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.lammoi.FlatAppearance.BorderSize = 0;
-            this.lammoi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.lammoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lammoi.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lammoi.Location = new System.Drawing.Point(866, 12);
-            this.lammoi.Name = "lammoi";
-            this.lammoi.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.lammoi.OnHoverButtonColor = System.Drawing.Color.Black;
-            this.lammoi.OnHoverTextColor = System.Drawing.Color.White;
-            this.lammoi.Size = new System.Drawing.Size(58, 38);
-            this.lammoi.TabIndex = 202;
-            this.lammoi.TextColor = System.Drawing.Color.Black;
-            this.lammoi.UseVisualStyleBackColor = false;
-            this.lammoi.Click += new System.EventHandler(this.lammoi_Click);
-            // 
-            // timkiem
-            // 
-            this.timkiem.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.timkiem.BorderColor = System.Drawing.Color.Black;
-            this.timkiem.ButtonColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.timkiem.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.timkiem.FlatAppearance.BorderSize = 0;
-            this.timkiem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.timkiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.timkiem.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timkiem.Location = new System.Drawing.Point(786, 13);
-            this.timkiem.Name = "timkiem";
-            this.timkiem.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.timkiem.OnHoverButtonColor = System.Drawing.Color.White;
-            this.timkiem.OnHoverTextColor = System.Drawing.Color.Black;
-            this.timkiem.Size = new System.Drawing.Size(58, 38);
-            this.timkiem.TabIndex = 212;
-            this.timkiem.TextColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.timkiem.UseVisualStyleBackColor = false;
-            // 
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
@@ -495,6 +390,111 @@ namespace shoppingManagement
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 217;
             this.pictureBox2.TabStop = false;
+            // 
+            // timkiem
+            // 
+            this.timkiem.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.timkiem.BorderColor = System.Drawing.Color.Black;
+            this.timkiem.ButtonColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.timkiem.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.timkiem.FlatAppearance.BorderSize = 0;
+            this.timkiem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.timkiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.timkiem.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timkiem.Location = new System.Drawing.Point(786, 13);
+            this.timkiem.Name = "timkiem";
+            this.timkiem.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.timkiem.OnHoverButtonColor = System.Drawing.Color.White;
+            this.timkiem.OnHoverTextColor = System.Drawing.Color.Black;
+            this.timkiem.Size = new System.Drawing.Size(58, 38);
+            this.timkiem.TabIndex = 212;
+            this.timkiem.TextColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.timkiem.UseVisualStyleBackColor = false;
+            // 
+            // quayve
+            // 
+            this.quayve.BorderColor = System.Drawing.Color.Black;
+            this.quayve.ButtonColor = System.Drawing.Color.White;
+            this.quayve.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.quayve.FlatAppearance.BorderSize = 0;
+            this.quayve.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.quayve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.quayve.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quayve.Location = new System.Drawing.Point(12, 12);
+            this.quayve.Name = "quayve";
+            this.quayve.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.quayve.OnHoverButtonColor = System.Drawing.Color.Black;
+            this.quayve.OnHoverTextColor = System.Drawing.Color.White;
+            this.quayve.Size = new System.Drawing.Size(76, 36);
+            this.quayve.TabIndex = 207;
+            this.quayve.Text = "<<";
+            this.quayve.TextColor = System.Drawing.Color.Black;
+            this.quayve.UseVisualStyleBackColor = true;
+            this.quayve.Click += new System.EventHandler(this.quayve_Click);
+            // 
+            // lammoi
+            // 
+            this.lammoi.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lammoi.BorderColor = System.Drawing.Color.Black;
+            this.lammoi.ButtonColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lammoi.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.lammoi.FlatAppearance.BorderSize = 0;
+            this.lammoi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.lammoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lammoi.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lammoi.Location = new System.Drawing.Point(866, 12);
+            this.lammoi.Name = "lammoi";
+            this.lammoi.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.lammoi.OnHoverButtonColor = System.Drawing.Color.Black;
+            this.lammoi.OnHoverTextColor = System.Drawing.Color.White;
+            this.lammoi.Size = new System.Drawing.Size(58, 38);
+            this.lammoi.TabIndex = 202;
+            this.lammoi.TextColor = System.Drawing.Color.Black;
+            this.lammoi.UseVisualStyleBackColor = false;
+            this.lammoi.Click += new System.EventHandler(this.lammoi_Click);
+            // 
+            // tieptuc
+            // 
+            this.tieptuc.BackColor = System.Drawing.Color.White;
+            this.tieptuc.BorderColor = System.Drawing.Color.Black;
+            this.tieptuc.ButtonColor = System.Drawing.Color.Black;
+            this.tieptuc.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.tieptuc.FlatAppearance.BorderSize = 0;
+            this.tieptuc.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.tieptuc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tieptuc.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tieptuc.Location = new System.Drawing.Point(870, 584);
+            this.tieptuc.Name = "tieptuc";
+            this.tieptuc.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.tieptuc.OnHoverButtonColor = System.Drawing.Color.White;
+            this.tieptuc.OnHoverTextColor = System.Drawing.Color.Black;
+            this.tieptuc.Size = new System.Drawing.Size(134, 36);
+            this.tieptuc.TabIndex = 198;
+            this.tieptuc.Text = "Tạo Phiếu Nhập";
+            this.tieptuc.TextColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tieptuc.UseVisualStyleBackColor = false;
+            this.tieptuc.Click += new System.EventHandler(this.tieptuc_Click);
+            // 
+            // themsp
+            // 
+            this.themsp.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.themsp.BorderColor = System.Drawing.Color.Black;
+            this.themsp.ButtonColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.themsp.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.themsp.FlatAppearance.BorderSize = 0;
+            this.themsp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.themsp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.themsp.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.themsp.Location = new System.Drawing.Point(928, 278);
+            this.themsp.Name = "themsp";
+            this.themsp.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.themsp.OnHoverButtonColor = System.Drawing.Color.Black;
+            this.themsp.OnHoverTextColor = System.Drawing.Color.White;
+            this.themsp.Size = new System.Drawing.Size(58, 38);
+            this.themsp.TabIndex = 193;
+            this.themsp.TextColor = System.Drawing.Color.Black;
+            this.themsp.UseVisualStyleBackColor = false;
+            this.themsp.Click += new System.EventHandler(this.themsp_Click);
             // 
             // NV_9Phieunhap
             // 
