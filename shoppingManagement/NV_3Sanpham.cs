@@ -204,7 +204,7 @@ namespace shoppingManagement
 
             //double total = Double.Parse(TienKM);
 
-            grandTotal = grandTotal + Int32.Parse(TienKM);
+            grandTotal = grandTotal - Int32.Parse(TienKM);
 
             dataGridView4.Rows.Add(MaKM, TenKM, TienKM);
 

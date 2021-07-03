@@ -185,7 +185,7 @@ namespace shoppingManagement
                 try
                 {
                     string sql = "update PHIEUDV" +
-                         " SET " + "MaNV= '" + txtmanv.TextName + "', MaKH='" + txtmakh.TextName + "', SoLuongDV=" + txtsldv.TextName + ", NgayLap=" + "TO_DATE('" + dLap.TextName + "', 'dd/mm/yyyy hh:mi:ss AM')" + ", TongTien=" + txttongtien.Text + ", ThanhToanTruoc=" + txtthanhtoantruoc.TextName + ", TienConLai=" + txtconlai.TextName + ", TinhTrang= '" + txttinhtrang.TextName + "' " +
+                         " SET " + "MaNV= '" + txtmanv.TextName + "', MaKH='" + txtmakh.TextName + "', SoLuongDV=" + txtsldv.TextName + ", NgayLap=" + "TO_DATE('" + dLap.TextName + "', 'dd/mm/yyyy hh:mi:ss AM')" + ", TongTien=" + txttongtien.TextName + ", ThanhToanTruoc=" + txtthanhtoantruoc.TextName + ", TienConLai=" + txtconlai.TextName + ", TinhTrang= '" + txttinhtrang.TextName + "' " +
                         " where MaPDV ='" + txtmaphieu.TextName + "'";
 
                     /* string sql = "update NHANVIEN SET NgaySinh=" + "TO_DATE('" + dSinh.TextName + "','dd-mm-yyy')" + "where MaNV='" + MaNV.TextName + "'"; */

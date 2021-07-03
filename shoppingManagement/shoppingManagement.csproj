@@ -168,11 +168,11 @@
     <Compile Include="Admin_Tonkho.Designer.cs">
       <DependentUpon>Admin_Tonkho.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin_Topsp.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Admin_Topsp.rpt</DependentUpon>
-      <SubType>Component</SubType>
+    <Compile Include="Admin_Topsanpham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Topsanpham.Designer.cs">
+      <DependentUpon>Admin_Topsanpham.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin_Vatlieu.cs">
       <SubType>Form</SubType>
@@ -211,6 +211,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="demo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>demo.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="hoadon.cs">
       <AutoGen>True</AutoGen>
@@ -353,6 +359,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="topsanpham.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>topsanpham.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="Admin_Dichvu.resx">
       <DependentUpon>Admin_Dichvu.cs</DependentUpon>
     </EmbeddedResource>
@@ -383,9 +395,8 @@
     <EmbeddedResource Include="Admin_Tonkho.resx">
       <DependentUpon>Admin_Tonkho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin_Topsp.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Admin_Topsp.cs</LastGenOutput>
+    <EmbeddedResource Include="Admin_Topsanpham.resx">
+      <DependentUpon>Admin_Topsanpham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_Vatlieu.resx">
       <DependentUpon>Admin_Vatlieu.cs</DependentUpon>
@@ -404,6 +415,10 @@
     <EmbeddedResource Include="danhsachphieudv.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>danhsachphieudv.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="demo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>demo.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="hoadon.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -487,6 +502,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="topsanpham.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>topsanpham.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
