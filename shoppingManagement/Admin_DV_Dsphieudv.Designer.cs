@@ -31,6 +31,7 @@ namespace shoppingManagement
         {
             this.quayve = new ePOSOne.btnProduct.Button_WOC();
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.danhsachphieudv1 = new shoppingManagement.danhsachphieudv();
             this.SuspendLayout();
             // 
             // quayve
@@ -55,11 +56,12 @@ namespace shoppingManagement
             // 
             // crystalReportViewer1
             // 
-            this.crystalReportViewer1.ActiveViewIndex = -1;
+            this.crystalReportViewer1.ActiveViewIndex = 0;
             this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
             this.crystalReportViewer1.Location = new System.Drawing.Point(12, 68);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.ReportSource = this.danhsachphieudv1;
             this.crystalReportViewer1.Size = new System.Drawing.Size(993, 552);
             this.crystalReportViewer1.TabIndex = 107;
             this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
@@ -84,5 +86,6 @@ namespace shoppingManagement
 
         private ePOSOne.btnProduct.Button_WOC quayve;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        private danhsachphieudv danhsachphieudv1;
     }
 }

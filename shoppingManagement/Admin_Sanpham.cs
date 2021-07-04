@@ -33,6 +33,7 @@ namespace shoppingManagement
             "); User Id=ttp; Password=123456Az";
 
             OracleConnection con = new OracleConnection(connstr);
+
             try
             {
 
@@ -196,6 +197,8 @@ namespace shoppingManagement
             "); User Id=ttp; Password=123456Az";
                 OracleConnection con = new OracleConnection(connstr);
 
+
+
                 try
                 {
 
@@ -207,6 +210,13 @@ namespace shoppingManagement
                         OracleCommand cmd = new OracleCommand(sql, con);
 
                         con.Open();
+
+                        OracleTransaction transaction;
+
+                        // Start a local transaction
+                        transaction = con.BeginTransaction(IsolationLevel.Serializable);
+                        // Assign transaction object for a pending local transaction
+                        cmd.Transaction = transaction;
 
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Cập nhật sản phẩm thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
