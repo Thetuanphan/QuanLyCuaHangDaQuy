@@ -13,6 +13,7 @@ using System.IO;
 
 namespace shoppingManagement
 {
+
     public partial class Admin_Sanpham : Form
     {
        
@@ -33,6 +34,14 @@ namespace shoppingManagement
             "); User Id=ttp; Password=123456Az";
 
             OracleConnection con = new OracleConnection(connstr);
+
+            OracleCommand command = con.CreateCommand();
+            OracleTransaction transaction;
+
+            // Start a local transaction
+            transaction = con.BeginTransaction(IsolationLevel.Serializable);
+            // Assign transaction object for a pending local transaction
+            command.Transaction = transaction;
 
             try
             {
@@ -74,6 +83,9 @@ namespace shoppingManagement
 
         private void quayve_Click(object sender, EventArgs e)
         {
+            OracleTransaction transaction;
+            transaction.Commit();
+
             this.Hide();
             Admin_Menu f4 = new Admin_Menu();
             f4.ShowDialog();
@@ -211,14 +223,26 @@ namespace shoppingManagement
 
                         con.Open();
 
+                        OracleCommand command = con.CreateCommand();
                         OracleTransaction transaction;
 
                         // Start a local transaction
                         transaction = con.BeginTransaction(IsolationLevel.Serializable);
                         // Assign transaction object for a pending local transaction
-                        cmd.Transaction = transaction;
+                        command.Transaction = transaction;
 
-                        cmd.ExecuteNonQuery();
+
+
+                        command.CommandText = "update SANPHAM" +
+                             " SET " + "MaVL= '" + MaVL.Text + "', TenSP='" + TenSP.TextName + "', SLTon=" + SLTon.TextName + ", DonGia=" + DonGia.TextName + ", MaDT='" + MaDT.TextName + "', DVT='" + DVT.Text + "'" +
+                            " where MaSP ='" + MaSP.TextName + "'";
+
+                        command.ExecuteNonQuery();
+                        
+                        
+
+
+
                         MessageBox.Show("Cập nhật sản phẩm thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         OracleDataAdapter adapter = new OracleDataAdapter("select * from SANPHAM order by MaSP", con);
@@ -237,7 +261,7 @@ namespace shoppingManagement
 
                     finally
                     {
-                        con.Close();
+                        //con.Close();
                     }
                 }
 
@@ -248,7 +272,7 @@ namespace shoppingManagement
 
                 finally
                 {
-                    con.Close();
+                    //con.Close();
                 }
             }
 
