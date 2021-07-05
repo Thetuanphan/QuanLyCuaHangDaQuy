@@ -165,7 +165,7 @@ namespace shoppingManagement
             this.GioiTinh.Items.AddRange(new object[] {
             "Nam",
             "Nữ",
-            "Khac"});
+            "Khác"});
             this.GioiTinh.Location = new System.Drawing.Point(449, 160);
             this.GioiTinh.Name = "GioiTinh";
             this.GioiTinh.Size = new System.Drawing.Size(71, 21);

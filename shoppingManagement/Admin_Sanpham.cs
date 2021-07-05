@@ -16,12 +16,10 @@ namespace shoppingManagement
 
     public partial class Admin_Sanpham : Form
     {
-       
+        
         public Admin_Sanpham()
         {
             InitializeComponent();
-            
-           
         }
 
         public void connection()
@@ -34,14 +32,6 @@ namespace shoppingManagement
             "); User Id=ttp; Password=123456Az";
 
             OracleConnection con = new OracleConnection(connstr);
-
-            OracleCommand command = con.CreateCommand();
-            OracleTransaction transaction;
-
-            // Start a local transaction
-            transaction = con.BeginTransaction(IsolationLevel.Serializable);
-            // Assign transaction object for a pending local transaction
-            command.Transaction = transaction;
 
             try
             {
@@ -79,12 +69,91 @@ namespace shoppingManagement
             connection();
         }
 
-        
+        public void capnhatsanpham_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chắc chắn cập nhật?", "Cập nhật", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                string connstr = "Data Source=(DESCRIPTION=" +
+            "(ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))" +
+            "(CONNECT_DATA =" +
+            "(SERVER = DEDICATED)" +
+            "(SERVICE_NAME = orcl)" + ")" +
+            "); User Id=ttp; Password=123456Az";
+                OracleConnection con = new OracleConnection(connstr);
+
+
+
+                try
+                {
+
+                    try
+                    {
+                        string sql = "update SANPHAM" +
+                             " SET " + "MaVL= '" + MaVL.Text + "', TenSP='" + TenSP.TextName + "', SLTon=" + SLTon.TextName + ", DonGia=" + DonGia.TextName + ", MaDT='" + MaDT.TextName + "', DVT='" + DVT.Text + "'" +
+                            " where MaSP ='" + MaSP.TextName + "'";
+                        OracleCommand cmd = new OracleCommand(sql, con);
+
+                        con.Open();
+
+                        OracleCommand command = con.CreateCommand();
+                        OracleTransaction transaction;
+
+                        // Start a local transaction
+                        transaction = con.BeginTransaction(IsolationLevel.Serializable);
+                        // Assign transaction object for a pending local transaction
+                        command.Transaction = transaction;
+
+                        command.CommandText = "update SANPHAM" +
+                             " SET " + "MaVL= '" + MaVL.Text + "', TenSP='" + TenSP.TextName + "', SLTon=" + SLTon.TextName + ", DonGia=" + DonGia.TextName + ", MaDT='" + MaDT.TextName + "', DVT='" + DVT.Text + "'" +
+                            " where MaSP ='" + MaSP.TextName + "'";
+
+                        cmd.ExecuteNonQuery();
+
+                        //transaction.Commit();
+
+                        MessageBox.Show("Cập nhật sản phẩm thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        OracleDataAdapter adapter = new OracleDataAdapter("select * from SANPHAM order by MaSP", con);
+                        DataTable dt = new DataTable();
+
+                        adapter.Fill(dt);
+
+
+                        dataGridView1.DataSource = dt;
+                    }
+
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                    finally
+                    {
+                        //con.Close();
+                    }
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                finally
+                {
+                    //con.Close();
+                }
+            }
+
+            else
+            {
+                MessageBox.Show("Dữ liệu chưa được cập nhật", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+        }
+
 
         private void quayve_Click(object sender, EventArgs e)
         {
-            OracleTransaction transaction;
-            transaction.Commit();
 
             this.Hide();
             Admin_Menu f4 = new Admin_Menu();
@@ -197,91 +266,7 @@ namespace shoppingManagement
             
         }
 
-        private void capnhatsanpham_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Bạn có chắc chắn cập nhật?", "Cập nhật", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                string connstr = "Data Source=(DESCRIPTION=" +
-            "(ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))" +
-            "(CONNECT_DATA =" +
-            "(SERVER = DEDICATED)" +
-            "(SERVICE_NAME = orcl)" + ")" +
-            "); User Id=ttp; Password=123456Az";
-                OracleConnection con = new OracleConnection(connstr);
-
-
-
-                try
-                {
-
-                    try
-                    {
-                        string sql = "update SANPHAM" +
-                             " SET " + "MaVL= '" + MaVL.Text + "', TenSP='" + TenSP.TextName + "', SLTon=" + SLTon.TextName + ", DonGia=" + DonGia.TextName + ", MaDT='" + MaDT.TextName + "', DVT='" + DVT.Text + "'" +
-                            " where MaSP ='" + MaSP.TextName + "'";
-                        OracleCommand cmd = new OracleCommand(sql, con);
-
-                        con.Open();
-
-                        OracleCommand command = con.CreateCommand();
-                        OracleTransaction transaction;
-
-                        // Start a local transaction
-                        transaction = con.BeginTransaction(IsolationLevel.Serializable);
-                        // Assign transaction object for a pending local transaction
-                        command.Transaction = transaction;
-
-
-
-                        command.CommandText = "update SANPHAM" +
-                             " SET " + "MaVL= '" + MaVL.Text + "', TenSP='" + TenSP.TextName + "', SLTon=" + SLTon.TextName + ", DonGia=" + DonGia.TextName + ", MaDT='" + MaDT.TextName + "', DVT='" + DVT.Text + "'" +
-                            " where MaSP ='" + MaSP.TextName + "'";
-
-                        command.ExecuteNonQuery();
-                        
-                        
-
-
-
-                        MessageBox.Show("Cập nhật sản phẩm thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        OracleDataAdapter adapter = new OracleDataAdapter("select * from SANPHAM order by MaSP", con);
-                        DataTable dt = new DataTable();
-
-                        adapter.Fill(dt);
-
-
-                        dataGridView1.DataSource = dt;
-                    }
-
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-
-                    finally
-                    {
-                        //con.Close();
-                    }
-                }
-
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-                finally
-                {
-                    //con.Close();
-                }
-            }
-
-            else
-            {
-                MessageBox.Show("Dữ liệu chưa được cập nhật", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            
-        }
+        
 
         private void lammoi_Click(object sender, EventArgs e)
         {
