@@ -219,6 +219,20 @@ namespace shoppingManagement
 
                     con.Open();
 
+
+
+                    OracleCommand objCmd = new OracleCommand();
+
+                    objCmd.CommandText = "Check_SDT";
+                    objCmd.CommandType = CommandType.StoredProcedure;
+                    objCmd.Parameters.Add("v_num_in", OracleDbType.Int32).Value = Int32.Parse(sdt.TextName);
+                    objCmd.Parameters.Add("v_num_out", OracleDbType.Int32).Direction = ParameterDirection.Output;
+
+                    objCmd.ExecuteNonQuery();
+
+
+
+
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Cập nhật nhân viên thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -233,7 +247,18 @@ namespace shoppingManagement
 
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (ex.Message.Contains("ORA-06512") && ex.Message.Contains("ORA-20000") && ex.Message.Contains("ORA-04088"))
+                    {
+                        MessageBox.Show("Nhân viên đi làm phải lớn hơn 18 tuổi", "Ngày vào làm không hợp lệ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    if (ex.Message.Contains("Input string"))
+                    {
+                        MessageBox.Show("Số điện thoại không bao gồm chữ", "Số điện thoại không hợp lệ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else {
+                        MessageBox.Show("Lỗi không xác định", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
                 }
 
                 finally

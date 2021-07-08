@@ -109,13 +109,20 @@ namespace shoppingManagement
                     string sql1 = "update PHIEUNSP SET TongNSP=" + grandTotal +
                         " where MaPH= '" + MaHD.TextName + "'";
 
+                    double slht = double.Parse(SLTon) + double.Parse(quantity);
+
+                    string sql2 = "update SANPHAM SET SLTon=" + slht +
+                        " where MaSP= '" + MaSP + "'";
+
                     OracleCommand cmd = new OracleCommand(sql, con);
                     OracleCommand cmd1 = new OracleCommand(sql1, con);
+                    OracleCommand cmd2 = new OracleCommand(sql2, con);
 
                     con.Open();
 
                     cmd.ExecuteNonQuery();
                     cmd1.ExecuteNonQuery();
+                    cmd2.ExecuteNonQuery();
                     //MessageBox.Show("Đã thêm sản phẩm thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }

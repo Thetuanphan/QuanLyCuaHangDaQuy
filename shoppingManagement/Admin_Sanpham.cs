@@ -7,16 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
+using System.Threading.Tasks;
 using Oracle.ManagedDataAccess.Client;
 using System.IO;
+using System.Threading;
 
 namespace shoppingManagement
 {
 
+
     public partial class Admin_Sanpham : Form
     {
-        
+
         public Admin_Sanpham()
         {
             InitializeComponent();
@@ -69,6 +71,41 @@ namespace shoppingManagement
             connection();
         }
 
+        public void RunOracleTransaction(string connectionString)
+        {
+            using (OracleConnection connection = new OracleConnection(connectionString))
+            {
+                connection.Open();
+
+                OracleCommand command = connection.CreateCommand();
+                OracleTransaction transaction;
+
+                // Start a local transaction
+                transaction = connection.BeginTransaction(IsolationLevel.ReadCommitted);
+                // Assign transaction object for a pending local transaction
+                command.Transaction = transaction;
+
+                try
+                {
+                    command.CommandText =
+                        "INSERT INTO Dept (DeptNo, Dname, Loc) values (50, 'TECHNOLOGY', 'DENVER')";
+                    command.ExecuteNonQuery();
+                    command.CommandText =
+                        "INSERT INTO Dept (DeptNo, Dname, Loc) values (60, 'ENGINEERING', 'KANSAS CITY')";
+                    command.ExecuteNonQuery();
+                    transaction.Commit();
+                    Console.WriteLine("Both records are written to database.");
+                }
+                catch (Exception e)
+                {
+                    transaction.Rollback();
+                    Console.WriteLine(e.ToString());
+                    Console.WriteLine("Neither record was written to database.");
+                }
+            }
+        }
+        
+
         public void capnhatsanpham_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có chắc chắn cập nhật?", "Cập nhật", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -81,13 +118,26 @@ namespace shoppingManagement
             "); User Id=ttp; Password=123456Az";
                 OracleConnection con = new OracleConnection(connstr);
 
-
-
                 try
                 {
 
                     try
                     {
+                        con.Open();
+                        OracleTransaction transaction = con.BeginTransaction(IsolationLevel.Serializable);
+                        OracleCommand command = con.CreateCommand();
+
+                        // Start a local transaction
+                        // Assign transaction object for a pending local transaction
+                        command.Transaction = transaction;
+                        
+                        command.CommandText ="update SANPHAM" +
+                             " SET " + "MaVL= '" + MaVL.Text + "', TenSP='" + TenSP.TextName + "', SLTon=" + SLTon.TextName + ", DonGia=" + DonGia.TextName + ", MaDT='" + MaDT.TextName + "', DVT='" + DVT.Text + "'" +
+                            " where MaSP ='" + MaSP.TextName + "'"; 
+                        command.ExecuteNonQuery();
+                        
+                        transaction.Commit();
+                        /*
                         string sql = "update SANPHAM" +
                              " SET " + "MaVL= '" + MaVL.Text + "', TenSP='" + TenSP.TextName + "', SLTon=" + SLTon.TextName + ", DonGia=" + DonGia.TextName + ", MaDT='" + MaDT.TextName + "', DVT='" + DVT.Text + "'" +
                             " where MaSP ='" + MaSP.TextName + "'";
@@ -95,21 +145,10 @@ namespace shoppingManagement
 
                         con.Open();
 
-                        OracleCommand command = con.CreateCommand();
-                        OracleTransaction transaction;
-
-                        // Start a local transaction
-                        transaction = con.BeginTransaction(IsolationLevel.Serializable);
-                        // Assign transaction object for a pending local transaction
-                        command.Transaction = transaction;
-
-                        command.CommandText = "update SANPHAM" +
-                             " SET " + "MaVL= '" + MaVL.Text + "', TenSP='" + TenSP.TextName + "', SLTon=" + SLTon.TextName + ", DonGia=" + DonGia.TextName + ", MaDT='" + MaDT.TextName + "', DVT='" + DVT.Text + "'" +
-                            " where MaSP ='" + MaSP.TextName + "'";
-
                         cmd.ExecuteNonQuery();
+                        */
 
-                        //transaction.Commit();
+
 
                         MessageBox.Show("Cập nhật sản phẩm thành công!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -129,7 +168,7 @@ namespace shoppingManagement
 
                     finally
                     {
-                        //con.Close();
+                        con.Close();
                     }
                 }
 
@@ -140,7 +179,7 @@ namespace shoppingManagement
 
                 finally
                 {
-                    //con.Close();
+                    con.Close();
                 }
             }
 
@@ -149,6 +188,76 @@ namespace shoppingManagement
                 MessageBox.Show("Dữ liệu chưa được cập nhật", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
+        }
+
+        
+
+
+        private void commit_Click(object sender, EventArgs e)
+        {
+            string connstr = "Data Source=(DESCRIPTION=" +
+            "(ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))" +
+            "(CONNECT_DATA =" +
+            "(SERVER = DEDICATED)" +
+            "(SERVICE_NAME = orcl)" + ")" +
+            "); User Id=ttp; Password=123456Az";
+            OracleConnection con = new OracleConnection(connstr);
+
+            try
+            {
+
+                try
+                {
+                    con.Open();
+                    OracleTransaction transaction = con.BeginTransaction(IsolationLevel.Serializable);
+                    
+                    OracleCommand command = con.CreateCommand();
+
+                    // Start a local transaction
+                    // Assign transaction object for a pending local transaction
+
+                    command.Transaction = transaction;
+
+                    command.CommandText = "update SANPHAM" +
+                             " SET " + "MaVL= '" + MaVL.Text + "', TenSP='" + TenSP.TextName + "', SLTon=" + SLTon.TextName + ", DonGia=" + DonGia.TextName + ", MaDT='" + MaDT.TextName + "', DVT='" + DVT.Text + "'" +
+                            " where MaSP ='" + MaSP.TextName + "'";
+                    command.ExecuteNonQuery();
+
+                    Thread.Sleep(5000);
+
+                    transaction.Commit();
+
+                    MessageBox.Show("Committed", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    OracleDataAdapter adapter = new OracleDataAdapter("select * from SANPHAM order by MaSP", con);
+                    DataTable dt = new DataTable();
+
+                    adapter.Fill(dt);
+
+
+                    dataGridView1.DataSource = dt;
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                finally
+                {
+                    con.Close();
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            finally
+            {
+                //con.Close();
+            }
         }
 
 
@@ -181,8 +290,7 @@ namespace shoppingManagement
             "); User Id=ttp; Password=123456Az";
 
             OracleConnection con = new OracleConnection(connstr);
-            OracleCommand cmdn = con.CreateCommand();
-            cmdn.CommandType = CommandType.Text;
+            
 
             try
             {
@@ -215,6 +323,8 @@ namespace shoppingManagement
                 con.Close();
             }
         }
+
+        
 
         private void xoasanpham_Click(object sender, EventArgs e)
         {
@@ -265,6 +375,8 @@ namespace shoppingManagement
 
             
         }
+
+
 
         
 
@@ -328,6 +440,77 @@ namespace shoppingManagement
         private void LoaiTimKiem_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void refresh_Click(object sender, EventArgs e)
+        {
+            string connstr = "Data Source=(DESCRIPTION=" +
+            "(ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))" +
+            "(CONNECT_DATA =" +
+            "(SERVER = DEDICATED)" +
+            "(SERVICE_NAME = orcl)" + ")" +
+            "); User Id=ttp; Password=123456Az";
+            OracleConnection con = new OracleConnection(connstr);
+
+            try
+            {
+
+                try
+                {
+                    con.Open();
+                    OracleTransaction transaction = con.BeginTransaction(IsolationLevel.Serializable);
+
+                    OracleCommand command = con.CreateCommand();
+
+                    // Start a local transaction
+                    // Assign transaction object for a pending local transaction
+
+                    command.Transaction = transaction;
+
+                    command.CommandText ="Select * from SANPHAM  order by MaSP";
+
+                    command.ExecuteNonQuery();
+
+                    OracleDataAdapter adapter = new OracleDataAdapter(command.CommandText, con);
+
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+                    dataGridView1.DataSource = dt;
+
+                    Thread.Sleep(10000);
+
+                    command.CommandText = "Select * from SANPHAM  order by MaSP";
+
+                    command.ExecuteNonQuery();
+
+                    adapter.Fill(dt);
+                    dataGridView1.DataSource = dt;
+
+
+                    MessageBox.Show("refresh", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                finally
+                {
+                    con.Close();
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            finally
+            {
+                //con.Close();
+            }
         }
     }
     

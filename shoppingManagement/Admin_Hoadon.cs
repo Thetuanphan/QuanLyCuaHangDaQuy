@@ -158,7 +158,15 @@ namespace shoppingManagement
 
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (ex.Message.Contains("ORA-06512") && ex.Message.Contains("ORA-20000") && ex.Message.Contains("ORA-04088"))
+                    {
+                        MessageBox.Show("Ngày lập hóa đơn phải sau ngày vào làm của nhân viên!", "Ngày lập hóa đơn không hợp lệ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show(ex.Message, "Lỗi #", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
                 }
 
                 finally

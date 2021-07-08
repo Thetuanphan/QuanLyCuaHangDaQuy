@@ -64,6 +64,8 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.commit = new ePOSOne.btnProduct.Button_WOC();
+            this.refresh = new ePOSOne.btnProduct.Button_WOC();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -580,12 +582,56 @@
             this.pictureBox1.TabIndex = 138;
             this.pictureBox1.TabStop = false;
             // 
+            // commit
+            // 
+            this.commit.BorderColor = System.Drawing.Color.Black;
+            this.commit.ButtonColor = System.Drawing.Color.White;
+            this.commit.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.commit.FlatAppearance.BorderSize = 0;
+            this.commit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.commit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.commit.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.commit.Location = new System.Drawing.Point(131, 526);
+            this.commit.Name = "commit";
+            this.commit.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.commit.OnHoverButtonColor = System.Drawing.Color.Black;
+            this.commit.OnHoverTextColor = System.Drawing.Color.White;
+            this.commit.Size = new System.Drawing.Size(100, 36);
+            this.commit.TabIndex = 143;
+            this.commit.Text = "Commit";
+            this.commit.TextColor = System.Drawing.Color.Black;
+            this.commit.UseVisualStyleBackColor = true;
+            this.commit.Click += new System.EventHandler(this.commit_Click);
+            // 
+            // refresh
+            // 
+            this.refresh.BorderColor = System.Drawing.Color.Black;
+            this.refresh.ButtonColor = System.Drawing.Color.White;
+            this.refresh.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.refresh.FlatAppearance.BorderSize = 0;
+            this.refresh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.refresh.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.refresh.Location = new System.Drawing.Point(264, 526);
+            this.refresh.Name = "refresh";
+            this.refresh.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.refresh.OnHoverButtonColor = System.Drawing.Color.Black;
+            this.refresh.OnHoverTextColor = System.Drawing.Color.White;
+            this.refresh.Size = new System.Drawing.Size(100, 36);
+            this.refresh.TabIndex = 144;
+            this.refresh.Text = "f5";
+            this.refresh.TextColor = System.Drawing.Color.Black;
+            this.refresh.UseVisualStyleBackColor = true;
+            this.refresh.Click += new System.EventHandler(this.refresh_Click);
+            // 
             // Admin_Sanpham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1017, 632);
+            this.Controls.Add(this.refresh);
+            this.Controls.Add(this.commit);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
@@ -675,5 +721,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private ePOSOne.btnProduct.Button_WOC commit;
+        private ePOSOne.btnProduct.Button_WOC refresh;
     }
 }
